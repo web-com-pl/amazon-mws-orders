@@ -6,5 +6,8 @@
     "require": {
         "php": ">=5.2.8",
         "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": { "Webcom\\MarketPlaceWebServiceOrders\\": "src/MarketplaceWebServiceOrders/" }
     }
-} 
+}
