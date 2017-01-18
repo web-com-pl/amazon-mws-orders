@@ -1,0 +1,10 @@
+{
+    "name": "web-com-pl/amazon-mws-orders",
+    "description": "Amazon",
+    "homepage": "https://github.com/web-com-pl/amazon-mws-orders",
+    "license": "Apache-2.0",
+    "require": {
+        "php": ">=5.2.8",
+        "ext-curl": "*"
+    }
+} 
