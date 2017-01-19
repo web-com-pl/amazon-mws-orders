@@ -19,25 +19,21 @@
 
 namespace Webcom\MarketPlaceWebServiceOrders;
 
-class Mock implements AmazonInterface
+interface AmazonInterface
 {
-    // Public API ------------------------------------------------------------//
 
     /**
      * Get Order
      * This operation takes up to 50 order ids and returns the corresponding orders.
      *
      * @param mixed $request array of parameters for Model_GetOrder request or Model_GetOrder object itself
-     * @see AmazonModelAbstract_GetOrder
+     * @see AmazonModelAbstract_GetOrderRequest
      * @return Model_GetOrderResponse
      *
      * @throws AmazonException
      */
-    public function getOrder($request)
-    {
-        
-        return Model_GetOrderResponse::fromXML($this->_invoke('GetOrder'));
-    }
+    public function getOrder($request);
+
 
     /**
      * Get Service Status
@@ -45,16 +41,13 @@ class Mock implements AmazonInterface
      * 		takes no input.
      *
      * @param mixed $request array of parameters for Model_GetServiceStatus request or Model_GetServiceStatus object itself
-     * @see AmazonModelAbstract_GetServiceStatus
+     * @see AmazonModelAbstract_GetServiceStatusRequest
      * @return Model_GetServiceStatusResponse
      *
      * @throws AmazonException
      */
-    public function getServiceStatus($request)
-    {
-        
-        return Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
-    }
+    public function getServiceStatus($request);
+
 
     /**
      * List Order Items
@@ -62,16 +55,13 @@ class Mock implements AmazonInterface
      *         given order id (only a single Amazon order id is allowed).
      *
      * @param mixed $request array of parameters for Model_ListOrderItems request or Model_ListOrderItems object itself
-     * @see AmazonModelAbstract_ListOrderItems
+     * @see AmazonModelAbstract_ListOrderItemsRequest
      * @return Model_ListOrderItemsResponse
      *
      * @throws AmazonException
      */
-    public function listOrderItems($request)
-    {
-        
-        return Model_ListOrderItemsResponse::fromXML($this->_invoke('ListOrderItems'));
-    }
+    public function listOrderItems($request);
+
 
     /**
      * List Order Items By Next Token
@@ -80,32 +70,26 @@ class Mock implements AmazonInterface
      *         retrive the next batch of items for that order.
      *
      * @param mixed $request array of parameters for Model_ListOrderItemsByNextToken request or Model_ListOrderItemsByNextToken object itself
-     * @see AmazonModelAbstract_ListOrderItemsByNextToken
+     * @see AmazonModelAbstract_ListOrderItemsByNextTokenRequest
      * @return Model_ListOrderItemsByNextTokenResponse
      *
      * @throws AmazonException
      */
-    public function listOrderItemsByNextToken($request)
-    {
-        
-        return Model_ListOrderItemsByNextTokenResponse::fromXML($this->_invoke('ListOrderItemsByNextToken'));
-    }
+    public function listOrderItemsByNextToken($request);
+
 
     /**
      * List Orders
      * ListOrders can be used to find orders that meet the specified criteria.
      *
      * @param mixed $request array of parameters for Model_ListOrders request or Model_ListOrders object itself
-     * @see AmazonModelAbstract_ListOrders
+     * @see AmazonModelAbstract_ListOrdersRequest
      * @return Model_ListOrdersResponse
      *
      * @throws AmazonException
      */
-    public function listOrders($request)
-    {
-        
-        return Model_ListOrdersResponse::fromXML($this->_invoke('ListOrders'));
-    }
+    public function listOrders($request);
+
 
     /**
      * List Orders By Next Token
@@ -114,22 +98,11 @@ class Mock implements AmazonInterface
      *         can be used to retrieve those other orders using that nextToken.
      *
      * @param mixed $request array of parameters for Model_ListOrdersByNextToken request or Model_ListOrdersByNextToken object itself
-     * @see AmazonModelAbstract_ListOrdersByNextToken
+     * @see AmazonModelAbstract_ListOrdersByNextTokenRequest
      * @return Model_ListOrdersByNextTokenResponse
      *
      * @throws AmazonException
      */
-    public function listOrdersByNextToken($request)
-    {
-        
-        return Model_ListOrdersByNextTokenResponse::fromXML($this->_invoke('ListOrdersByNextToken'));
-    }
-
-    // Private API ------------------------------------------------------------//
-
-    private function _invoke($actionName)
-    {
-        return $xml = file_get_contents(dirname(__FILE__) . '/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
-    }
+    public function listOrdersByNextToken($request);
 
 }

@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,30 +18,31 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem
- * 
+ * PaymentExecutionDetailItem
+ *
  * Properties:
  * <ul>
- * 
- * <li>Payment: MarketplaceWebServiceOrders_Model_Money</li>
+ *
+ * <li>Payment: Money</li>
  * <li>PaymentMethod: string</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem extends MarketplaceWebServiceOrders_Model {
+ class PaymentExecutionDetailItem extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'Payment' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'Payment' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
     'PaymentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
@@ -60,7 +61,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Payment property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money payment
+     * @param Money payment
      * @return this instance
      */
     public function setPayment($value)
@@ -72,7 +73,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Payment is set.
      *
-     * @return true if Payment is set.
+     * @return boolean TRUE if Payment is set.
      */
     public function isSetPayment()
     {
@@ -118,7 +119,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PaymentMethod is set.
      *
-     * @return true if PaymentMethod is set.
+     * @return boolean TRUE if PaymentMethod is set.
      */
     public function isSetPaymentMethod()
     {

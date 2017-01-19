@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,18 +18,19 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenRequest
- * 
+ * ListOrdersByNextTokenRequest
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>NextToken: string</li>
@@ -37,7 +38,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenRequest extends MarketplaceWebServiceOrders_Model {
+ class ListOrdersByNextTokenRequest extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
@@ -74,7 +75,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SellerId is set.
      *
-     * @return true if SellerId is set.
+     * @return boolean TRUE if SellerId is set.
      */
     public function isSetSellerId()
     {
@@ -120,7 +121,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MWSAuthToken is set.
      *
-     * @return true if MWSAuthToken is set.
+     * @return boolean TRUE if MWSAuthToken is set.
      */
     public function isSetMWSAuthToken()
     {
@@ -166,7 +167,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NextToken is set.
      *
-     * @return true if NextToken is set.
+     * @return boolean TRUE if NextToken is set.
      */
     public function isSetNextToken()
     {

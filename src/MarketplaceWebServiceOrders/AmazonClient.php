@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -17,16 +17,14 @@
  * Generated: Fri Sep 25 20:06:28 GMT 2015
  */
 
-/**
- *  @see MarketplaceWebServiceOrders_Interface
- */
-require_once (dirname(__FILE__) . '/Interface.php');
+namespace Webcom\MarketPlaceWebServiceOrders;
+use Webcom\MarketPlaceWebServiceOrders\Model as AmazonModel;
 
 /**
- * MarketplaceWebServiceOrders_Client is an implementation of MarketplaceWebServiceOrders
+ * AmazonClient is an implementation of MarketplaceWebServiceOrders
  *
  */
-class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_Interface
+class AmazonClient implements AmazonInterface
 {
 
     const SERVICE_VERSION = '2013-09-01';
@@ -56,24 +54,24 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      * Get Order
      * This operation takes up to 50 order ids and returns the corresponding orders.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_GetOrder request or MarketplaceWebServiceOrders_Model_GetOrder object itself
-     * @see MarketplaceWebServiceOrders_Model_GetOrderRequest
-     * @return MarketplaceWebServiceOrders_Model_GetOrderResponse
+     * @param mixed $request array of parameters for AmazonModel\GetOrder request or AmazonModel\GetOrder object itself
+     * @see AmazonModelAbstract_GetOrderRequest
+     * @return AmazonModel\GetOrderResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws AmazonException
      */
     public function getOrder($request)
     {
-        if (!($request instanceof MarketplaceWebServiceOrders_Model_GetOrderRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetOrderRequest.php');
-            $request = new MarketplaceWebServiceOrders_Model_GetOrderRequest($request);
+        if (!($request instanceof AmazonModel\GetOrderRequest)) {
+
+            $request = new AmazonModel\GetOrderRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetOrder';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetOrderResponse.php');
-        $response = MarketplaceWebServiceOrders_Model_GetOrderResponse::fromXML($httpResponse['ResponseBody']);
+
+        $response = AmazonModel\GetOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -105,24 +103,24 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      * Returns the service status of a particular MWS API section. The operation
      * 		takes no input.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_GetServiceStatus request or MarketplaceWebServiceOrders_Model_GetServiceStatus object itself
-     * @see MarketplaceWebServiceOrders_Model_GetServiceStatusRequest
-     * @return MarketplaceWebServiceOrders_Model_GetServiceStatusResponse
+     * @param mixed $request array of parameters for AmazonModel\GetServiceStatus request or AmazonModel\GetServiceStatus object itself
+     * @see AmazonModelAbstract_GetServiceStatusRequest
+     * @return AmazonModel\GetServiceStatusResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws AmazonException
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MarketplaceWebServiceOrders_Model_GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
-            $request = new MarketplaceWebServiceOrders_Model_GetServiceStatusRequest($request);
+        if (!($request instanceof AmazonModel\GetServiceStatusRequest)) {
+
+            $request = new AmazonModel\GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MarketplaceWebServiceOrders_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+
+        $response = AmazonModel\GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -151,24 +149,24 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      * This operation can be used to list the items of the order indicated by the
      *         given order id (only a single Amazon order id is allowed).
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrderItems request or MarketplaceWebServiceOrders_Model_ListOrderItems object itself
-     * @see MarketplaceWebServiceOrders_Model_ListOrderItemsRequest
-     * @return MarketplaceWebServiceOrders_Model_ListOrderItemsResponse
+     * @param mixed $request array of parameters for AmazonModel\ListOrderItems request or AmazonModel\ListOrderItems object itself
+     * @see AmazonModelAbstract_ListOrderItemsRequest
+     * @return AmazonModel\ListOrderItemsResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws AmazonException
      */
     public function listOrderItems($request)
     {
-        if (!($request instanceof MarketplaceWebServiceOrders_Model_ListOrderItemsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListOrderItemsRequest.php');
-            $request = new MarketplaceWebServiceOrders_Model_ListOrderItemsRequest($request);
+        if (!($request instanceof AmazonModel\ListOrderItemsRequest)) {
+
+            $request = new AmazonModel\ListOrderItemsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrderItems';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListOrderItemsResponse.php');
-        $response = MarketplaceWebServiceOrders_Model_ListOrderItemsResponse::fromXML($httpResponse['ResponseBody']);
+
+        $response = AmazonModel\ListOrderItemsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -201,24 +199,24 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      *         provide a nextToken. That nextToken can be used with this operation to
      *         retrive the next batch of items for that order.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrderItemsByNextToken request or MarketplaceWebServiceOrders_Model_ListOrderItemsByNextToken object itself
-     * @see MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenRequest
-     * @return MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResponse
+     * @param mixed $request array of parameters for AmazonModel\ListOrderItemsByNextToken request or AmazonModel\ListOrderItemsByNextToken object itself
+     * @see AmazonModelAbstract_ListOrderItemsByNextTokenRequest
+     * @return AmazonModel\ListOrderItemsByNextTokenResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws AmazonException
      */
     public function listOrderItemsByNextToken($request)
     {
-        if (!($request instanceof MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListOrderItemsByNextTokenRequest.php');
-            $request = new MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenRequest($request);
+        if (!($request instanceof AmazonModel\ListOrderItemsByNextTokenRequest)) {
+
+            $request = new AmazonModel\ListOrderItemsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrderItemsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListOrderItemsByNextTokenResponse.php');
-        $response = MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+
+        $response = AmazonModel\ListOrderItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -249,24 +247,24 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      * List Orders
      * ListOrders can be used to find orders that meet the specified criteria.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrders request or MarketplaceWebServiceOrders_Model_ListOrders object itself
-     * @see MarketplaceWebServiceOrders_Model_ListOrdersRequest
-     * @return MarketplaceWebServiceOrders_Model_ListOrdersResponse
+     * @param mixed $request array of parameters for AmazonModel\ListOrders request or AmazonModel\ListOrders object itself
+     * @see AmazonModelAbstract_ListOrdersRequest
+     * @return AmazonModel\ListOrdersResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws AmazonException
      */
     public function listOrders($request)
     {
-        if (!($request instanceof MarketplaceWebServiceOrders_Model_ListOrdersRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListOrdersRequest.php');
-            $request = new MarketplaceWebServiceOrders_Model_ListOrdersRequest($request);
+        if (!($request instanceof AmazonModel\ListOrdersRequest)) {
+
+            $request = new AmazonModel\ListOrdersRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrders';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListOrdersResponse.php');
-        $response = MarketplaceWebServiceOrders_Model_ListOrdersResponse::fromXML($httpResponse['ResponseBody']);
+        //
+        $response = AmazonModel\ListOrdersResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -332,24 +330,24 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      *         than returned that matched the given filter criteria, ListOrdersByNextToken
      *         can be used to retrieve those other orders using that nextToken.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrdersByNextToken request or MarketplaceWebServiceOrders_Model_ListOrdersByNextToken object itself
-     * @see MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenRequest
-     * @return MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenResponse
+     * @param mixed $request array of parameters for AmazonModel\ListOrdersByNextToken request or AmazonModel\ListOrdersByNextToken object itself
+     * @see AmazonModelAbstract_ListOrdersByNextTokenRequest
+     * @return AmazonModel\ListOrdersByNextTokenResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws AmazonException
      */
     public function listOrdersByNextToken($request)
     {
-        if (!($request instanceof MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListOrdersByNextTokenRequest.php');
-            $request = new MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenRequest($request);
+        if (!($request instanceof AmazonModel\ListOrdersByNextTokenRequest)) {
+
+            $request = new AmazonModel\ListOrdersByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrdersByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListOrdersByNextTokenResponse.php');
-        $response = MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+
+        $response = AmazonModel\ListOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -417,7 +415,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
             $attributes = array ();
         }
 
-        $this->_config['UserAgent'] = 
+        $this->_config['UserAgent'] =
             $this->constructUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
@@ -430,7 +428,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
             throw new InvalidArgumentException('$applicationVersion cannot be null');
         }
 
-        $userAgent = 
+        $userAgent =
             $this->quoteApplicationName($applicationName)
             . '/'
             . $this->quoteApplicationVersion($applicationVersion);
@@ -537,8 +535,8 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
-                throw new MarketplaceWebServiceOrders_Exception(
+
+                throw new AmazonException(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
             }
@@ -557,11 +555,11 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
                 throw $this->_reportAnyErrors($response['ResponseBody'],
                     $status, $response['ResponseHeaderMetadata']);
             }
-        } catch (MarketplaceWebServiceOrders_Exception $se) {
+        } catch (AmazonException $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
-            throw new MarketplaceWebServiceOrders_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+
+            throw new AmazonException(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
@@ -587,8 +585,8 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
-        return new MarketplaceWebServiceOrders_Exception($exProps);
+
+        return new AmazonException($exProps);
     }
 
 
@@ -637,7 +635,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $query);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $allHeadersStr);
-        curl_setopt($ch, CURLOPT_HEADER, true); 
+        curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1)
         {
@@ -652,21 +650,21 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         $response = curl_exec($ch);
 
         if($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
+
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
-            throw new MarketplaceWebServiceOrders_Exception($exProps);
+            throw new AmazonException($exProps);
         }
 
         curl_close($ch);
         return $this->_extractHeadersAndBody($response);
     }
-    
+
     /**
      * This method will attempt to extract the headers and body of our response.
      * We need to split the raw response string by 2 'CRLF's.  2 'CRLF's should indicate the separation of the response header
-     * from the response body.  However in our case we have some circumstances (certain client proxies) that result in 
+     * from the response body.  However in our case we have some circumstances (certain client proxies) that result in
      * multiple responses concatenated.  We could encounter a response like
      *
      * HTTP/1.1 100 Continue
@@ -686,36 +684,36 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0; 
-                $count < count($responseComponents) && $body == null; 
+        for ($count = 0;
+                $count < count($responseComponents) && $body == null;
                 $count++) {
-            
+
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
-            
-            if($responseStatus != null && 
+
+            if($responseStatus != null &&
                     $this->_httpHeadersHaveContent($headers)){
-                
+
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
             }
         }
-        
+
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
+
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
-            throw new MarketplaceWebServiceOrders_Exception($exProps);
+            throw new AmazonException($exProps);
         }
 
         return array(
-                'Status' => $responseStatus, 
-                'ResponseBody' => $body, 
+                'Status' => $responseStatus,
+                'ResponseBody' => $body,
                 'ResponseHeaderMetadata' => $responseHeaderMetadata);
     }
-    
+
     /**
      * parse the status line of a header string for the proper format and
      * return the status code
@@ -725,14 +723,14 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      * returns String statusCode or null if the status line can't be parsed
      */
     private function _extractHttpStatusCode($headers){
-    	$statusCode = null; 
+    	$statusCode = null;
         if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
         	//The matches array [entireMatchString, protocol, statusCode, the rest]
-            $statusCode = $matches[2]; 
+            $statusCode = $matches[2];
         }
         return $statusCode;
     }
-    
+
     /**
      * Tries to determine some valid headers indicating this response
      * has content.  In this case
@@ -742,7 +740,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
-    
+
     /**
     *  extract a ResponseHeaderMetadata object from the raw headers
     */
@@ -767,9 +765,9 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
                 }
             }
         }
- 
-        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
-        return new MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata(
+
+
+        return new AmazonModel\ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],
           $headers['x-mws-timestamp'],
@@ -798,7 +796,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
             $delay = (int) (pow(4, $retries) * 100000);
             usleep($delay);
             return true;
-        } 
+        }
         return false;
     }
 
@@ -871,7 +869,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -914,7 +912,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception ("Non-supported signing method specified");
+            throw new \Exception ("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,51 +18,52 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_OrderItem
- * 
+ * OrderItem
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>ASIN: string</li>
  * <li>SellerSKU: string</li>
  * <li>OrderItemId: string</li>
  * <li>Title: string</li>
  * <li>QuantityOrdered: int</li>
  * <li>QuantityShipped: int</li>
- * <li>PointsGranted: MarketplaceWebServiceOrders_Model_PointsGrantedDetail</li>
- * <li>ItemPrice: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ShippingPrice: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>GiftWrapPrice: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ItemTax: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ShippingTax: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>GiftWrapTax: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ShippingDiscount: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>PromotionDiscount: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>PointsGranted: PointsGrantedDetail</li>
+ * <li>ItemPrice: Money</li>
+ * <li>ShippingPrice: Money</li>
+ * <li>GiftWrapPrice: Money</li>
+ * <li>ItemTax: Money</li>
+ * <li>ShippingTax: Money</li>
+ * <li>GiftWrapTax: Money</li>
+ * <li>ShippingDiscount: Money</li>
+ * <li>PromotionDiscount: Money</li>
  * <li>PromotionIds: array</li>
- * <li>CODFee: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>CODFeeDiscount: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>CODFee: Money</li>
+ * <li>CODFeeDiscount: Money</li>
  * <li>GiftMessageText: string</li>
  * <li>GiftWrapLevel: string</li>
- * <li>InvoiceData: MarketplaceWebServiceOrders_Model_InvoiceData</li>
+ * <li>InvoiceData: InvoiceData</li>
  * <li>ConditionNote: string</li>
  * <li>ConditionId: string</li>
  * <li>ConditionSubtypeId: string</li>
  * <li>ScheduledDeliveryStartDate: string</li>
  * <li>ScheduledDeliveryEndDate: string</li>
  * <li>PriceDesignation: string</li>
- * <li>BuyerCustomizedInfo: MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail</li>
+ * <li>BuyerCustomizedInfo: BuyerCustomizedInfoDetail</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_OrderItem extends MarketplaceWebServiceOrders_Model {
+ class OrderItem extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
@@ -73,28 +74,28 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'Title' => array('FieldValue' => null, 'FieldType' => 'string'),
     'QuantityOrdered' => array('FieldValue' => null, 'FieldType' => 'int'),
     'QuantityShipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PointsGranted' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_PointsGrantedDetail'),
-    'ItemPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ShippingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'GiftWrapPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ItemTax' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ShippingTax' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'GiftWrapTax' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ShippingDiscount' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'PromotionDiscount' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'PointsGranted' => array('FieldValue' => null, 'FieldType' => 'Model\PointsGrantedDetail'),
+    'ItemPrice' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
+    'ShippingPrice' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
+    'GiftWrapPrice' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
+    'ItemTax' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
+    'ShippingTax' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
+    'GiftWrapTax' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
+    'ShippingDiscount' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
+    'PromotionDiscount' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
     'PromotionIds' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'PromotionId'),
-    'CODFee' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'CODFeeDiscount' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'CODFee' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
+    'CODFeeDiscount' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
     'GiftMessageText' => array('FieldValue' => null, 'FieldType' => 'string'),
     'GiftWrapLevel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'InvoiceData' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_InvoiceData'),
+    'InvoiceData' => array('FieldValue' => null, 'FieldType' => 'Model\InvoiceData'),
     'ConditionNote' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ConditionId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ConditionSubtypeId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ScheduledDeliveryStartDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ScheduledDeliveryEndDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'PriceDesignation' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerCustomizedInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail'),
+    'BuyerCustomizedInfo' => array('FieldValue' => null, 'FieldType' => 'Model\BuyerCustomizedInfoDetail'),
     );
     parent::__construct($data);
     }
@@ -124,7 +125,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ASIN is set.
      *
-     * @return true if ASIN is set.
+     * @return boolean TRUE if ASIN is set.
      */
     public function isSetASIN()
     {
@@ -170,7 +171,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SellerSKU is set.
      *
-     * @return true if SellerSKU is set.
+     * @return boolean TRUE if SellerSKU is set.
      */
     public function isSetSellerSKU()
     {
@@ -216,7 +217,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderItemId is set.
      *
-     * @return true if OrderItemId is set.
+     * @return boolean TRUE if OrderItemId is set.
      */
     public function isSetOrderItemId()
     {
@@ -262,7 +263,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Title is set.
      *
-     * @return true if Title is set.
+     * @return boolean TRUE if Title is set.
      */
     public function isSetTitle()
     {
@@ -308,7 +309,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if QuantityOrdered is set.
      *
-     * @return true if QuantityOrdered is set.
+     * @return boolean TRUE if QuantityOrdered is set.
      */
     public function isSetQuantityOrdered()
     {
@@ -354,7 +355,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if QuantityShipped is set.
      *
-     * @return true if QuantityShipped is set.
+     * @return boolean TRUE if QuantityShipped is set.
      */
     public function isSetQuantityShipped()
     {
@@ -388,7 +389,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PointsGranted property.
      *
-     * @param MarketplaceWebServiceOrders_Model_PointsGrantedDetail pointsGranted
+     * @param PointsGrantedDetail pointsGranted
      * @return this instance
      */
     public function setPointsGranted($value)
@@ -400,7 +401,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PointsGranted is set.
      *
-     * @return true if PointsGranted is set.
+     * @return boolean TRUE if PointsGranted is set.
      */
     public function isSetPointsGranted()
     {
@@ -434,7 +435,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ItemPrice property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money itemPrice
+     * @param Money itemPrice
      * @return this instance
      */
     public function setItemPrice($value)
@@ -446,7 +447,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ItemPrice is set.
      *
-     * @return true if ItemPrice is set.
+     * @return boolean TRUE if ItemPrice is set.
      */
     public function isSetItemPrice()
     {
@@ -480,7 +481,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingPrice property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money shippingPrice
+     * @param Money shippingPrice
      * @return this instance
      */
     public function setShippingPrice($value)
@@ -492,7 +493,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShippingPrice is set.
      *
-     * @return true if ShippingPrice is set.
+     * @return boolean TRUE if ShippingPrice is set.
      */
     public function isSetShippingPrice()
     {
@@ -526,7 +527,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GiftWrapPrice property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money giftWrapPrice
+     * @param Money giftWrapPrice
      * @return this instance
      */
     public function setGiftWrapPrice($value)
@@ -538,7 +539,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if GiftWrapPrice is set.
      *
-     * @return true if GiftWrapPrice is set.
+     * @return boolean TRUE if GiftWrapPrice is set.
      */
     public function isSetGiftWrapPrice()
     {
@@ -572,7 +573,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ItemTax property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money itemTax
+     * @param Money itemTax
      * @return this instance
      */
     public function setItemTax($value)
@@ -584,7 +585,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ItemTax is set.
      *
-     * @return true if ItemTax is set.
+     * @return boolean TRUE if ItemTax is set.
      */
     public function isSetItemTax()
     {
@@ -618,7 +619,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingTax property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money shippingTax
+     * @param Money shippingTax
      * @return this instance
      */
     public function setShippingTax($value)
@@ -630,7 +631,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShippingTax is set.
      *
-     * @return true if ShippingTax is set.
+     * @return boolean TRUE if ShippingTax is set.
      */
     public function isSetShippingTax()
     {
@@ -664,7 +665,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GiftWrapTax property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money giftWrapTax
+     * @param Money giftWrapTax
      * @return this instance
      */
     public function setGiftWrapTax($value)
@@ -676,7 +677,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if GiftWrapTax is set.
      *
-     * @return true if GiftWrapTax is set.
+     * @return boolean TRUE if GiftWrapTax is set.
      */
     public function isSetGiftWrapTax()
     {
@@ -710,7 +711,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingDiscount property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money shippingDiscount
+     * @param Money shippingDiscount
      * @return this instance
      */
     public function setShippingDiscount($value)
@@ -722,7 +723,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShippingDiscount is set.
      *
-     * @return true if ShippingDiscount is set.
+     * @return boolean TRUE if ShippingDiscount is set.
      */
     public function isSetShippingDiscount()
     {
@@ -756,7 +757,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PromotionDiscount property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money promotionDiscount
+     * @param Money promotionDiscount
      * @return this instance
      */
     public function setPromotionDiscount($value)
@@ -768,7 +769,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PromotionDiscount is set.
      *
-     * @return true if PromotionDiscount is set.
+     * @return boolean TRUE if PromotionDiscount is set.
      */
     public function isSetPromotionDiscount()
     {
@@ -829,7 +830,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PromotionIds is set.
      *
-     * @return true if PromotionIds is set.
+     * @return boolean TRUE if PromotionIds is set.
      */
     public function isSetPromotionIds()
     {
@@ -866,7 +867,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CODFee property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money codFee
+     * @param Money codFee
      * @return this instance
      */
     public function setCODFee($value)
@@ -878,7 +879,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CODFee is set.
      *
-     * @return true if CODFee is set.
+     * @return boolean TRUE if CODFee is set.
      */
     public function isSetCODFee()
     {
@@ -912,7 +913,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CODFeeDiscount property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money codFeeDiscount
+     * @param Money codFeeDiscount
      * @return this instance
      */
     public function setCODFeeDiscount($value)
@@ -924,7 +925,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CODFeeDiscount is set.
      *
-     * @return true if CODFeeDiscount is set.
+     * @return boolean TRUE if CODFeeDiscount is set.
      */
     public function isSetCODFeeDiscount()
     {
@@ -970,7 +971,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if GiftMessageText is set.
      *
-     * @return true if GiftMessageText is set.
+     * @return boolean TRUE if GiftMessageText is set.
      */
     public function isSetGiftMessageText()
     {
@@ -1016,7 +1017,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if GiftWrapLevel is set.
      *
-     * @return true if GiftWrapLevel is set.
+     * @return boolean TRUE if GiftWrapLevel is set.
      */
     public function isSetGiftWrapLevel()
     {
@@ -1050,7 +1051,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the InvoiceData property.
      *
-     * @param MarketplaceWebServiceOrders_Model_InvoiceData invoiceData
+     * @param InvoiceData invoiceData
      * @return this instance
      */
     public function setInvoiceData($value)
@@ -1062,7 +1063,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if InvoiceData is set.
      *
-     * @return true if InvoiceData is set.
+     * @return boolean TRUE if InvoiceData is set.
      */
     public function isSetInvoiceData()
     {
@@ -1108,7 +1109,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ConditionNote is set.
      *
-     * @return true if ConditionNote is set.
+     * @return boolean TRUE if ConditionNote is set.
      */
     public function isSetConditionNote()
     {
@@ -1154,7 +1155,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ConditionId is set.
      *
-     * @return true if ConditionId is set.
+     * @return boolean TRUE if ConditionId is set.
      */
     public function isSetConditionId()
     {
@@ -1200,7 +1201,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ConditionSubtypeId is set.
      *
-     * @return true if ConditionSubtypeId is set.
+     * @return boolean TRUE if ConditionSubtypeId is set.
      */
     public function isSetConditionSubtypeId()
     {
@@ -1246,7 +1247,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ScheduledDeliveryStartDate is set.
      *
-     * @return true if ScheduledDeliveryStartDate is set.
+     * @return boolean TRUE if ScheduledDeliveryStartDate is set.
      */
     public function isSetScheduledDeliveryStartDate()
     {
@@ -1292,7 +1293,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ScheduledDeliveryEndDate is set.
      *
-     * @return true if ScheduledDeliveryEndDate is set.
+     * @return boolean TRUE if ScheduledDeliveryEndDate is set.
      */
     public function isSetScheduledDeliveryEndDate()
     {
@@ -1338,7 +1339,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PriceDesignation is set.
      *
-     * @return true if PriceDesignation is set.
+     * @return boolean TRUE if PriceDesignation is set.
      */
     public function isSetPriceDesignation()
     {
@@ -1372,7 +1373,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the BuyerCustomizedInfo property.
      *
-     * @param MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail buyerCustomizedInfo
+     * @param BuyerCustomizedInfoDetail buyerCustomizedInfo
      * @return this instance
      */
     public function setBuyerCustomizedInfo($value)
@@ -1384,7 +1385,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BuyerCustomizedInfo is set.
      *
-     * @return true if BuyerCustomizedInfo is set.
+     * @return boolean TRUE if BuyerCustomizedInfo is set.
      */
     public function isSetBuyerCustomizedInfo()
     {

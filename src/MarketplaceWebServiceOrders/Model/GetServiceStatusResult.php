@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,18 +18,19 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_GetServiceStatusResult
- * 
+ * GetServiceStatusResult
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Status: string</li>
  * <li>Timestamp: string</li>
  * <li>MessageId: string</li>
@@ -38,7 +39,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends MarketplaceWebServiceOrders_Model {
+ class GetServiceStatusResult extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
@@ -46,7 +47,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
     'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Messages' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_Message'), 'ListMemberName' => 'Message'),
+    'Messages' => array('FieldValue' => array(), 'FieldType' => array('Message'), 'ListMemberName' => 'Model\Message'),
     );
     parent::__construct($data);
     }
@@ -76,7 +77,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Status is set.
      *
-     * @return true if Status is set.
+     * @return boolean TRUE if Status is set.
      */
     public function isSetStatus()
     {
@@ -122,7 +123,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Timestamp is set.
      *
-     * @return true if Timestamp is set.
+     * @return boolean TRUE if Timestamp is set.
      */
     public function isSetTimestamp()
     {
@@ -168,7 +169,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MessageId is set.
      *
-     * @return true if MessageId is set.
+     * @return boolean TRUE if MessageId is set.
      */
     public function isSetMessageId()
     {
@@ -229,7 +230,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Messages is set.
      *
-     * @return true if Messages is set.
+     * @return boolean TRUE if Messages is set.
      */
     public function isSetMessages()
     {

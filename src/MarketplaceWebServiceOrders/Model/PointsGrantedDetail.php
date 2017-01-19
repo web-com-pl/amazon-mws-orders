@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,31 +18,32 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_PointsGrantedDetail
- * 
+ * PointsGrantedDetail
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>PointsNumber: int</li>
- * <li>PointsMonetaryValue: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>PointsMonetaryValue: Money</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_PointsGrantedDetail extends MarketplaceWebServiceOrders_Model {
+ class PointsGrantedDetail extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'PointsNumber' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
     );
     parent::__construct($data);
     }
@@ -72,7 +73,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PointsNumber is set.
      *
-     * @return true if PointsNumber is set.
+     * @return boolean TRUE if PointsNumber is set.
      */
     public function isSetPointsNumber()
     {
@@ -106,7 +107,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PointsMonetaryValue property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money pointsMonetaryValue
+     * @param Money pointsMonetaryValue
      * @return this instance
      */
     public function setPointsMonetaryValue($value)
@@ -118,7 +119,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PointsMonetaryValue is set.
      *
-     * @return true if PointsMonetaryValue is set.
+     * @return boolean TRUE if PointsMonetaryValue is set.
      */
     public function isSetPointsMonetaryValue()
     {

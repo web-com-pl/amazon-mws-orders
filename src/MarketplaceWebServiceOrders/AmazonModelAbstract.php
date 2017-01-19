@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -17,10 +17,12 @@
  * Generated: Fri Sep 25 20:06:28 GMT 2015
  */
 
+namespace Webcom\MarketPlaceWebServiceOrders;
+
 /**
- * MarketplaceWebServiceOrders_Model - base class for all model classes
+ * Model - base class for all model classes
  */
-abstract class MarketplaceWebServiceOrders_Model
+abstract class AmazonModelAbstract
 {
 
     /** @var array */
@@ -28,8 +30,8 @@ abstract class MarketplaceWebServiceOrders_Model
 
     /**
      * Construct new model class
-     * 
-     * @param mixed $data - DOMElement or Associative Array to construct from. 
+     *
+     * @param mixed $data - DOMElement or Associative Array to construct from.
      */
     public function __construct($data = null)
     {
@@ -39,41 +41,41 @@ abstract class MarketplaceWebServiceOrders_Model
             } elseif ($this->_isDOMElement($data)) {
                 $this->_fromDOMElement($data);
             } else {
-                throw new Exception ("Unable to construct from provided data. Please be sure to pass associative array or DOMElement");
+                throw new \Exception ("Unable to construct from provided data. Please be sure to pass associative array or DOMElement");
             }
         }
     }
 
     /**
-     * Support for virtual properties getters. 
-     * 
+     * Support for virtual properties getters.
+     *
      * Virtual property call example:
-     * 
+     *
      *   $action->Property
-     * 
-     * Direct getter(preferred): 
-     * 
-     *   $action->getProperty()      
-     * 
+     *
+     * Direct getter(preferred):
+     *
+     *   $action->getProperty()
+     *
      * @param string $propertyName name of the property
      */
     public function __get($propertyName)
     {
-       $getter = "get$propertyName"; 
+       $getter = "get$propertyName";
        return $this->$getter();
     }
 
     /**
-     * Support for virtual properties setters. 
+     * Support for virtual properties setters.
      *
      * Virtual property call example:
-     * 
+     *
      *   $action->Property  = 'ABC'
-     * 
+     *
      * Direct setter (preferred):
-     * 
-     *   $action->setProperty('ABC')     
-     * 
+     *
+     *   $action->setProperty('ABC')
+     *
      * @param string $propertyName name of the property
      */
     public function __set($propertyName, $propertyValue)
@@ -84,25 +86,25 @@ abstract class MarketplaceWebServiceOrders_Model
     }
 
     /**
-     * Construct from DOMElement 
-     * 
-     * This function iterates over object fields and queries XML 
-     * for corresponding tag value. If query succeeds, value extracted 
-     * from xml, and field value properly constructed based on field type. 
+     * Construct from DOMElement
+     *
+     * This function iterates over object fields and queries XML
+     * for corresponding tag value. If query succeeds, value extracted
+     * from xml, and field value properly constructed based on field type.
      *
      * Field types defined as arrays always constructed as arrays,
      * even if XML contains a single element - to make sure that
      * data structure is predictable, and no is_array checks are
      * required.
-     * 
+     *
      * @param DOMElement $dom XML element to construct from
      */
-    private function _fromDOMElement(DOMElement $dom)
+    private function _fromDOMElement(\DOMElement $dom)
     {
-        $xpath = new DOMXPath($dom->ownerDocument);
+        $xpath = new \DOMXPath($dom->ownerDocument);
 
         foreach ($this->_fields as $fieldName => $field) {
-            $fieldType = $field['FieldType'];   
+            $fieldType = $field['FieldType'];
             if (is_array($fieldType)) {
                 if ($fieldType[0] == "object") {
                     $elements = $dom->childNodes;
@@ -117,11 +119,12 @@ abstract class MarketplaceWebServiceOrders_Model
                        $elements = $xpath->query("./*[local-name()='$fieldName']", $dom);
                     }
                     if ($elements->length >= 1) {
-                        require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType[0]) . ".php");
+
                         foreach ($elements as $element) {
-                            $this->_fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
+                            $class = '\\' . __NAMESPACE__ . '\\' . $fieldType[0];
+                            $this->_fields[$fieldName]['FieldValue'][] = new $class($element);
                         }
-                    } 
+                    }
                 } else {
                     if (isset($field['ListMemberName'])) {
                         $memberName = $field['ListMemberName'];
@@ -140,9 +143,10 @@ abstract class MarketplaceWebServiceOrders_Model
                 if ($this->_isComplexType($fieldType)) {
                     $elements = $xpath->query("./*[local-name()='$fieldName']", $dom);
                     if ($elements->length == 1) {
-                        require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType) . ".php");
-                        $this->_fields[$fieldName]['FieldValue'] = new $fieldType($elements->item(0));
-                    }   
+
+                        $class = '\\' . __NAMESPACE__ . '\\' . $fieldType;
+                        $this->_fields[$fieldName]['FieldValue'] = new $class($elements->item(0));
+                    }
                 } else {
                     if($fieldType[0] == "@") {
                         $attribute = $xpath->query("./@$fieldName", $dom);
@@ -177,48 +181,47 @@ abstract class MarketplaceWebServiceOrders_Model
 
     /**
      * Construct from Associative Array
-     * 
-     * 
+     *
+     *
      * @param array $array associative array to construct from
      */
     private function _fromAssociativeArray(array $array)
     {
         foreach ($this->_fields as $fieldName => $field) {
-            $fieldType = $field['FieldType'];   
+            $fieldType = $field['FieldType'];
             if (is_array($fieldType)) {
                 if ($this->_isComplexType($fieldType[0])) {
-                    if (array_key_exists($fieldName, $array)) { 
+                    if (array_key_exists($fieldName, $array)) {
                         $elements = $array[$fieldName];
                         if (!$this->_isNumericArray($elements)) {
-                            $elements =  array($elements);    
+                            $elements =  array($elements);
                         }
                         if (count ($elements) >= 1) {
-                            require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType[0]) . ".php");
+
 
                             foreach ($elements as $element) {
                                 $this->_fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
                             }
                         }
-                    } 
+                    }
                 } else {
                     if (array_key_exists($fieldName, $array)) {
                         $elements = $array[$fieldName];
                         if (!$this->_isNumericArray($elements)) {
-                            $elements =  array($elements);    
+                            $elements =  array($elements);
                         }
                         if (count ($elements) >= 1) {
                             foreach ($elements as $element) {
                                 $this->_fields[$fieldName]['FieldValue'][] = $element;
                             }
-                        }  
+                        }
                     }
                 }
             } else {
                  if ($this->_isComplexType($fieldType)) {
                     if (array_key_exists($fieldName, $array)) {
-                        require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType) . ".php");
                         $this->_fields[$fieldName]['FieldValue'] = new $fieldType($array[$fieldName]);
-                    }   
+                    }
                  } else {
                     if (array_key_exists($fieldName, $array)) {
                         $this->_fields[$fieldName]['FieldValue'] = $array[$fieldName];
@@ -261,7 +264,7 @@ abstract class MarketplaceWebServiceOrders_Model
             for($i = 1; $i <= count($fieldValue); $i++) {
                 $indexedPrefix = $itemPrefix . $i . '.';
                 $memberType = $fieldType[0];
-                $arr = array_merge($arr, 
+                $arr = array_merge($arr,
                     $this->__toQueryParameterArray($indexedPrefix,
                     $memberType, $fieldValue[$i - 1], null));
             }
@@ -285,16 +288,16 @@ abstract class MarketplaceWebServiceOrders_Model
 
     /**
      * XML fragment representation of this object
-     * Note, name of the root determined by caller 
+     * Note, name of the root determined by caller
      * This fragment returns inner fields representation only
      * @return string XML fragment for this object
      */
-    protected function _toXMLFragment() 
+    protected function _toXMLFragment()
     {
         $xml = "";
         foreach ($this->_fields as $fieldName => $field) {
             $fieldValue = $field['FieldValue'];
-            if (!is_null($fieldValue) && $field['FieldType'] != "MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata") {
+            if (!is_null($fieldValue) && $field['FieldType'] != "Model_ResponseHeaderMetadata") {
                 $fieldType = $field['FieldType'];
                 if (is_array($fieldType)) {
                     if ($fieldType[0] == "object") {
@@ -379,28 +382,32 @@ abstract class MarketplaceWebServiceOrders_Model
      * Escape special XML characters
      * @return string with escaped XML characters
      */
-    private function _escapeXML($str) 
+    private function _escapeXML($str)
     {
-        $from = array( "&", "<", ">", "'", "\""); 
+        $from = array( "&", "<", ">", "'", "\"");
         $to = array( "&amp;", "&lt;", "&gt;", "&#039;", "&quot;");
-        return str_replace($from, $to, $str); 
+        return str_replace($from, $to, $str);
     }
 
     /**
      * Determines if field is complex type
-     * 
+     *
      * @param string $fieldType field type name
+     *
      */
-    private function _isComplexType ($fieldType) 
+    private function _isComplexType ($fieldType)
     {
-        return preg_match("/^MarketplaceWebServiceOrders_/", $fieldType);
+        if (is_array($fieldType)) {
+            return true;
+        }
+        return strpos($fieldType, 'Model') !== false;
     }
 
    /**
     * Checks  whether passed variable is an associative array
     *
     * @param mixed $var
-    * @return TRUE if passed variable is an associative array
+    * @return boolean TRUE if passed variable is an associative array
     */
     private function _isAssociativeArray($var)
     {
@@ -411,18 +418,18 @@ abstract class MarketplaceWebServiceOrders_Model
     * Checks  whether passed variable is DOMElement
     *
     * @param mixed $var
-    * @return TRUE if passed variable is DOMElement
+    * @return boolean TRUE if passed variable is DOMElement
     */
     private function _isDOMElement($var)
     {
-        return $var instanceof DOMElement;
+        return $var instanceof \DOMElement;
     }
 
    /**
     * Checks  whether passed variable is numeric array
     *
     * @param mixed $var
-    * @return TRUE if passed variable is an numeric array
+    * @return boolean TRUE if passed variable is an numeric array
     */
     protected function _isNumericArray($var)
     {

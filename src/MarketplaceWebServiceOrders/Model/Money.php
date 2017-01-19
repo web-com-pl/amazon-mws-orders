@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,25 +18,26 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_Money
- * 
+ * Money
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>CurrencyCode: string</li>
  * <li>Amount: string</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_Money extends MarketplaceWebServiceOrders_Model {
+ class Money extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
@@ -72,7 +73,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CurrencyCode is set.
      *
-     * @return true if CurrencyCode is set.
+     * @return boolean TRUE if CurrencyCode is set.
      */
     public function isSetCurrencyCode()
     {
@@ -118,7 +119,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Amount is set.
      *
-     * @return true if Amount is set.
+     * @return boolean TRUE if Amount is set.
      */
     public function isSetAmount()
     {

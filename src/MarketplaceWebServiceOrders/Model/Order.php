@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,18 +18,19 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_Order
- * 
+ * Order
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>AmazonOrderId: string</li>
  * <li>SellerOrderId: string</li>
  * <li>PurchaseDate: string</li>
@@ -39,8 +40,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>SalesChannel: string</li>
  * <li>OrderChannel: string</li>
  * <li>ShipServiceLevel: string</li>
- * <li>ShippingAddress: MarketplaceWebServiceOrders_Model_Address</li>
- * <li>OrderTotal: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>ShippingAddress: Address</li>
+ * <li>OrderTotal: Money</li>
  * <li>NumberOfItemsShipped: int</li>
  * <li>NumberOfItemsUnshipped: int</li>
  * <li>PaymentExecutionDetail: array</li>
@@ -65,7 +66,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_Order extends MarketplaceWebServiceOrders_Model {
+ class Order extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
@@ -79,11 +80,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'SalesChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
     'OrderChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ShipServiceLevel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingAddress' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Address'),
-    'OrderTotal' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'ShippingAddress' => array('FieldValue' => null, 'FieldType' => 'Model\Address'),
+    'OrderTotal' => array('FieldValue' => null, 'FieldType' => 'Model\Money'),
     'NumberOfItemsShipped' => array('FieldValue' => null, 'FieldType' => 'int'),
     'NumberOfItemsUnshipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PaymentExecutionDetail' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem'), 'ListMemberName' => 'PaymentExecutionDetailItem'),
+    'PaymentExecutionDetail' => array('FieldValue' => array(), 'FieldType' => array('PaymentExecutionDetailItem'), 'ListMemberName' => 'PaymentExecutionDetailItem'),
     'PaymentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'BuyerEmail' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -130,7 +131,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AmazonOrderId is set.
      *
-     * @return true if AmazonOrderId is set.
+     * @return boolean TRUE if AmazonOrderId is set.
      */
     public function isSetAmazonOrderId()
     {
@@ -176,7 +177,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SellerOrderId is set.
      *
-     * @return true if SellerOrderId is set.
+     * @return boolean TRUE if SellerOrderId is set.
      */
     public function isSetSellerOrderId()
     {
@@ -222,7 +223,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PurchaseDate is set.
      *
-     * @return true if PurchaseDate is set.
+     * @return boolean TRUE if PurchaseDate is set.
      */
     public function isSetPurchaseDate()
     {
@@ -268,7 +269,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if LastUpdateDate is set.
      *
-     * @return true if LastUpdateDate is set.
+     * @return boolean TRUE if LastUpdateDate is set.
      */
     public function isSetLastUpdateDate()
     {
@@ -314,7 +315,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderStatus is set.
      *
-     * @return true if OrderStatus is set.
+     * @return boolean TRUE if OrderStatus is set.
      */
     public function isSetOrderStatus()
     {
@@ -360,7 +361,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if FulfillmentChannel is set.
      *
-     * @return true if FulfillmentChannel is set.
+     * @return boolean TRUE if FulfillmentChannel is set.
      */
     public function isSetFulfillmentChannel()
     {
@@ -406,7 +407,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SalesChannel is set.
      *
-     * @return true if SalesChannel is set.
+     * @return boolean TRUE if SalesChannel is set.
      */
     public function isSetSalesChannel()
     {
@@ -452,7 +453,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderChannel is set.
      *
-     * @return true if OrderChannel is set.
+     * @return boolean TRUE if OrderChannel is set.
      */
     public function isSetOrderChannel()
     {
@@ -498,7 +499,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShipServiceLevel is set.
      *
-     * @return true if ShipServiceLevel is set.
+     * @return boolean TRUE if ShipServiceLevel is set.
      */
     public function isSetShipServiceLevel()
     {
@@ -532,7 +533,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingAddress property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Address shippingAddress
+     * @param Address shippingAddress
      * @return this instance
      */
     public function setShippingAddress($value)
@@ -544,7 +545,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShippingAddress is set.
      *
-     * @return true if ShippingAddress is set.
+     * @return boolean TRUE if ShippingAddress is set.
      */
     public function isSetShippingAddress()
     {
@@ -578,7 +579,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the OrderTotal property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money orderTotal
+     * @param Money orderTotal
      * @return this instance
      */
     public function setOrderTotal($value)
@@ -590,7 +591,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderTotal is set.
      *
-     * @return true if OrderTotal is set.
+     * @return boolean TRUE if OrderTotal is set.
      */
     public function isSetOrderTotal()
     {
@@ -636,7 +637,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NumberOfItemsShipped is set.
      *
-     * @return true if NumberOfItemsShipped is set.
+     * @return boolean TRUE if NumberOfItemsShipped is set.
      */
     public function isSetNumberOfItemsShipped()
     {
@@ -682,7 +683,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NumberOfItemsUnshipped is set.
      *
-     * @return true if NumberOfItemsUnshipped is set.
+     * @return boolean TRUE if NumberOfItemsUnshipped is set.
      */
     public function isSetNumberOfItemsUnshipped()
     {
@@ -743,7 +744,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PaymentExecutionDetail is set.
      *
-     * @return true if PaymentExecutionDetail is set.
+     * @return boolean TRUE if PaymentExecutionDetail is set.
      */
     public function isSetPaymentExecutionDetail()
     {
@@ -792,7 +793,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PaymentMethod is set.
      *
-     * @return true if PaymentMethod is set.
+     * @return boolean TRUE if PaymentMethod is set.
      */
     public function isSetPaymentMethod()
     {
@@ -838,7 +839,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MarketplaceId is set.
      *
-     * @return true if MarketplaceId is set.
+     * @return boolean TRUE if MarketplaceId is set.
      */
     public function isSetMarketplaceId()
     {
@@ -884,7 +885,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BuyerEmail is set.
      *
-     * @return true if BuyerEmail is set.
+     * @return boolean TRUE if BuyerEmail is set.
      */
     public function isSetBuyerEmail()
     {
@@ -930,7 +931,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BuyerName is set.
      *
-     * @return true if BuyerName is set.
+     * @return boolean TRUE if BuyerName is set.
      */
     public function isSetBuyerName()
     {
@@ -976,7 +977,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShipmentServiceLevelCategory is set.
      *
-     * @return true if ShipmentServiceLevelCategory is set.
+     * @return boolean TRUE if ShipmentServiceLevelCategory is set.
      */
     public function isSetShipmentServiceLevelCategory()
     {
@@ -1000,7 +1001,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check the value of ShippedByAmazonTFM.
      *
-     * @return true if ShippedByAmazonTFM is set to true.
+     * @return boolean TRUE if ShippedByAmazonTFM is set to true.
      */
     public function isShippedByAmazonTFM()
     {
@@ -1032,7 +1033,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShippedByAmazonTFM is set.
      *
-     * @return true if ShippedByAmazonTFM is set.
+     * @return boolean TRUE if ShippedByAmazonTFM is set.
      */
     public function isSetShippedByAmazonTFM()
     {
@@ -1078,7 +1079,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if TFMShipmentStatus is set.
      *
-     * @return true if TFMShipmentStatus is set.
+     * @return boolean TRUE if TFMShipmentStatus is set.
      */
     public function isSetTFMShipmentStatus()
     {
@@ -1124,7 +1125,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CbaDisplayableShippingLabel is set.
      *
-     * @return true if CbaDisplayableShippingLabel is set.
+     * @return boolean TRUE if CbaDisplayableShippingLabel is set.
      */
     public function isSetCbaDisplayableShippingLabel()
     {
@@ -1170,7 +1171,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderType is set.
      *
-     * @return true if OrderType is set.
+     * @return boolean TRUE if OrderType is set.
      */
     public function isSetOrderType()
     {
@@ -1216,7 +1217,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if EarliestShipDate is set.
      *
-     * @return true if EarliestShipDate is set.
+     * @return boolean TRUE if EarliestShipDate is set.
      */
     public function isSetEarliestShipDate()
     {
@@ -1262,7 +1263,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if LatestShipDate is set.
      *
-     * @return true if LatestShipDate is set.
+     * @return boolean TRUE if LatestShipDate is set.
      */
     public function isSetLatestShipDate()
     {
@@ -1308,7 +1309,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if EarliestDeliveryDate is set.
      *
-     * @return true if EarliestDeliveryDate is set.
+     * @return boolean TRUE if EarliestDeliveryDate is set.
      */
     public function isSetEarliestDeliveryDate()
     {
@@ -1354,7 +1355,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if LatestDeliveryDate is set.
      *
-     * @return true if LatestDeliveryDate is set.
+     * @return boolean TRUE if LatestDeliveryDate is set.
      */
     public function isSetLatestDeliveryDate()
     {
@@ -1378,7 +1379,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check the value of IsBusinessOrder.
      *
-     * @return true if IsBusinessOrder is set to true.
+     * @return boolean TRUE if IsBusinessOrder is set to true.
      */
     public function isIsBusinessOrder()
     {
@@ -1410,7 +1411,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if IsBusinessOrder is set.
      *
-     * @return true if IsBusinessOrder is set.
+     * @return boolean TRUE if IsBusinessOrder is set.
      */
     public function isSetIsBusinessOrder()
     {
@@ -1456,7 +1457,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PurchaseOrderNumber is set.
      *
-     * @return true if PurchaseOrderNumber is set.
+     * @return boolean TRUE if PurchaseOrderNumber is set.
      */
     public function isSetPurchaseOrderNumber()
     {
@@ -1480,7 +1481,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check the value of IsPrime.
      *
-     * @return true if IsPrime is set to true.
+     * @return boolean TRUE if IsPrime is set to true.
      */
     public function isIsPrime()
     {
@@ -1512,7 +1513,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if IsPrime is set.
      *
-     * @return true if IsPrime is set.
+     * @return boolean TRUE if IsPrime is set.
      */
     public function isSetIsPrime()
     {
@@ -1536,7 +1537,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check the value of IsPremiumOrder.
      *
-     * @return true if IsPremiumOrder is set to true.
+     * @return boolean TRUE if IsPremiumOrder is set to true.
      */
     public function isIsPremiumOrder()
     {
@@ -1568,7 +1569,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if IsPremiumOrder is set.
      *
-     * @return true if IsPremiumOrder is set.
+     * @return boolean TRUE if IsPremiumOrder is set.
      */
     public function isSetIsPremiumOrder()
     {

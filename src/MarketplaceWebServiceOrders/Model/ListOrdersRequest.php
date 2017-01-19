@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,18 +18,19 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_ListOrdersRequest
- * 
+ * ListOrdersRequest
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>CreatedAfter: string</li>
@@ -48,7 +49,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWebServiceOrders_Model {
+ class ListOrdersRequest extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
@@ -96,7 +97,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SellerId is set.
      *
-     * @return true if SellerId is set.
+     * @return boolean TRUE if SellerId is set.
      */
     public function isSetSellerId()
     {
@@ -142,7 +143,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MWSAuthToken is set.
      *
-     * @return true if MWSAuthToken is set.
+     * @return boolean TRUE if MWSAuthToken is set.
      */
     public function isSetMWSAuthToken()
     {
@@ -188,7 +189,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CreatedAfter is set.
      *
-     * @return true if CreatedAfter is set.
+     * @return boolean TRUE if CreatedAfter is set.
      */
     public function isSetCreatedAfter()
     {
@@ -234,7 +235,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CreatedBefore is set.
      *
-     * @return true if CreatedBefore is set.
+     * @return boolean TRUE if CreatedBefore is set.
      */
     public function isSetCreatedBefore()
     {
@@ -280,7 +281,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if LastUpdatedAfter is set.
      *
-     * @return true if LastUpdatedAfter is set.
+     * @return boolean TRUE if LastUpdatedAfter is set.
      */
     public function isSetLastUpdatedAfter()
     {
@@ -326,7 +327,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if LastUpdatedBefore is set.
      *
-     * @return true if LastUpdatedBefore is set.
+     * @return boolean TRUE if LastUpdatedBefore is set.
      */
     public function isSetLastUpdatedBefore()
     {
@@ -387,7 +388,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderStatus is set.
      *
-     * @return true if OrderStatus is set.
+     * @return boolean TRUE if OrderStatus is set.
      */
     public function isSetOrderStatus()
     {
@@ -451,7 +452,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MarketplaceId is set.
      *
-     * @return true if MarketplaceId is set.
+     * @return boolean TRUE if MarketplaceId is set.
      */
     public function isSetMarketplaceId()
     {
@@ -515,7 +516,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if FulfillmentChannel is set.
      *
-     * @return true if FulfillmentChannel is set.
+     * @return boolean TRUE if FulfillmentChannel is set.
      */
     public function isSetFulfillmentChannel()
     {
@@ -579,7 +580,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PaymentMethod is set.
      *
-     * @return true if PaymentMethod is set.
+     * @return boolean TRUE if PaymentMethod is set.
      */
     public function isSetPaymentMethod()
     {
@@ -628,7 +629,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BuyerEmail is set.
      *
-     * @return true if BuyerEmail is set.
+     * @return boolean TRUE if BuyerEmail is set.
      */
     public function isSetBuyerEmail()
     {
@@ -674,7 +675,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SellerOrderId is set.
      *
-     * @return true if SellerOrderId is set.
+     * @return boolean TRUE if SellerOrderId is set.
      */
     public function isSetSellerOrderId()
     {
@@ -720,7 +721,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MaxResultsPerPage is set.
      *
-     * @return true if MaxResultsPerPage is set.
+     * @return boolean TRUE if MaxResultsPerPage is set.
      */
     public function isSetMaxResultsPerPage()
     {
@@ -781,7 +782,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if TFMShipmentStatus is set.
      *
-     * @return true if TFMShipmentStatus is set.
+     * @return boolean TRUE if TFMShipmentStatus is set.
      */
     public function isSetTFMShipmentStatus()
     {

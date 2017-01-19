@@ -21,7 +21,7 @@
  * List Order Items By Next Token Sample
  */
 
-require_once('.config.inc.php');
+
 
 /************************************************************************
  * Instantiate Implementation of MarketplaceWebServiceOrders
@@ -50,7 +50,7 @@ require_once('.config.inc.php');
    'MaxErrorRetry' => 3,
  );
 
- $service = new MarketplaceWebServiceOrders_Client(
+ $service = new AmazonClient(
         AWS_ACCESS_KEY_ID,
         AWS_SECRET_ACCESS_KEY,
         APPLICATION_NAME,
@@ -67,14 +67,14 @@ require_once('.config.inc.php');
  * XML files available under MarketplaceWebServiceOrders/Mock tree
  *
  ***********************************************************************/
- // $service = new MarketplaceWebServiceOrders_Mock();
+ // $service = new Mock();
 
 /************************************************************************
  * Setup request parameters and uncomment invoke to try out
  * sample for List Order Items By Next Token Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebServiceOrders_Model_ListOrderItemsByNextToken
- $request = new MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenRequest();
+ // @TODO: set request. Action can be passed as Model_ListOrderItemsByNextToken
+ $request = new Model_ListOrderItemsByNextTokenRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeListOrderItemsByNextToken($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param MarketplaceWebServiceOrders_Interface $service instance of MarketplaceWebServiceOrders_Interface
-  * @param mixed $request MarketplaceWebServiceOrders_Model_ListOrderItemsByNextToken or array of parameters
+  * @param mixed $request Model_ListOrderItemsByNextToken or array of parameters
   */
 
   function invokeListOrderItemsByNextToken(MarketplaceWebServiceOrders_Interface $service, $request)
@@ -103,7 +103,7 @@ require_once('.config.inc.php');
         echo $dom->saveXML();
         echo("ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
 
-     } catch (MarketplaceWebServiceOrders_Exception $ex) {
+     } catch (AmazonException $ex) {
         echo("Caught Exception: " . $ex->getMessage() . "\n");
         echo("Response Status Code: " . $ex->getStatusCode() . "\n");
         echo("Error Code: " . $ex->getErrorCode() . "\n");

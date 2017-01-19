@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,18 +18,19 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_Address
- * 
+ * Address
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Name: string</li>
  * <li>AddressLine1: string</li>
  * <li>AddressLine2: string</li>
@@ -45,7 +46,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrders_Model {
+ class Address extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
@@ -90,7 +91,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Name is set.
      *
-     * @return true if Name is set.
+     * @return boolean TRUE if Name is set.
      */
     public function isSetName()
     {
@@ -136,7 +137,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AddressLine1 is set.
      *
-     * @return true if AddressLine1 is set.
+     * @return boolean TRUE if AddressLine1 is set.
      */
     public function isSetAddressLine1()
     {
@@ -182,7 +183,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AddressLine2 is set.
      *
-     * @return true if AddressLine2 is set.
+     * @return boolean TRUE if AddressLine2 is set.
      */
     public function isSetAddressLine2()
     {
@@ -228,7 +229,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AddressLine3 is set.
      *
-     * @return true if AddressLine3 is set.
+     * @return boolean TRUE if AddressLine3 is set.
      */
     public function isSetAddressLine3()
     {
@@ -274,7 +275,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if City is set.
      *
-     * @return true if City is set.
+     * @return boolean TRUE if City is set.
      */
     public function isSetCity()
     {
@@ -320,7 +321,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if County is set.
      *
-     * @return true if County is set.
+     * @return boolean TRUE if County is set.
      */
     public function isSetCounty()
     {
@@ -366,7 +367,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if District is set.
      *
-     * @return true if District is set.
+     * @return boolean TRUE if District is set.
      */
     public function isSetDistrict()
     {
@@ -412,7 +413,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if StateOrRegion is set.
      *
-     * @return true if StateOrRegion is set.
+     * @return boolean TRUE if StateOrRegion is set.
      */
     public function isSetStateOrRegion()
     {
@@ -458,7 +459,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PostalCode is set.
      *
-     * @return true if PostalCode is set.
+     * @return boolean TRUE if PostalCode is set.
      */
     public function isSetPostalCode()
     {
@@ -504,7 +505,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CountryCode is set.
      *
-     * @return true if CountryCode is set.
+     * @return boolean TRUE if CountryCode is set.
      */
     public function isSetCountryCode()
     {
@@ -550,7 +551,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Phone is set.
      *
-     * @return true if Phone is set.
+     * @return boolean TRUE if Phone is set.
      */
     public function isSetPhone()
     {

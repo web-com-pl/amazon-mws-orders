@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,18 +18,19 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResult
- * 
+ * ListOrderItemsByNextTokenResult
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>NextToken: string</li>
  * <li>AmazonOrderId: string</li>
  * <li>OrderItems: array</li>
@@ -37,14 +38,14 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResult extends MarketplaceWebServiceOrders_Model {
+ class ListOrderItemsByNextTokenResult extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
     'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderItems' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_OrderItem'), 'ListMemberName' => 'OrderItem'),
+    'OrderItems' => array('FieldValue' => array(), 'FieldType' => array('OrderItem'), 'ListMemberName' => 'Model\OrderItem'),
     );
     parent::__construct($data);
     }
@@ -74,7 +75,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NextToken is set.
      *
-     * @return true if NextToken is set.
+     * @return boolean TRUE if NextToken is set.
      */
     public function isSetNextToken()
     {
@@ -120,7 +121,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AmazonOrderId is set.
      *
-     * @return true if AmazonOrderId is set.
+     * @return boolean TRUE if AmazonOrderId is set.
      */
     public function isSetAmazonOrderId()
     {
@@ -181,7 +182,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderItems is set.
      *
-     * @return true if OrderItems is set.
+     * @return boolean TRUE if OrderItems is set.
      */
     public function isSetOrderItems()
     {

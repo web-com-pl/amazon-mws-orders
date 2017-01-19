@@ -43,7 +43,7 @@
     * Autoload function is reponsible for loading classes of the library on demand
     *
     * NOTE: Only one __autoload function is allowed by PHP per each PHP installation,
-    * and this function may need to be replaced with individual require_once statements
+    * and this function may need to be replaced with individual 
     * in case where other framework that define an __autoload already loaded.
     *
     * However, since this library follow common naming convention for PHP classes it
@@ -56,7 +56,7 @@
         $includePaths = explode(PATH_SEPARATOR, get_include_path());
         foreach($includePaths as $includePath){
             if(file_exists($includePath . DIRECTORY_SEPARATOR . $filePath)){
-                require_once $filePath;
+                
                 return;
             }
         }

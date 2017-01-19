@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -18,33 +18,34 @@
  */
 
 /**
- *  @see MarketplaceWebServiceOrders_Model
+ *  @see AmazonModelAbstract
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_GetOrderResponse
- * 
+ * GetOrderResponse
+ *
  * Properties:
  * <ul>
- * 
- * <li>GetOrderResult: MarketplaceWebServiceOrders_Model_GetOrderResult</li>
- * <li>ResponseMetadata: MarketplaceWebServiceOrders_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata</li>
+ *
+ * <li>GetOrderResult: GetOrderResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebServiceOrders_Model {
+ class GetOrderResponse extends AmazonModelAbstract {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'GetOrderResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_GetOrderResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata'),
+    'GetOrderResult' => array('FieldValue' => null, 'FieldType' => 'Model\GetOrderResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -62,7 +63,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GetOrderResult property.
      *
-     * @param MarketplaceWebServiceOrders_Model_GetOrderResult getOrderResult
+     * @param GetOrderResult getOrderResult
      * @return this instance
      */
     public function setGetOrderResult($value)
@@ -74,7 +75,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if GetOrderResult is set.
      *
-     * @return true if GetOrderResult is set.
+     * @return boolean TRUE if GetOrderResult is set.
      */
     public function isSetGetOrderResult()
     {
@@ -108,7 +109,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -120,7 +121,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ResponseMetadata is set.
      *
-     * @return true if ResponseMetadata is set.
+     * @return boolean TRUE if ResponseMetadata is set.
      */
     public function isSetResponseMetadata()
     {
@@ -154,7 +155,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -166,7 +167,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ResponseHeaderMetadata is set.
      *
-     * @return true if ResponseHeaderMetadata is set.
+     * @return boolean TRUE if ResponseHeaderMetadata is set.
      */
     public function isSetResponseHeaderMetadata()
     {
@@ -187,32 +188,32 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct MarketplaceWebServiceOrders_Model_GetOrderResponse from XML string
-     * 
+     * Construct GetOrderResponse from XML string
+     *
      * @param $xml
      *        XML string to construct from
      *
-     * @return MarketplaceWebServiceOrders_Model_GetOrderResponse 
+     * @return GetOrderResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetOrderResponse']");
         if ($response->length == 1) {
-            return new MarketplaceWebServiceOrders_Model_GetOrderResponse(($response->item(0))); 
+            return new GetOrderResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebServiceOrders_Model_GetOrderResponse from provided XML. 
+            throw new \Exception ("Unable to construct GetOrderResponse from provided XML.
                                   Make sure that GetOrderResponse is a root element");
         }
     }
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<GetOrderResponse xmlns=\"https://mws.amazonservices.com/Orders/2013-09-01\">";

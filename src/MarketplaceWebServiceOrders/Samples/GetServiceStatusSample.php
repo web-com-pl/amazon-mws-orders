@@ -21,7 +21,7 @@
  * Get Service Status Sample
  */
 
-require_once('.config.inc.php');
+
 
 /************************************************************************
  * Instantiate Implementation of MarketplaceWebServiceOrders
@@ -50,7 +50,7 @@ require_once('.config.inc.php');
    'MaxErrorRetry' => 3,
  );
 
- $service = new MarketplaceWebServiceOrders_Client(
+ $service = new AmazonClient(
         AWS_ACCESS_KEY_ID,
         AWS_SECRET_ACCESS_KEY,
         APPLICATION_NAME,
@@ -67,14 +67,14 @@ require_once('.config.inc.php');
  * XML files available under MarketplaceWebServiceOrders/Mock tree
  *
  ***********************************************************************/
- // $service = new MarketplaceWebServiceOrders_Mock();
+ // $service = new Mock();
 
 /************************************************************************
  * Setup request parameters and uncomment invoke to try out
  * sample for Get Service Status Action
  ***********************************************************************/
- // @TODO: set request. Action can be passed as MarketplaceWebServiceOrders_Model_GetServiceStatus
- $request = new MarketplaceWebServiceOrders_Model_GetServiceStatusRequest();
+ // @TODO: set request. Action can be passed as Model_GetServiceStatus
+ $request = new Model_GetServiceStatusRequest();
  $request->setSellerId(MERCHANT_ID);
  // object or array of parameters
  invokeGetServiceStatus($service, $request);
@@ -85,7 +85,7 @@ require_once('.config.inc.php');
   * the MarketplaceId and ASIN.
   *
   * @param MarketplaceWebServiceOrders_Interface $service instance of MarketplaceWebServiceOrders_Interface
-  * @param mixed $request MarketplaceWebServiceOrders_Model_GetServiceStatus or array of parameters
+  * @param mixed $request Model_GetServiceStatus or array of parameters
   */
 
   function invokeGetServiceStatus(MarketplaceWebServiceOrders_Interface $service, $request)
@@ -103,7 +103,7 @@ require_once('.config.inc.php');
         echo $dom->saveXML();
         echo("ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
 
-     } catch (MarketplaceWebServiceOrders_Exception $ex) {
+     } catch (AmazonException $ex) {
         echo("Caught Exception: " . $ex->getMessage() . "\n");
         echo("Response Status Code: " . $ex->getStatusCode() . "\n");
         echo("Error Code: " . $ex->getErrorCode() . "\n");
