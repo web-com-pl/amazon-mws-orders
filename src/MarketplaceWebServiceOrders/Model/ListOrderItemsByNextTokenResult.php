@@ -45,7 +45,7 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
     $this->_fields = array (
     'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
     'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderItems' => array('FieldValue' => array(), 'FieldType' => array('OrderItem'), 'ListMemberName' => 'Model\OrderItem'),
+    'OrderItems' => array('FieldValue' => array(), 'FieldType' => array('Model\OrderItem'), 'ListMemberName' => 'OrderItem'),
     );
     parent::__construct($data);
     }
