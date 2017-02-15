@@ -8,6 +8,9 @@
         "ext-curl": "*"
     },
     "autoload": {
-        "psr-4": { "Webcom\\MarketPlaceWebServiceOrders\\": "src/MarketplaceWebServiceOrders/" }
+        "psr-4": {
+            "Webcom\\MarketPlaceWebServiceOrders\\": "src/MarketplaceWebServiceOrders/",
+            "Webcom\\MarketPlaceWebService\\": "src/MarketplaceWebService/"
+        }
     }
 }
