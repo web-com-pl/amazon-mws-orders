@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionCountResult
+ * GetFeedSubmissionCountResult
  * 
  * Properties:
  * <ul>
@@ -33,12 +34,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetFeedSubmissionCountResult extends MarketplaceWebService_Model
+class GetFeedSubmissionCountResult extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionCountResult
+     * Construct new GetFeedSubmissionCountResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -83,7 +84,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResult extends Marketpla
      * Sets the value of the Count and returns this instance
      * 
      * @param int $value Count
-     * @return MarketplaceWebService_Model_GetFeedSubmissionCountResult instance
+     * @return GetFeedSubmissionCountResult instance
      */
     public function withCount($value)
     {

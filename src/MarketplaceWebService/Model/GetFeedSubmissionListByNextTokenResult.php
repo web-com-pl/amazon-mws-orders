@@ -17,30 +17,31 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult
+ * GetFeedSubmissionListByNextTokenResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
- * <li>FeedSubmissionInfo: MarketplaceWebService_Model_FeedSubmissionInfo</li>
+ * <li>FeedSubmissionInfo: FeedSubmissionInfo</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult extends MarketplaceWebService_Model
+class GetFeedSubmissionListByNextTokenResult extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult
+     * Construct new GetFeedSubmissionListByNextTokenResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -49,7 +50,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult extends
      * 
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
-     * <li>FeedSubmissionInfo: MarketplaceWebService_Model_FeedSubmissionInfo</li>
+     * <li>FeedSubmissionInfo: FeedSubmissionInfo</li>
      *
      * </ul>
      */
@@ -58,7 +59,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult extends
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_FeedSubmissionInfo')),
+        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }
@@ -89,7 +90,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult extends
      * Sets the value of the NextToken and returns this instance
      * 
      * @param string $value NextToken
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult instance
+     * @return GetFeedSubmissionListByNextTokenResult instance
      */
     public function withNextToken($value)
     {
@@ -134,7 +135,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult extends
      * Sets the value of the HasNext and returns this instance
      * 
      * @param bool $value HasNext
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult instance
+     * @return GetFeedSubmissionListByNextTokenResult instance
      */
     public function withHasNext($value)
     {
@@ -185,7 +186,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult extends
      * <code>withFeedSubmissionInfo($feedSubmissionInfo1, $feedSubmissionInfo2)</code>
      * 
      * @param FeedSubmissionInfo  $feedSubmissionInfoArgs one or more FeedSubmissionInfo
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult  instance
+     * @return GetFeedSubmissionListByNextTokenResult  instance
      */
     public function withFeedSubmissionInfo($feedSubmissionInfoArgs)
     {

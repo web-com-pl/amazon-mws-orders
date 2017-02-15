@@ -93,8 +93,8 @@ $config = array (
 
 //$parameters = array (
 //  'Merchant' => MERCHANT_ID,
-//  'AvailableFromDate' => new DateTime('-6 months', new DateTimeZone('UTC')),
-//  'AvailableToDate' => new DateTime('-3 months', new DateTimeZone('UTC')),
+//  'AvailableFromDate' => new \DateTime('-6 months', new \DateTimeZone('UTC')),
+//  'AvailableToDate' => new \DateTime('-3 months', new \DateTimeZone('UTC')),
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);
 //
@@ -102,8 +102,8 @@ $config = array (
 
 //$request = new MarketplaceWebService_Model_GetReportCountRequest();
 //$request->setMerchant(MERCHANT_ID);
-//$request->setAvailableFromDate(new DateTime('-6 months', new DateTimeZone('UTC')));
-//$request->setAvailableToDate(new DateTime('now', new DateTimeZone('UTC')));
+//$request->setAvailableFromDate(new \DateTime('-6 months', new \DateTimeZone('UTC')));
+//$request->setAvailableToDate(new \DateTime('now', new \DateTimeZone('UTC')));
 //$request->setMWSAuthToken('<MWS Auth Token>'); // Optional
 //
 //invokeGetReportCount($service, $request);

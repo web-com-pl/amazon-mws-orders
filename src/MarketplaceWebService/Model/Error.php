@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_Error
+ * Error
  * 
  * Properties:
  * <ul>
@@ -32,16 +33,16 @@ require_once ('MarketplaceWebService/Model.php');
  * <li>Type: string</li>
  * <li>Code: string</li>
  * <li>Message: string</li>
- * <li>Detail: MarketplaceWebService_Model_Object</li>
+ * <li>Detail: Object</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
+class Error extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_Error
+     * Construct new Error
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -51,7 +52,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * <li>Type: string</li>
      * <li>Code: string</li>
      * <li>Message: string</li>
-     * <li>Detail: MarketplaceWebService_Model_Object</li>
+     * <li>Detail: Object</li>
      *
      * </ul>
      */
@@ -92,7 +93,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Type and returns this instance
      * 
      * @param string $value Type
-     * @return MarketplaceWebService_Model_Error instance
+     * @return Error instance
      */
     public function withType($value)
     {
@@ -137,7 +138,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Code and returns this instance
      * 
      * @param string $value Code
-     * @return MarketplaceWebService_Model_Error instance
+     * @return Error instance
      */
     public function withCode($value)
     {
@@ -182,7 +183,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Message and returns this instance
      * 
      * @param string $value Message
-     * @return MarketplaceWebService_Model_Error instance
+     * @return Error instance
      */
     public function withMessage($value)
     {
@@ -227,7 +228,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Detail  and returns this instance
      * 
      * @param Object $value Detail
-     * @return MarketplaceWebService_Model_Error instance
+     * @return Error instance
      */
     public function withDetail($value)
     {

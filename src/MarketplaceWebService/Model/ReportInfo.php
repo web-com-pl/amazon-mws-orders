@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_ReportInfo
+ * ReportInfo
  * 
  * Properties:
  * <ul>
@@ -38,12 +39,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_ReportInfo extends MarketplaceWebService_Model
+class ReportInfo extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ReportInfo
+     * Construct new ReportInfo
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -98,7 +99,7 @@ class MarketplaceWebService_Model_ReportInfo extends MarketplaceWebService_Model
      * Sets the value of the ReportId and returns this instance
      * 
      * @param string $value ReportId
-     * @return MarketplaceWebService_Model_ReportInfo instance
+     * @return ReportInfo instance
      */
     public function withReportId($value)
     {
@@ -143,7 +144,7 @@ class MarketplaceWebService_Model_ReportInfo extends MarketplaceWebService_Model
      * Sets the value of the ReportType and returns this instance
      * 
      * @param string $value ReportType
-     * @return MarketplaceWebService_Model_ReportInfo instance
+     * @return ReportInfo instance
      */
     public function withReportType($value)
     {
@@ -188,7 +189,7 @@ class MarketplaceWebService_Model_ReportInfo extends MarketplaceWebService_Model
      * Sets the value of the ReportRequestId and returns this instance
      * 
      * @param string $value ReportRequestId
-     * @return MarketplaceWebService_Model_ReportInfo instance
+     * @return ReportInfo instance
      */
     public function withReportRequestId($value)
     {
@@ -233,7 +234,7 @@ class MarketplaceWebService_Model_ReportInfo extends MarketplaceWebService_Model
      * Sets the value of the AvailableDate and returns this instance
      * 
      * @param string $value AvailableDate
-     * @return MarketplaceWebService_Model_ReportInfo instance
+     * @return ReportInfo instance
      */
     public function withAvailableDate($value)
     {
@@ -278,7 +279,7 @@ class MarketplaceWebService_Model_ReportInfo extends MarketplaceWebService_Model
      * Sets the value of the Acknowledged and returns this instance
      * 
      * @param bool $value Acknowledged
-     * @return MarketplaceWebService_Model_ReportInfo instance
+     * @return ReportInfo instance
      */
     public function withAcknowledged($value)
     {
@@ -323,7 +324,7 @@ class MarketplaceWebService_Model_ReportInfo extends MarketplaceWebService_Model
      * Sets the value of the AcknowledgedDate and returns this instance
      * 
      * @param string $value AcknowledgedDate
-     * @return MarketplaceWebService_Model_ReportInfo instance
+     * @return ReportInfo instance
      */
     public function withAcknowledgedDate($value)
     {

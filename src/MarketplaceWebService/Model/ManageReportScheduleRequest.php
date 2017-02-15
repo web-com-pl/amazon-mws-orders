@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_ManageReportScheduleRequest
+ * ManageReportScheduleRequest
  * 
  * Properties:
  * <ul>
@@ -37,12 +38,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_ManageReportScheduleRequest extends MarketplaceWebService_Model
+class ManageReportScheduleRequest extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ManageReportScheduleRequest
+     * Construct new ManageReportScheduleRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -96,7 +97,7 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
+     * @return ManageReportScheduleRequest instance
      */
     public function withMarketplace($value)
     {
@@ -141,7 +142,7 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
+     * @return ManageReportScheduleRequest instance
      */
     public function withMerchant($value)
     {
@@ -186,7 +187,7 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
+     * @return ManageReportScheduleRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -231,7 +232,7 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the ReportType and returns this instance
      * 
      * @param string $value ReportType
-     * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
+     * @return ManageReportScheduleRequest instance
      */
     public function withReportType($value)
     {
@@ -276,7 +277,7 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the Schedule and returns this instance
      * 
      * @param string $value Schedule
-     * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
+     * @return ManageReportScheduleRequest instance
      */
     public function withSchedule($value)
     {
@@ -321,7 +322,7 @@ class MarketplaceWebService_Model_ManageReportScheduleRequest extends Marketplac
      * Sets the value of the ScheduleDate and returns this instance
      * 
      * @param string $value ScheduleDate
-     * @return MarketplaceWebService_Model_ManageReportScheduleRequest instance
+     * @return ManageReportScheduleRequest instance
      */
     public function withScheduleDate($value)
     {

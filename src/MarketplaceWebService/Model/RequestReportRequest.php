@@ -17,21 +17,22 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_RequestReportRequest
+ * RequestReportRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>MarketplaceIdList: MarketplaceWebService_Model_IdList</li>
+ * <li>MarketplaceIdList: IdList</li>
  * <li>ReportType: string</li>
  * <li>StartDate: string</li>
  * <li>EndDate: string</li>
@@ -39,12 +40,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebService_Model
+class RequestReportRequest extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_RequestReportRequest
+     * Construct new RequestReportRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -53,7 +54,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>MarketplaceIdList: MarketplaceWebService_Model_IdList</li>
+     * <li>MarketplaceIdList: IdList</li>
      * <li>ReportType: string</li>
      * <li>StartDate: string</li>
      * <li>EndDate: string</li>
@@ -67,7 +68,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
+        'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'Model\IdList'),
         'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
         'StartDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'EndDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
@@ -102,7 +103,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_RequestReportRequest instance
+     * @return RequestReportRequest instance
      */
     public function withMarketplace($value)
     {
@@ -147,7 +148,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_RequestReportRequest instance
+     * @return RequestReportRequest instance
      */
     public function withMerchant($value)
     {
@@ -192,7 +193,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_RequestReportRequest instance
+     * @return RequestReportRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -229,7 +230,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      */
     public function setMarketplaceIdList($value) 
     {
-	$marketplaceIdList = new MarketplaceWebService_Model_IdList();
+	$marketplaceIdList = new IdList();
 	$marketplaceIdList->setId($value['Id']);
         $this->fields['MarketplaceIdList']['FieldValue'] = $marketplaceIdList;
         return;
@@ -239,7 +240,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      * Sets the value of the MarketplaceIdList  and returns this instance
      * 
      * @param IdList $value MarketplaceIdList
-     * @return MarketplaceWebService_Model_RequestReportRequest instance
+     * @return RequestReportRequest instance
      */
     public function withMarketplaceIdList($value)
     {
@@ -285,7 +286,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      * Sets the value of the ReportType and returns this instance
      * 
      * @param string $value ReportType
-     * @return MarketplaceWebService_Model_RequestReportRequest instance
+     * @return RequestReportRequest instance
      */
     public function withReportType($value)
     {
@@ -330,7 +331,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      * Sets the value of the StartDate and returns this instance
      * 
      * @param string $value StartDate
-     * @return MarketplaceWebService_Model_RequestReportRequest instance
+     * @return RequestReportRequest instance
      */
     public function withStartDate($value)
     {
@@ -375,7 +376,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      * Sets the value of the EndDate and returns this instance
      * 
      * @param string $value EndDate
-     * @return MarketplaceWebService_Model_RequestReportRequest instance
+     * @return RequestReportRequest instance
      */
     public function withEndDate($value)
     {
@@ -420,7 +421,7 @@ class MarketplaceWebService_Model_RequestReportRequest extends MarketplaceWebSer
      * Sets the value of the ReportOptions and returns this instance
      * 
      * @param string $value ReportOptions
-     * @return MarketplaceWebService_Model_RequestReportRequest instance
+     * @return RequestReportRequest instance
      */
     public function withReportOptions($value)
     {

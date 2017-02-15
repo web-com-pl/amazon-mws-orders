@@ -17,29 +17,30 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_CancelReportRequestsResult
+ * CancelReportRequestsResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>Count: int</li>
- * <li>ReportRequestInfo: MarketplaceWebService_Model_ReportRequestInfo</li>
+ * <li>ReportRequestInfo: ReportRequestInfo</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_CancelReportRequestsResult extends MarketplaceWebService_Model
+class CancelReportRequestsResult extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_CancelReportRequestsResult
+     * Construct new CancelReportRequestsResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -47,7 +48,7 @@ class MarketplaceWebService_Model_CancelReportRequestsResult extends Marketplace
      * <ul>
      * 
      * <li>Count: int</li>
-     * <li>ReportRequestInfo: MarketplaceWebService_Model_ReportRequestInfo</li>
+     * <li>ReportRequestInfo: ReportRequestInfo</li>
      *
      * </ul>
      */
@@ -55,7 +56,7 @@ class MarketplaceWebService_Model_CancelReportRequestsResult extends Marketplace
     {
         $this->fields = array (
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportRequestInfo')),
+        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
         );
         parent::__construct($data);
     }
@@ -86,7 +87,7 @@ class MarketplaceWebService_Model_CancelReportRequestsResult extends Marketplace
      * Sets the value of the Count and returns this instance
      * 
      * @param int $value Count
-     * @return MarketplaceWebService_Model_CancelReportRequestsResult instance
+     * @return CancelReportRequestsResult instance
      */
     public function withCount($value)
     {
@@ -137,7 +138,7 @@ class MarketplaceWebService_Model_CancelReportRequestsResult extends Marketplace
      * <code>withReportRequestInfo($reportRequestInfo1, $reportRequestInfo2)</code>
      * 
      * @param ReportRequestInfo  $reportRequestInfoArgs one or more ReportRequestInfo
-     * @return MarketplaceWebService_Model_CancelReportRequestsResult  instance
+     * @return CancelReportRequestsResult  instance
      */
     public function withReportRequestInfo($reportRequestInfoArgs)
     {

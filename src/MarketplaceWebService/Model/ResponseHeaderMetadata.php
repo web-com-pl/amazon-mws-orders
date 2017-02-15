@@ -15,7 +15,7 @@
  * 
  */
 
-class MarketplaceWebService_Model_ResponseHeaderMetadata {
+class ResponseHeaderMetadata {
 
   const REQUEST_ID = 'x-mws-request-id';
   const RESPONSE_CONTEXT = 'x-mws-response-context';

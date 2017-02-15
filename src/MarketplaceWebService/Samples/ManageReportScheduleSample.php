@@ -95,7 +95,7 @@ $config = array (
 //  'Merchant' => MERCHANT_ID,
 //  'ReportType' => '_GET_ORDERS_DATA_',
 //  'Schedule' => '_1_HOUR_',
-//  'ScheduleDate' => new DateTime('now', new DateTimeZone('UTC')),
+//  'ScheduleDate' => new \DateTime('now', new \DateTimeZone('UTC')),
 //  'MWSAuthToken' => '<MWS Auth Token>', // Optional
 //);
 //
@@ -105,7 +105,7 @@ $config = array (
 //$request->setMerchant(MERCHANT_ID);
 //$request->setReportType('_GET_ORDERS_DATA_');
 //$request->setSchedule('_1_HOUR_');
-//$request->setScheduleDate(new DateTime('now', new DateTimeZone('UTC')));
+//$request->setScheduleDate(new \DateTime('now', new \DateTimeZone('UTC')));
 //$request->setMWSAuthToken('<MWS Auth Token>'); // Optional
 //
 //invokeManageReportSchedule($service, $request);

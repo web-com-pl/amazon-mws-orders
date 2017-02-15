@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_IdList
+ * IdList
  * 
  * Properties:
  * <ul>
@@ -33,12 +34,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_IdList extends MarketplaceWebService_Model
+class IdList extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_IdList
+     * Construct new IdList
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -89,7 +90,7 @@ class MarketplaceWebService_Model_IdList extends MarketplaceWebService_Model
      * <code>withId($id1, $id2)</code>
      * 
      * @param string  $stringArgs one or more Id
-     * @return MarketplaceWebService_Model_IdList  instance
+     * @return IdList  instance
      */
     public function withId($stringArgs)
     {

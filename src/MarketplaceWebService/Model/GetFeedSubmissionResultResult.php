@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionResultResult
+ * GetFeedSubmissionResultResult
  * 
  * Properties:
  * <ul>
@@ -32,12 +33,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetFeedSubmissionResultResult extends MarketplaceWebService_Model
+class GetFeedSubmissionResultResult extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionResultResult
+     * Construct new GetFeedSubmissionResultResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 

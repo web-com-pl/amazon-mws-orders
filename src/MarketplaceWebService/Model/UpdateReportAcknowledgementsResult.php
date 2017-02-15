@@ -17,29 +17,30 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_UpdateReportAcknowledgementsResult
+ * UpdateReportAcknowledgementsResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>Count: int</li>
- * <li>ReportInfo: MarketplaceWebService_Model_ReportInfo</li>
+ * <li>ReportInfo: ReportInfo</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_UpdateReportAcknowledgementsResult extends MarketplaceWebService_Model
+class UpdateReportAcknowledgementsResult extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_UpdateReportAcknowledgementsResult
+     * Construct new UpdateReportAcknowledgementsResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -47,7 +48,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsResult extends Mar
      * <ul>
      * 
      * <li>Count: int</li>
-     * <li>ReportInfo: MarketplaceWebService_Model_ReportInfo</li>
+     * <li>ReportInfo: ReportInfo</li>
      *
      * </ul>
      */
@@ -55,7 +56,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsResult extends Mar
     {
         $this->fields = array (
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportInfo')),
+        'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportInfo')),
         );
         parent::__construct($data);
     }
@@ -86,7 +87,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsResult extends Mar
      * Sets the value of the Count and returns this instance
      * 
      * @param int $value Count
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsResult instance
+     * @return UpdateReportAcknowledgementsResult instance
      */
     public function withCount($value)
     {
@@ -137,7 +138,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsResult extends Mar
      * <code>withReportInfo($reportInfo1, $reportInfo2)</code>
      * 
      * @param ReportInfo  $reportInfoArgs one or more ReportInfo
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsResult  instance
+     * @return UpdateReportAcknowledgementsResult  instance
      */
     public function withReportInfo($reportInfoArgs)
     {

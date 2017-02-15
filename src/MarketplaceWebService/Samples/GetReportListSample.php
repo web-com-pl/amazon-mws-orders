@@ -92,8 +92,8 @@ $config = array (
  // object or array of parameters
 // $parameters = array (
 //   'Merchant' => MERCHANT_ID,
-//   'AvailableToDate' => new DateTime('now', new DateTimeZone('UTC')),
-//   'AvailableFromDate' => new DateTime('-6 months', new DateTimeZone('UTC')),
+//   'AvailableToDate' => new \DateTime('now', new \DateTimeZone('UTC')),
+//   'AvailableFromDate' => new \DateTime('-6 months', new \DateTimeZone('UTC')),
 //   'Acknowledged' => false, 
 //   'MWSAuthToken' => '<MWS Auth Token>', // Optional
 // );
@@ -102,8 +102,8 @@ $config = array (
  
 // $request = new MarketplaceWebService_Model_GetReportListRequest();
 // $request->setMerchant(MERCHANT_ID);
-// $request->setAvailableToDate(new DateTime('now', new DateTimeZone('UTC')));
-// $request->setAvailableFromDate(new DateTime('-3 months', new DateTimeZone('UTC')));
+// $request->setAvailableToDate(new \DateTime('now', new \DateTimeZone('UTC')));
+// $request->setAvailableFromDate(new \DateTime('-3 months', new \DateTimeZone('UTC')));
 // $request->setAcknowledged(false);
 // $request->setMWSAuthToken('<MWS Auth Token>'); // Optional
  

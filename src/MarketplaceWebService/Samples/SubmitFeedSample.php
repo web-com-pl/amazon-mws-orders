@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  *  PHP Version 5
  *
  *  @category    Amazon
@@ -9,18 +9,18 @@
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
  *  @version     2009-01-01
  */
-/******************************************************************************* 
+/*******************************************************************************
 
  *  Marketplace Web Service PHP5 Library
  *  Generated: Thu May 07 13:07:36 PDT 2009
- * 
+ *
  */
 
 /**
  * Submit Feed  Sample
  */
 
-include_once ('.config.inc.php'); 
+include_once ('.config.inc.php');
 
 /************************************************************************
 * Uncomment to configure the client instance. Configuration settings
@@ -60,18 +60,18 @@ $config = array (
 
 /************************************************************************
  * Instantiate Implementation of MarketplaceWebService
- * 
- * AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY constants 
- * are defined in the .config.inc.php located in the same 
+ *
+ * AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY constants
+ * are defined in the .config.inc.php located in the same
  * directory as this sample
  ***********************************************************************/
  $service = new MarketplaceWebService_Client(
-     AWS_ACCESS_KEY_ID, 
-     AWS_SECRET_ACCESS_KEY, 
+     AWS_ACCESS_KEY_ID,
+     AWS_SECRET_ACCESS_KEY,
      $config,
      APPLICATION_NAME,
      APPLICATION_VERSION);
- 
+
 /************************************************************************
  * Uncomment to try out Mock Service that simulates MarketplaceWebService
  * responses without calling MarketplaceWebService service.
@@ -85,7 +85,7 @@ $config = array (
  // $service = new MarketplaceWebService_Mock();
 
 /************************************************************************
- * Setup request parameters and uncomment invoke to try out 
+ * Setup request parameters and uncomment invoke to try out
  * sample for Submit Feed Action
  ***********************************************************************/
  // @TODO: set request. Action can be passed as MarketplaceWebService_Model_SubmitFeedRequest
@@ -123,33 +123,33 @@ $feed = <<<EOD
 </AmazonEnvelope>
 EOD;
 
-// Constructing the MarketplaceId array which will be passed in as the the MarketplaceIdList 
+// Constructing the MarketplaceId array which will be passed in as the the MarketplaceIdList
 // parameter to the SubmitFeedRequest object.
 //$marketplaceIdArray = array("Id" => array('<Marketplace_Id_1>','<Marketplace_Id_2>'));
-     
- // MWS request objects can be constructed two ways: either passing an array containing the 
+
+ // MWS request objects can be constructed two ways: either passing an array containing the
  // required request parameters into the request constructor, or by individually setting the request
  // parameters via setter methods.
  // Uncomment one of the methods below.
- 
+
 /********* Begin Comment Block *********/
 
-//$feedHandle = @fopen('php://temp', 'rw+');
-//fwrite($feedHandle, $feed);
-//rewind($feedHandle);
-//$parameters = array (
-//  'Merchant' => MERCHANT_ID,
-//  'MarketplaceIdList' => $marketplaceIdArray,
-//  'FeedType' => '_POST_ORDER_FULFILLMENT_DATA_',
-//  'FeedContent' => $feedHandle,
-//  'PurgeAndReplace' => false,
-//  'ContentMd5' => base64_encode(md5(stream_get_contents($feedHandle), true)),
-//  'MWSAuthToken' => '<MWS Auth Token>', // Optional
-//);
+$feedHandle = @fopen('php://temp', 'rw+');
+fwrite($feedHandle, $feed);
+rewind($feedHandle);
+$parameters = array (
+  'Merchant' => MERCHANT_ID,
+  'MarketplaceIdList' => $marketplaceIdArray,
+  'FeedType' => '_POST_ORDER_FULFILLMENT_DATA_',
+  'FeedContent' => $feedHandle,
+  'PurgeAndReplace' => false,
+  'ContentMd5' => base64_encode(md5(stream_get_contents($feedHandle), true)),
+  'MWSAuthToken' => '<MWS Auth Token>', // Optional
+);
 
-//rewind($feedHandle);
+rewind($feedHandle);
 
-//$request = new MarketplaceWebService_Model_SubmitFeedRequest($parameters);
+$request = new MarketplaceWebService_Model_SubmitFeedRequest($parameters);
 /********* End Comment Block *********/
 
 /********* Begin Comment Block *********/
@@ -173,7 +173,7 @@ EOD;
 //invokeSubmitFeed($service, $request);
 
 //@fclose($feedHandle);
-                                        
+
 /**
   * Submit Feed Action Sample
   * Uploads a file for processing together with the necessary
@@ -181,66 +181,66 @@ EOD;
   * PurgeAndReplace if true means that your existing e.g. inventory is
   * wiped out and replace with the contents of this feed - use with
   * caution (the default is false).
-  *   
+  *
   * @param MarketplaceWebService_Interface $service instance of MarketplaceWebService_Interface
   * @param mixed $request MarketplaceWebService_Model_SubmitFeed or array of parameters
   */
-  function invokeSubmitFeed(MarketplaceWebService_Interface $service, $request) 
+  function invokeSubmitFeed(MarketplaceWebService_Interface $service, $request)
   {
       try {
               $response = $service->submitFeed($request);
-              
+
                 echo ("Service Response\n");
                 echo ("=============================================================================\n");
 
                 echo("        SubmitFeedResponse\n");
-                if ($response->isSetSubmitFeedResult()) { 
+                if ($response->isSetSubmitFeedResult()) {
                     echo("            SubmitFeedResult\n");
                     $submitFeedResult = $response->getSubmitFeedResult();
-                    if ($submitFeedResult->isSetFeedSubmissionInfo()) { 
+                    if ($submitFeedResult->isSetFeedSubmissionInfo()) {
                         echo("                FeedSubmissionInfo\n");
                         $feedSubmissionInfo = $submitFeedResult->getFeedSubmissionInfo();
-                        if ($feedSubmissionInfo->isSetFeedSubmissionId()) 
+                        if ($feedSubmissionInfo->isSetFeedSubmissionId())
                         {
                             echo("                    FeedSubmissionId\n");
                             echo("                        " . $feedSubmissionInfo->getFeedSubmissionId() . "\n");
                         }
-                        if ($feedSubmissionInfo->isSetFeedType()) 
+                        if ($feedSubmissionInfo->isSetFeedType())
                         {
                             echo("                    FeedType\n");
                             echo("                        " . $feedSubmissionInfo->getFeedType() . "\n");
                         }
-                        if ($feedSubmissionInfo->isSetSubmittedDate()) 
+                        if ($feedSubmissionInfo->isSetSubmittedDate())
                         {
                             echo("                    SubmittedDate\n");
                             echo("                        " . $feedSubmissionInfo->getSubmittedDate()->format(DATE_FORMAT) . "\n");
                         }
-                        if ($feedSubmissionInfo->isSetFeedProcessingStatus()) 
+                        if ($feedSubmissionInfo->isSetFeedProcessingStatus())
                         {
                             echo("                    FeedProcessingStatus\n");
                             echo("                        " . $feedSubmissionInfo->getFeedProcessingStatus() . "\n");
                         }
-                        if ($feedSubmissionInfo->isSetStartedProcessingDate()) 
+                        if ($feedSubmissionInfo->isSetStartedProcessingDate())
                         {
                             echo("                    StartedProcessingDate\n");
                             echo("                        " . $feedSubmissionInfo->getStartedProcessingDate()->format(DATE_FORMAT) . "\n");
                         }
-                        if ($feedSubmissionInfo->isSetCompletedProcessingDate()) 
+                        if ($feedSubmissionInfo->isSetCompletedProcessingDate())
                         {
                             echo("                    CompletedProcessingDate\n");
                             echo("                        " . $feedSubmissionInfo->getCompletedProcessingDate()->format(DATE_FORMAT) . "\n");
                         }
-                    } 
-                } 
-                if ($response->isSetResponseMetadata()) { 
+                    }
+                }
+                if ($response->isSetResponseMetadata()) {
                     echo("            ResponseMetadata\n");
                     $responseMetadata = $response->getResponseMetadata();
-                    if ($responseMetadata->isSetRequestId()) 
+                    if ($responseMetadata->isSetRequestId())
                     {
                         echo("                RequestId\n");
                         echo("                    " . $responseMetadata->getRequestId() . "\n");
                     }
-                } 
+                }
 
                 echo("            ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
      } catch (MarketplaceWebService_Exception $ex) {
@@ -253,4 +253,4 @@ EOD;
          echo("ResponseHeaderMetadata: " . $ex->getResponseHeaderMetadata() . "\n");
      }
  }
-                                                                
+

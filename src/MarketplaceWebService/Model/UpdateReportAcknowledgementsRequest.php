@@ -17,31 +17,32 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest
+ * UpdateReportAcknowledgementsRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>ReportIdList: MarketplaceWebService_Model_IdList</li>
+ * <li>ReportIdList: IdList</li>
  * <li>Acknowledged: bool</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends MarketplaceWebService_Model
+class UpdateReportAcknowledgementsRequest extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest
+     * Construct new UpdateReportAcknowledgementsRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -50,7 +51,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>ReportIdList: MarketplaceWebService_Model_IdList</li>
+     * <li>ReportIdList: IdList</li>
      * <li>Acknowledged: bool</li>
      *
      * </ul>
@@ -61,7 +62,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
+        'ReportIdList' => array('FieldValue' => null, 'FieldType' => 'Model\IdList'),
         'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
         parent::__construct($data);
@@ -93,7 +94,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest instance
+     * @return UpdateReportAcknowledgementsRequest instance
      */
     public function withMarketplace($value)
     {
@@ -138,7 +139,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest instance
+     * @return UpdateReportAcknowledgementsRequest instance
      */
     public function withMerchant($value)
     {
@@ -183,7 +184,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest instance
+     * @return UpdateReportAcknowledgementsRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -228,7 +229,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the ReportIdList  and returns this instance
      * 
      * @param IdList $value ReportIdList
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest instance
+     * @return UpdateReportAcknowledgementsRequest instance
      */
     public function withReportIdList($value)
     {
@@ -274,7 +275,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the Acknowledged and returns this instance
      * 
      * @param bool $value Acknowledged
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest instance
+     * @return UpdateReportAcknowledgementsRequest instance
      */
     public function withAcknowledged($value)
     {

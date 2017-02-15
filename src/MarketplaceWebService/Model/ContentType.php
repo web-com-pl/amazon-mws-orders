@@ -12,7 +12,7 @@
 /******************************************************************************* 
 
 /**
- * MarketplaceWebService_Model_ContentType
+ * ContentType
  *
  * Defines the content type, encoding and character set used to send
  * a feed to MWS
@@ -30,7 +30,7 @@
  * The only content type that MWS currently supports is octet-stream
  */
 
-class MarketplaceWebService_Model_ContentType  extends MarketplaceWebService_Model {
+class ContentType  extends AmazonModelAbstract {
 	
 	public function __construct($data = null) {
         $this->fields = array (

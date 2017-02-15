@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_ReportSchedule
+ * ReportSchedule
  * 
  * Properties:
  * <ul>
@@ -35,12 +36,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_Model
+class ReportSchedule extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ReportSchedule
+     * Construct new ReportSchedule
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -89,7 +90,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
      * Sets the value of the ReportType and returns this instance
      * 
      * @param string $value ReportType
-     * @return MarketplaceWebService_Model_ReportSchedule instance
+     * @return ReportSchedule instance
      */
     public function withReportType($value)
     {
@@ -134,7 +135,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
      * Sets the value of the Schedule and returns this instance
      * 
      * @param string $value Schedule
-     * @return MarketplaceWebService_Model_ReportSchedule instance
+     * @return ReportSchedule instance
      */
     public function withSchedule($value)
     {
@@ -179,7 +180,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
      * Sets the value of the ScheduledDate and returns this instance
      * 
      * @param string $value ScheduledDate
-     * @return MarketplaceWebService_Model_ReportSchedule instance
+     * @return ReportSchedule instance
      */
     public function withScheduledDate($value)
     {

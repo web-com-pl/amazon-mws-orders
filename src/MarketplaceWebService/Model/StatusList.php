@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_StatusList
+ * StatusList
  * 
  * Properties:
  * <ul>
@@ -33,12 +34,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_StatusList extends MarketplaceWebService_Model
+class StatusList extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_StatusList
+     * Construct new StatusList
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -89,7 +90,7 @@ class MarketplaceWebService_Model_StatusList extends MarketplaceWebService_Model
      * <code>withStatus($status1, $status2)</code>
      * 
      * @param string  $stringArgs one or more Status
-     * @return MarketplaceWebService_Model_StatusList  instance
+     * @return StatusList  instance
      */
     public function withStatus($stringArgs)
     {

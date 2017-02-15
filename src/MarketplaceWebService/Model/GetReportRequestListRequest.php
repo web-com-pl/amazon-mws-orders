@@ -17,35 +17,36 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportRequestListRequest
+ * GetReportRequestListRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>ReportRequestIdList: MarketplaceWebService_Model_IdList</li>
- * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
- * <li>ReportProcessingStatusList: MarketplaceWebService_Model_StatusList</li>
+ * <li>ReportRequestIdList: IdList</li>
+ * <li>ReportTypeList: TypeList</li>
+ * <li>ReportProcessingStatusList: StatusList</li>
  * <li>MaxCount: Count</li>
  * <li>RequestedFromDate: string</li>
  * <li>RequestedToDate: string</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportRequestListRequest extends MarketplaceWebService_Model
+class GetReportRequestListRequest extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportRequestListRequest
+     * Construct new GetReportRequestListRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -54,9 +55,9 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>ReportRequestIdList: MarketplaceWebService_Model_IdList</li>
-     * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
-     * <li>ReportProcessingStatusList: MarketplaceWebService_Model_StatusList</li>
+     * <li>ReportRequestIdList: IdList</li>
+     * <li>ReportTypeList: TypeList</li>
+     * <li>ReportProcessingStatusList: StatusList</li>
      * <li>MaxCount: Count</li>
      * <li>RequestedFromDate: string</li>
      * <li>RequestedToDate: string</li>
@@ -69,9 +70,9 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
-        'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_StatusList'),
+        'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'Model\IdList'),
+        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'Model\TypeList'),
+        'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'Model\StatusList'),
         'MaxCount' => array('FieldValue' => null, 'FieldType' => 'string'),
         'RequestedFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'RequestedToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
@@ -105,7 +106,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return GetReportRequestListRequest instance
      */
     public function withMarketplace($value)
     {
@@ -150,7 +151,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return GetReportRequestListRequest instance
      */
     public function withMerchant($value)
     {
@@ -195,7 +196,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return GetReportRequestListRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -240,7 +241,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      * Sets the value of the ReportRequestIdList  and returns this instance
      * 
      * @param IdList $value ReportRequestIdList
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return GetReportRequestListRequest instance
      */
     public function withReportRequestIdList($value)
     {
@@ -286,7 +287,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      * Sets the value of the ReportTypeList  and returns this instance
      * 
      * @param TypeList $value ReportTypeList
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return GetReportRequestListRequest instance
      */
     public function withReportTypeList($value)
     {
@@ -332,7 +333,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      * Sets the value of the ReportProcessingStatusList  and returns this instance
      * 
      * @param StatusList $value ReportProcessingStatusList
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return GetReportRequestListRequest instance
      */
     public function withReportProcessingStatusList($value)
     {
@@ -378,7 +379,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      * Sets the value of the MaxCount and returns this instance
      * 
      * @param Count $value MaxCount
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return GetReportRequestListRequest instance
      */
     public function withMaxCount($value)
     {
@@ -423,7 +424,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      * Sets the value of the RequestedFromDate and returns this instance
      * 
      * @param string $value RequestedFromDate
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return GetReportRequestListRequest instance
      */
     public function withRequestedFromDate($value)
     {
@@ -468,7 +469,7 @@ class MarketplaceWebService_Model_GetReportRequestListRequest extends Marketplac
      * Sets the value of the RequestedToDate and returns this instance
      * 
      * @param string $value RequestedToDate
-     * @return MarketplaceWebService_Model_GetReportRequestListRequest instance
+     * @return GetReportRequestListRequest instance
      */
     public function withRequestedToDate($value)
     {

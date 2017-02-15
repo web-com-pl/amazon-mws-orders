@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionResultRequest
+ * GetFeedSubmissionResultRequest
  * 
  * Properties:
  * <ul>
@@ -35,12 +36,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends MarketplaceWebService_Model
+class GetFeedSubmissionResultRequest extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionResultRequest
+     * Construct new GetFeedSubmissionResultRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -91,7 +92,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_GetFeedSubmissionResultRequest instance
+     * @return GetFeedSubmissionResultRequest instance
      */
     public function withMarketplace($value)
     {
@@ -136,7 +137,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_GetFeedSubmissionResultRequest instance
+     * @return GetFeedSubmissionResultRequest instance
      */
     public function withMerchant($value)
     {
@@ -181,7 +182,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_GetFeedSubmissionResultRequest instance
+     * @return GetFeedSubmissionResultRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -226,7 +227,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      * Sets the value of the FeedSubmissionId and returns this instance
      * 
      * @param string $value FeedSubmissionId
-     * @return MarketplaceWebService_Model_GetFeedSubmissionResultRequest instance
+     * @return GetFeedSubmissionResultRequest instance
      */
     public function withFeedSubmissionId($value)
     {
@@ -271,7 +272,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionResultRequest extends Marketp
      * Sets the value of the FeedSubmissionResult and returns this instance
      * 
      * @param string $value FeedSubmissionResult
-     * @return MarketplaceWebService_Model_GetFeedSubmissionResultRequest instance
+     * @return GetFeedSubmissionResultRequest instance
      */
     public function withFeedSubmissionResult($value)
     {

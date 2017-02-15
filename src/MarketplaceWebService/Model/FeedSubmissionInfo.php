@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_FeedSubmissionInfo
+ * FeedSubmissionInfo
  * 
  * Properties:
  * <ul>
@@ -38,12 +39,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebService_Model
+class FeedSubmissionInfo extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_FeedSubmissionInfo
+     * Construct new FeedSubmissionInfo
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -98,7 +99,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the FeedSubmissionId and returns this instance
      * 
      * @param string $value FeedSubmissionId
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withFeedSubmissionId($value)
     {
@@ -143,7 +144,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the FeedType and returns this instance
      * 
      * @param string $value FeedType
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withFeedType($value)
     {
@@ -188,7 +189,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the SubmittedDate and returns this instance
      * 
      * @param string $value SubmittedDate
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withSubmittedDate($value)
     {
@@ -233,7 +234,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the FeedProcessingStatus and returns this instance
      * 
      * @param string $value FeedProcessingStatus
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withFeedProcessingStatus($value)
     {
@@ -278,7 +279,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the StartedProcessingDate and returns this instance
      * 
      * @param string $value StartedProcessingDate
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withStartedProcessingDate($value)
     {
@@ -323,7 +324,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the CompletedProcessingDate and returns this instance
      * 
      * @param string $value CompletedProcessingDate
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withCompletedProcessingDate($value)
     {

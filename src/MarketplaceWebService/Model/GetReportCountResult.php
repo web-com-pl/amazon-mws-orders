@@ -17,14 +17,15 @@
  */
 
 /**
- *  @see MarketplaceWebService_Model
+ *  @see AmazonModelAbstract
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Webcom\MarketPlaceWebService\Model;
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportCountResult
+ * GetReportCountResult
  * 
  * Properties:
  * <ul>
@@ -33,12 +34,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportCountResult extends MarketplaceWebService_Model
+class GetReportCountResult extends AmazonModelAbstract
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportCountResult
+     * Construct new GetReportCountResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -83,7 +84,7 @@ class MarketplaceWebService_Model_GetReportCountResult extends MarketplaceWebSer
      * Sets the value of the Count and returns this instance
      * 
      * @param int $value Count
-     * @return MarketplaceWebService_Model_GetReportCountResult instance
+     * @return GetReportCountResult instance
      */
     public function withCount($value)
     {

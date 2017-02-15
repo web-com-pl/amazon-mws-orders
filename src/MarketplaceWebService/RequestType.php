@@ -6,6 +6,8 @@
  *      matching the request type.
  *   3. 'Regular' POST requests. This represents the multitude of MWS requests.
  */
+namespace Webcom\MarketPlaceWebService;
+
 final class RequestType {
   const POST_UPLOAD = 'POST_UPLOAD';
   const POST_DOWNLOAD = 'POST_DOWNLOAD';
@@ -45,7 +47,7 @@ final class RequestType {
         $requestType = self::UNKNOWN;
         break;
     }
-    
+
     return $requestType;
   }
 }
