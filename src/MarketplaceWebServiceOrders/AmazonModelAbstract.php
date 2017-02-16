@@ -200,7 +200,8 @@ abstract class AmazonModelAbstract
 
 
                             foreach ($elements as $element) {
-                                $this->_fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
+                                $class = '\\' . __NAMESPACE__ . '\\' . $fieldType[0];
+                                $this->_fields[$fieldName]['FieldValue'][] = new $class($element);
                             }
                         }
                     }
@@ -220,7 +221,8 @@ abstract class AmazonModelAbstract
             } else {
                  if ($this->_isComplexType($fieldType)) {
                     if (array_key_exists($fieldName, $array)) {
-                        $this->_fields[$fieldName]['FieldValue'] = new $fieldType($array[$fieldName]);
+                        $class = '\\' . __NAMESPACE__ . '\\' . $fieldType;
+                        $this->_fields[$fieldName]['FieldValue'] = new $class($array[$fieldName]);
                     }
                  } else {
                     if (array_key_exists($fieldName, $array)) {
@@ -302,7 +304,7 @@ abstract class AmazonModelAbstract
                 if (is_array($fieldType)) {
                     if ($fieldType[0] == "object") {
                         foreach ($fieldValue as $item) {
-                            $newDoc = new DOMDocument();
+                            $newDoc = new \DOMDocument();
                             $importedNode = $newDoc->importNode($item, true);
                             $newDoc->appendChild($importedNode);
                             $xmlStr = $newDoc->saveXML();

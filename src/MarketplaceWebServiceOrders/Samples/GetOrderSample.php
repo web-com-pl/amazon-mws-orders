@@ -96,7 +96,7 @@
         echo ("Service Response\n");
         echo ("=============================================================================\n");
 
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($response->toXML());
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;

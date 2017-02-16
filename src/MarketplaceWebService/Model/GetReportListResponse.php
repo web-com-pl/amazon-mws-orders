@@ -70,7 +70,7 @@ class GetReportListResponse extends AmazonModelAbstract
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
         $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
@@ -78,7 +78,7 @@ class GetReportListResponse extends AmazonModelAbstract
         if ($response->length == 1) {
             return new GetReportListResponse(($response->item(0))); 
         } else {
-            throw new Exception ("Unable to construct GetReportListResponse from provided XML. 
+            throw new \Exception ("Unable to construct GetReportListResponse from provided XML. 
                                   Make sure that GetReportListResponse is a root element");
         }
           
