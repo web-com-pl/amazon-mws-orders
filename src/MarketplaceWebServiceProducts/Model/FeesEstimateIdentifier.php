@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,15 +22,12 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>MarketplaceId: string</li>
  * <li>SellerId: string</li>
  * <li>IdType: string</li>
@@ -40,21 +38,20 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IdType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IdValue' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsAmazonFulfilled' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'PriceToEstimateFees' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceToEstimateFees'),
-    'SellerInputIdentifier' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'MarketplaceId'         => array('FieldValue' => null, 'FieldType' => 'string'),
+                'SellerId'              => array('FieldValue' => null, 'FieldType' => 'string'),
+                'IdType'                => array('FieldValue' => null, 'FieldType' => 'string'),
+                'IdValue'               => array('FieldValue' => null, 'FieldType' => 'string'),
+                'IsAmazonFulfilled'     => array('FieldValue' => null, 'FieldType' => 'bool'),
+                'PriceToEstimateFees'   => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceToEstimateFees'),
+                'SellerInputIdentifier' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -86,8 +83,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -132,8 +129,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -178,8 +175,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIdType()
     {
-                return !is_null($this->_fields['IdType']['FieldValue']);
-            }
+        return !is_null($this->_fields['IdType']['FieldValue']);
+    }
 
     /**
      * Set the value of IdType, return this.
@@ -224,8 +221,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIdValue()
     {
-                return !is_null($this->_fields['IdValue']['FieldValue']);
-            }
+        return !is_null($this->_fields['IdValue']['FieldValue']);
+    }
 
     /**
      * Set the value of IdValue, return this.
@@ -280,8 +277,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIsAmazonFulfilled()
     {
-                return !is_null($this->_fields['IsAmazonFulfilled']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsAmazonFulfilled']['FieldValue']);
+    }
 
     /**
      * Set the value of IsAmazonFulfilled, return this.
@@ -326,8 +323,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPriceToEstimateFees()
     {
-                return !is_null($this->_fields['PriceToEstimateFees']['FieldValue']);
-            }
+        return !is_null($this->_fields['PriceToEstimateFees']['FieldValue']);
+    }
 
     /**
      * Set the value of PriceToEstimateFees, return this.
@@ -372,8 +369,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerInputIdentifier()
     {
-                return !is_null($this->_fields['SellerInputIdentifier']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerInputIdentifier']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerInputIdentifier, return this.

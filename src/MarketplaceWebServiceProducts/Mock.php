@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -20,12 +21,11 @@
 /**
  *  @see MarketplaceWebServiceProducts_Interface
  */
-require_once (dirname(__FILE__) . '/Interface.php'); 
+require_once (dirname(__FILE__) . '/Interface.php');
 
-class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProducts_Interface
+class Mock implements AmazonInterface
 {
     // Public API ------------------------------------------------------------//
-
     /**
      * Get Competitive Pricing For ASIN
      * Gets competitive pricing and related information for a product identified by
@@ -35,7 +35,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASIN
      * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getCompetitivePricingForASIN($request)
     {
@@ -52,7 +52,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKU
      * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getCompetitivePricingForSKU($request)
     {
@@ -69,7 +69,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASIN
      * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getLowestOfferListingsForASIN($request)
     {
@@ -86,7 +86,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKU
      * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getLowestOfferListingsForSKU($request)
     {
@@ -103,7 +103,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN
      * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getLowestPricedOffersForASIN($request)
     {
@@ -120,7 +120,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU
      * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getLowestPricedOffersForSKU($request)
     {
@@ -137,7 +137,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetMatchingProduct
      * @return MarketplaceWebServiceProducts_Model_GetMatchingProductResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getMatchingProduct($request)
     {
@@ -154,7 +154,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetMatchingProductForId
      * @return MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getMatchingProductForId($request)
     {
@@ -172,7 +172,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetMyFeesEstimate
      * @return MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getMyFeesEstimate($request)
     {
@@ -188,7 +188,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetMyPriceForASIN
      * @return MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getMyPriceForASIN($request)
     {
@@ -204,7 +204,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetMyPriceForSKU
      * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getMyPriceForSKU($request)
     {
@@ -221,7 +221,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForASIN
      * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getProductCategoriesForASIN($request)
     {
@@ -238,7 +238,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKU
      * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getProductCategoriesForSKU($request)
     {
@@ -256,7 +256,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_GetServiceStatus
      * @return MarketplaceWebServiceProducts_Model_GetServiceStatusResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getServiceStatus($request)
     {
@@ -273,7 +273,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      * @see MarketplaceWebServiceProducts_Model_ListMatchingProducts
      * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function listMatchingProducts($request)
     {

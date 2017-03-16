@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -17,9 +18,8 @@
  * Generated: Fri Sep 16 11:49:32 PDT 2016
  */
 
-interface  MarketplaceWebServiceProducts_Interface
+interface AmazonInterface
 {
-
     /**
      * Get Competitive Pricing For ASIN
      * Gets competitive pricing and related information for a product identified by
@@ -29,11 +29,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest
      * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getCompetitivePricingForASIN($request);
-
-
     /**
      * Get Competitive Pricing For SKU
      * Gets competitive pricing and related information for a product identified by
@@ -43,11 +41,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest
      * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getCompetitivePricingForSKU($request);
-
-
     /**
      * Get Lowest Offer Listings For ASIN
      * Gets some of the lowest prices based on the product identified by the given
@@ -57,11 +53,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest
      * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getLowestOfferListingsForASIN($request);
-
-
     /**
      * Get Lowest Offer Listings For SKU
      * Gets some of the lowest prices based on the product identified by the given
@@ -71,11 +65,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest
      * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getLowestOfferListingsForSKU($request);
-
-
     /**
      * Get Lowest Priced Offers For ASIN
      * Retrieves the lowest priced offers based on the product identified by the given
@@ -85,11 +77,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINRequest
      * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getLowestPricedOffersForASIN($request);
-
-
     /**
      * Get Lowest Priced Offers For SKU
      * Retrieves the lowest priced offers based on the product identified by the given
@@ -99,11 +89,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKURequest
      * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getLowestPricedOffersForSKU($request);
-
-
     /**
      * Get Matching Product
      * GetMatchingProduct will return the details (attributes) for the
@@ -113,11 +101,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetMatchingProductRequest
      * @return MarketplaceWebServiceProducts_Model_GetMatchingProductResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getMatchingProduct($request);
-
-
     /**
      * Get Matching Product For Id
      * GetMatchingProduct will return the details (attributes) for the
@@ -127,11 +113,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest
      * @return MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getMatchingProductForId($request);
-
-
     /**
      * Get My Fees Estimate
      * Retrieves the fees estimate for the
@@ -142,11 +126,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetMyFeesEstimateRequest
      * @return MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getMyFeesEstimate($request);
-
-
     /**
      * Get My Price For ASIN
      * <!-- Wrong doc in current code -->
@@ -155,11 +137,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest
      * @return MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getMyPriceForASIN($request);
-
-
     /**
      * Get My Price For SKU
      * <!-- Wrong doc in current code -->
@@ -168,11 +148,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest
      * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getMyPriceForSKU($request);
-
-
     /**
      * Get Product Categories For ASIN
      * Gets categories information for a product identified by
@@ -182,11 +160,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest
      * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getProductCategoriesForASIN($request);
-
-
     /**
      * Get Product Categories For SKU
      * Gets categories information for a product identified by
@@ -196,11 +172,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest
      * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getProductCategoriesForSKU($request);
-
-
     /**
      * Get Service Status
      * Returns the service status of a particular MWS API section. The operation
@@ -211,11 +185,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_GetServiceStatusRequest
      * @return MarketplaceWebServiceProducts_Model_GetServiceStatusResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function getServiceStatus($request);
-
-
     /**
      * List Matching Products
      * ListMatchingProducts can be used to
@@ -225,8 +197,7 @@ interface  MarketplaceWebServiceProducts_Interface
      * @see MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest
      * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws AmazonException
      */
     public function listMatchingProducts($request);
-
 }

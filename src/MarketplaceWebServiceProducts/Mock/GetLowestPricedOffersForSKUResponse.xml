@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GetLowestPricedOffersForSKUResponse xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01">
-   <GetLowestPricedOffersForSKUResult MarketplaceID="String" SKU="String" ItemCondition="String" status="String">
-    
+    <GetLowestPricedOffersForSKUResult MarketplaceID="String" SKU="String" ItemCondition="String" status="String">
+
         <Identifier>
             <MarketplaceId>String</MarketplaceId>
             <SellerSKU>String</SellerSKU>
@@ -12,13 +12,13 @@
             <TotalOfferCount>1</TotalOfferCount>
             <NumberOfOffers>
                 <OfferCount condition="String" fulfillmentChannel="String">
-                
+
                     1
                 </OfferCount>
             </NumberOfOffers>
             <LowestPrices>
                 <LowestPrice condition="String" fulfillmentChannel="String">
-                
+
                     <LandedPrice>
                         <CurrencyCode>String</CurrencyCode>
                         <Amount>100</Amount>
@@ -34,15 +34,15 @@
                     <Points>
                         <PointsNumber>1</PointsNumber>
                         <PointsMonetaryValue>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
+                            <CurrencyCode>String</CurrencyCode>
+                            <Amount>100</Amount>
                         </PointsMonetaryValue>
                     </Points>
                 </LowestPrice>
             </LowestPrices>
             <BuyBoxPrices>
                 <BuyBoxPrice condition="String">
-                
+
                     <LandedPrice>
                         <CurrencyCode>String</CurrencyCode>
                         <Amount>100</Amount>
@@ -58,8 +58,8 @@
                     <Points>
                         <PointsNumber>1</PointsNumber>
                         <PointsMonetaryValue>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
+                            <CurrencyCode>String</CurrencyCode>
+                            <Amount>100</Amount>
                         </PointsMonetaryValue>
                     </Points>
                 </BuyBoxPrice>
@@ -74,7 +74,7 @@
             </SuggestedLowerPricePlusShipping>
             <BuyBoxEligibleOffers>
                 <OfferCount condition="String" fulfillmentChannel="String">
-                
+
                     1
                 </OfferCount>
             </BuyBoxEligibleOffers>
@@ -88,7 +88,7 @@
                     <FeedbackCount>1</FeedbackCount>
                 </SellerFeedbackRating>
                 <ShippingTime minimumHours="1" maximumHours="1" availableDate="1969-07-21T02:56:03Z" availabilityType="String">
-                
+
                 </ShippingTime>
                 <ListingPrice>
                     <CurrencyCode>String</CurrencyCode>
@@ -115,7 +115,7 @@
             </Offer>
         </Offers>
     </GetLowestPricedOffersForSKUResult>
-   <ResponseMetadata>
+    <ResponseMetadata>
         <RequestId>String</RequestId>
     </ResponseMetadata>
 </GetLowestPricedOffersForSKUResponse>

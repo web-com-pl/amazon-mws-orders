@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,15 +22,12 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_PriceType
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>LandedPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
  * <li>ListingPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
  * <li>Shipping: MarketplaceWebServiceProducts_Model_MoneyType</li>
@@ -37,18 +35,17 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_PriceType extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_PriceType extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'LandedPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'Shipping' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'Points' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Points'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'LandedPrice'  => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'Shipping'     => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'Points'       => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Points'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -80,8 +77,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetLandedPrice()
     {
-                return !is_null($this->_fields['LandedPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['LandedPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of LandedPrice, return this.
@@ -126,8 +123,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetListingPrice()
     {
-                return !is_null($this->_fields['ListingPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListingPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of ListingPrice, return this.
@@ -172,8 +169,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipping()
     {
-                return !is_null($this->_fields['Shipping']['FieldValue']);
-            }
+        return !is_null($this->_fields['Shipping']['FieldValue']);
+    }
 
     /**
      * Set the value of Shipping, return this.
@@ -218,8 +215,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPoints()
     {
-                return !is_null($this->_fields['Points']['FieldValue']);
-            }
+        return !is_null($this->_fields['Points']['FieldValue']);
+    }
 
     /**
      * Set the value of Points, return this.

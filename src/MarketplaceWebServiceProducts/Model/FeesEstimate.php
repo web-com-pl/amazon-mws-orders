@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,32 +22,28 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_FeesEstimate
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>TimeOfFeesEstimation: string</li>
  * <li>TotalFeesEstimate: MarketplaceWebServiceProducts_Model_MoneyType</li>
  * <li>FeeDetailList: MarketplaceWebServiceProducts_Model_FeeDetailList</li>
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_FeesEstimate extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_FeesEstimate extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TimeOfFeesEstimation' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TotalFeesEstimate' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'FeeDetailList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_FeeDetailList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'TimeOfFeesEstimation' => array('FieldValue' => null, 'FieldType' => 'string'),
+                'TotalFeesEstimate'    => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'FeeDetailList'        => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_FeeDetailList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -78,8 +75,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTimeOfFeesEstimation()
     {
-                return !is_null($this->_fields['TimeOfFeesEstimation']['FieldValue']);
-            }
+        return !is_null($this->_fields['TimeOfFeesEstimation']['FieldValue']);
+    }
 
     /**
      * Set the value of TimeOfFeesEstimation, return this.
@@ -124,8 +121,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTotalFeesEstimate()
     {
-                return !is_null($this->_fields['TotalFeesEstimate']['FieldValue']);
-            }
+        return !is_null($this->_fields['TotalFeesEstimate']['FieldValue']);
+    }
 
     /**
      * Set the value of TotalFeesEstimate, return this.
@@ -170,8 +167,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetFeeDetailList()
     {
-                return !is_null($this->_fields['FeeDetailList']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeeDetailList']['FieldValue']);
+    }
 
     /**
      * Set the value of FeeDetailList, return this.

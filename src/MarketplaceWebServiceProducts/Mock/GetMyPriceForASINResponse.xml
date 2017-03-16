@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GetMyPriceForASINResponse xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01">
-   <GetMyPriceForASINResult ASIN="String" status="String">
-    
+    <GetMyPriceForASINResult ASIN="String" status="String">
+
         <Product>
             <Identifiers>
                 <MarketplaceASIN>
@@ -15,42 +15,46 @@
                 </SKUIdentifier>
             </Identifiers>
             <AttributeSets>
-                <Any><any-xml></any-xml></Any>
+                <Any>
+                    <any-xml></any-xml>
+                </Any>
             </AttributeSets>
             <Relationships>
-                <Any><any-xml></any-xml></Any>
+                <Any>
+                    <any-xml></any-xml>
+                </Any>
             </Relationships>
             <CompetitivePricing>
                 <CompetitivePrices>
                     <CompetitivePrice condition="String" subcondition="String" belongsToRequester="true">
-                    
+
                         <CompetitivePriceId>String</CompetitivePriceId>
                         <Price>
-                        <LandedPrice>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </LandedPrice>
-                        <ListingPrice>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </ListingPrice>
-                        <Shipping>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </Shipping>
-                        <Points>
-                        <PointsNumber>1</PointsNumber>
-                        <PointsMonetaryValue>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </PointsMonetaryValue>
-                        </Points>
+                            <LandedPrice>
+                                <CurrencyCode>String</CurrencyCode>
+                                <Amount>100</Amount>
+                            </LandedPrice>
+                            <ListingPrice>
+                                <CurrencyCode>String</CurrencyCode>
+                                <Amount>100</Amount>
+                            </ListingPrice>
+                            <Shipping>
+                                <CurrencyCode>String</CurrencyCode>
+                                <Amount>100</Amount>
+                            </Shipping>
+                            <Points>
+                                <PointsNumber>1</PointsNumber>
+                                <PointsMonetaryValue>
+                                    <CurrencyCode>String</CurrencyCode>
+                                    <Amount>100</Amount>
+                                </PointsMonetaryValue>
+                            </Points>
                         </Price>
                     </CompetitivePrice>
                 </CompetitivePrices>
                 <NumberOfOfferListings>
                     <OfferListingCount condition="String">
-                    
+
                         1
                     </OfferListingCount>
                 </NumberOfOfferListings>
@@ -73,7 +77,7 @@
                         <FulfillmentChannel>String</FulfillmentChannel>
                         <ShipsDomestically>String</ShipsDomestically>
                         <ShippingTime>
-                        <Max>String</Max>
+                            <Max>String</Max>
                         </ShippingTime>
                         <SellerPositiveFeedbackRating>String</SellerPositiveFeedbackRating>
                     </Qualifiers>
@@ -81,23 +85,23 @@
                     <SellerFeedbackCount>1</SellerFeedbackCount>
                     <Price>
                         <LandedPrice>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
+                            <CurrencyCode>String</CurrencyCode>
+                            <Amount>100</Amount>
                         </LandedPrice>
                         <ListingPrice>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
+                            <CurrencyCode>String</CurrencyCode>
+                            <Amount>100</Amount>
                         </ListingPrice>
                         <Shipping>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
+                            <CurrencyCode>String</CurrencyCode>
+                            <Amount>100</Amount>
                         </Shipping>
                         <Points>
-                        <PointsNumber>1</PointsNumber>
-                        <PointsMonetaryValue>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </PointsMonetaryValue>
+                            <PointsNumber>1</PointsNumber>
+                            <PointsMonetaryValue>
+                                <CurrencyCode>String</CurrencyCode>
+                                <Amount>100</Amount>
+                            </PointsMonetaryValue>
                         </Points>
                     </Price>
                     <MultipleOffersAtLowestPrice>String</MultipleOffersAtLowestPrice>
@@ -107,23 +111,23 @@
                 <Offer>
                     <BuyingPrice>
                         <LandedPrice>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
+                            <CurrencyCode>String</CurrencyCode>
+                            <Amount>100</Amount>
                         </LandedPrice>
                         <ListingPrice>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
+                            <CurrencyCode>String</CurrencyCode>
+                            <Amount>100</Amount>
                         </ListingPrice>
                         <Shipping>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
+                            <CurrencyCode>String</CurrencyCode>
+                            <Amount>100</Amount>
                         </Shipping>
                         <Points>
-                        <PointsNumber>1</PointsNumber>
-                        <PointsMonetaryValue>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </PointsMonetaryValue>
+                            <PointsNumber>1</PointsNumber>
+                            <PointsMonetaryValue>
+                                <CurrencyCode>String</CurrencyCode>
+                                <Amount>100</Amount>
+                            </PointsMonetaryValue>
                         </Points>
                     </BuyingPrice>
                     <RegularPrice>
@@ -143,11 +147,13 @@
             <Code>String</Code>
             <Message>String</Message>
             <Detail>
-                <Any><any-xml></any-xml></Any>
+                <Any>
+                    <any-xml></any-xml>
+                </Any>
             </Detail>
         </Error>
     </GetMyPriceForASINResult>
-   <ResponseMetadata>
+    <ResponseMetadata>
         <RequestId>String</RequestId>
     </ResponseMetadata>
 </GetMyPriceForASINResponse>

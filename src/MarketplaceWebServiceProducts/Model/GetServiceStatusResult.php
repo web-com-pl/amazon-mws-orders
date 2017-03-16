@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,15 +22,12 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_GetServiceStatusResult
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Status: string</li>
  * <li>Timestamp: string</li>
  * <li>MessageId: string</li>
@@ -37,18 +35,17 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_GetServiceStatusResult extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_GetServiceStatusResult extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Messages' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MessageList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'Status'    => array('FieldValue' => null, 'FieldType' => 'string'),
+                'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
+                'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
+                'Messages'  => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MessageList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -80,8 +77,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetStatus()
     {
-                return !is_null($this->_fields['Status']['FieldValue']);
-            }
+        return !is_null($this->_fields['Status']['FieldValue']);
+    }
 
     /**
      * Set the value of Status, return this.
@@ -126,8 +123,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTimestamp()
     {
-                return !is_null($this->_fields['Timestamp']['FieldValue']);
-            }
+        return !is_null($this->_fields['Timestamp']['FieldValue']);
+    }
 
     /**
      * Set the value of Timestamp, return this.
@@ -172,8 +169,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMessageId()
     {
-                return !is_null($this->_fields['MessageId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MessageId']['FieldValue']);
+    }
 
     /**
      * Set the value of MessageId, return this.
@@ -218,8 +215,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMessages()
     {
-                return !is_null($this->_fields['Messages']['FieldValue']);
-            }
+        return !is_null($this->_fields['Messages']['FieldValue']);
+    }
 
     /**
      * Set the value of Messages, return this.

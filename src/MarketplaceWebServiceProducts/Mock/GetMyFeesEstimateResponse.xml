@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GetMyFeesEstimateResponse xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01">
-   <GetMyFeesEstimateResult>
+    <GetMyFeesEstimateResult>
         <FeesEstimateResultList>
             <FeesEstimateResult>
                 <Status>String</Status>
@@ -12,19 +12,19 @@
                     <IsAmazonFulfilled>true</IsAmazonFulfilled>
                     <PriceToEstimateFees>
                         <ListingPrice>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
+                            <CurrencyCode>String</CurrencyCode>
+                            <Amount>100</Amount>
                         </ListingPrice>
                         <Shipping>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
+                            <CurrencyCode>String</CurrencyCode>
+                            <Amount>100</Amount>
                         </Shipping>
                         <Points>
-                        <PointsNumber>1</PointsNumber>
-                        <PointsMonetaryValue>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </PointsMonetaryValue>
+                            <PointsNumber>1</PointsNumber>
+                            <PointsMonetaryValue>
+                                <CurrencyCode>String</CurrencyCode>
+                                <Amount>100</Amount>
+                            </PointsMonetaryValue>
                         </Points>
                     </PriceToEstimateFees>
                     <SellerInputIdentifier>String</SellerInputIdentifier>
@@ -37,26 +37,26 @@
                     </TotalFeesEstimate>
                     <FeeDetailList>
                         <FeeDetail>
-                        <FeeType>String</FeeType>
-                        <FeeAmount>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </FeeAmount>
-                        <FeePromotion>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </FeePromotion>
-                        <TaxAmount>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </TaxAmount>
-                        <FinalFee>
-                        <CurrencyCode>String</CurrencyCode>
-                        <Amount>100</Amount>
-                        </FinalFee>
-                        <IncludedFeeDetailList>
-                        
-                        </IncludedFeeDetailList>
+                            <FeeType>String</FeeType>
+                            <FeeAmount>
+                                <CurrencyCode>String</CurrencyCode>
+                                <Amount>100</Amount>
+                            </FeeAmount>
+                            <FeePromotion>
+                                <CurrencyCode>String</CurrencyCode>
+                                <Amount>100</Amount>
+                            </FeePromotion>
+                            <TaxAmount>
+                                <CurrencyCode>String</CurrencyCode>
+                                <Amount>100</Amount>
+                            </TaxAmount>
+                            <FinalFee>
+                                <CurrencyCode>String</CurrencyCode>
+                                <Amount>100</Amount>
+                            </FinalFee>
+                            <IncludedFeeDetailList>
+
+                            </IncludedFeeDetailList>
                         </FeeDetail>
                     </FeeDetailList>
                 </FeesEstimate>
@@ -65,13 +65,15 @@
                     <Code>String</Code>
                     <Message>String</Message>
                     <Detail>
-                        <Any><any-xml></any-xml></Any>
+                        <Any>
+                            <any-xml></any-xml>
+                        </Any>
                     </Detail>
                 </Error>
             </FeesEstimateResult>
         </FeesEstimateResultList>
     </GetMyFeesEstimateResult>
-   <ResponseMetadata>
+    <ResponseMetadata>
         <RequestId>String</RequestId>
     </ResponseMetadata>
 </GetMyFeesEstimateResponse>

@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,15 +22,12 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_ASINOfferDetail
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>SubCondition: string</li>
  * <li>SellerFeedbackRating: MarketplaceWebServiceProducts_Model_SellerFeedbackType</li>
  * <li>ShippingTime: MarketplaceWebServiceProducts_Model_DetailedShippingTimeType</li>
@@ -43,24 +41,23 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_ASINOfferDetail extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_ASINOfferDetail extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SubCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SellerFeedbackType'),
-    'ShippingTime' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_DetailedShippingTimeType'),
-    'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'Points' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Points'),
-    'Shipping' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'ShipsFrom' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ShipsFromType'),
-    'IsFulfilledByAmazon' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'IsBuyBoxWinner' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'IsFeaturedMerchant' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'SubCondition'         => array('FieldValue' => null, 'FieldType' => 'string'),
+                'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SellerFeedbackType'),
+                'ShippingTime'         => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_DetailedShippingTimeType'),
+                'ListingPrice'         => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'Points'               => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Points'),
+                'Shipping'             => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'ShipsFrom'            => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ShipsFromType'),
+                'IsFulfilledByAmazon'  => array('FieldValue' => null, 'FieldType' => 'bool'),
+                'IsBuyBoxWinner'       => array('FieldValue' => null, 'FieldType' => 'bool'),
+                'IsFeaturedMerchant'   => array('FieldValue' => null, 'FieldType' => 'bool'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -92,8 +89,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSubCondition()
     {
-                return !is_null($this->_fields['SubCondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['SubCondition']['FieldValue']);
+    }
 
     /**
      * Set the value of SubCondition, return this.
@@ -138,8 +135,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerFeedbackRating()
     {
-                return !is_null($this->_fields['SellerFeedbackRating']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerFeedbackRating']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerFeedbackRating, return this.
@@ -184,8 +181,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShippingTime()
     {
-                return !is_null($this->_fields['ShippingTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingTime']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingTime, return this.
@@ -230,8 +227,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetListingPrice()
     {
-                return !is_null($this->_fields['ListingPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListingPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of ListingPrice, return this.
@@ -276,8 +273,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPoints()
     {
-                return !is_null($this->_fields['Points']['FieldValue']);
-            }
+        return !is_null($this->_fields['Points']['FieldValue']);
+    }
 
     /**
      * Set the value of Points, return this.
@@ -322,8 +319,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipping()
     {
-                return !is_null($this->_fields['Shipping']['FieldValue']);
-            }
+        return !is_null($this->_fields['Shipping']['FieldValue']);
+    }
 
     /**
      * Set the value of Shipping, return this.
@@ -368,8 +365,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipsFrom()
     {
-                return !is_null($this->_fields['ShipsFrom']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipsFrom']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipsFrom, return this.
@@ -424,8 +421,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIsFulfilledByAmazon()
     {
-                return !is_null($this->_fields['IsFulfilledByAmazon']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsFulfilledByAmazon']['FieldValue']);
+    }
 
     /**
      * Set the value of IsFulfilledByAmazon, return this.
@@ -480,8 +477,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIsBuyBoxWinner()
     {
-                return !is_null($this->_fields['IsBuyBoxWinner']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsBuyBoxWinner']['FieldValue']);
+    }
 
     /**
      * Set the value of IsBuyBoxWinner, return this.
@@ -536,8 +533,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIsFeaturedMerchant()
     {
-                return !is_null($this->_fields['IsFeaturedMerchant']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsFeaturedMerchant']['FieldValue']);
+    }
 
     /**
      * Set the value of IsFeaturedMerchant, return this.

@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,15 +22,12 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_Summary
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>TotalOfferCount: int</li>
  * <li>NumberOfOffers: MarketplaceWebServiceProducts_Model_NumberOfOffers</li>
  * <li>LowestPrices: MarketplaceWebServiceProducts_Model_LowestPrices</li>
@@ -40,21 +38,20 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_Summary extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_Summary extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TotalOfferCount' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'NumberOfOffers' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_NumberOfOffers'),
-    'LowestPrices' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_LowestPrices'),
-    'BuyBoxPrices' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_BuyBoxPrices'),
-    'ListPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'BuyBoxEligibleOffers' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'TotalOfferCount'                 => array('FieldValue' => null, 'FieldType' => 'int'),
+                'NumberOfOffers'                  => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_NumberOfOffers'),
+                'LowestPrices'                    => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_LowestPrices'),
+                'BuyBoxPrices'                    => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_BuyBoxPrices'),
+                'ListPrice'                       => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'BuyBoxEligibleOffers'            => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -86,8 +83,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTotalOfferCount()
     {
-                return !is_null($this->_fields['TotalOfferCount']['FieldValue']);
-            }
+        return !is_null($this->_fields['TotalOfferCount']['FieldValue']);
+    }
 
     /**
      * Set the value of TotalOfferCount, return this.
@@ -132,8 +129,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetNumberOfOffers()
     {
-                return !is_null($this->_fields['NumberOfOffers']['FieldValue']);
-            }
+        return !is_null($this->_fields['NumberOfOffers']['FieldValue']);
+    }
 
     /**
      * Set the value of NumberOfOffers, return this.
@@ -178,8 +175,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetLowestPrices()
     {
-                return !is_null($this->_fields['LowestPrices']['FieldValue']);
-            }
+        return !is_null($this->_fields['LowestPrices']['FieldValue']);
+    }
 
     /**
      * Set the value of LowestPrices, return this.
@@ -224,8 +221,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetBuyBoxPrices()
     {
-                return !is_null($this->_fields['BuyBoxPrices']['FieldValue']);
-            }
+        return !is_null($this->_fields['BuyBoxPrices']['FieldValue']);
+    }
 
     /**
      * Set the value of BuyBoxPrices, return this.
@@ -270,8 +267,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetListPrice()
     {
-                return !is_null($this->_fields['ListPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of ListPrice, return this.
@@ -316,8 +313,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSuggestedLowerPricePlusShipping()
     {
-                return !is_null($this->_fields['SuggestedLowerPricePlusShipping']['FieldValue']);
-            }
+        return !is_null($this->_fields['SuggestedLowerPricePlusShipping']['FieldValue']);
+    }
 
     /**
      * Set the value of SuggestedLowerPricePlusShipping, return this.
@@ -362,8 +359,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetBuyBoxEligibleOffers()
     {
-                return !is_null($this->_fields['BuyBoxEligibleOffers']['FieldValue']);
-            }
+        return !is_null($this->_fields['BuyBoxEligibleOffers']['FieldValue']);
+    }
 
     /**
      * Set the value of BuyBoxEligibleOffers, return this.

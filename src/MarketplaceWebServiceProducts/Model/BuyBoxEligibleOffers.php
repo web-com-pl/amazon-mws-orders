@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,28 +22,24 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>OfferCount: array</li>
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'OfferCount' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_OfferCountType')),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'OfferCount' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_OfferCountType')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -52,8 +49,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getOfferCount()
     {
-        if ($this->_fields['OfferCount']['FieldValue'] == null)
-        {
+        if ($this->_fields['OfferCount']['FieldValue'] == null) {
             $this->_fields['OfferCount']['FieldValue'] = array();
         }
         return $this->_fields['OfferCount']['FieldValue'];
@@ -68,7 +64,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function setOfferCount($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array ($value);
+            $value = array($value);
         }
         $this->_fields['OfferCount']['FieldValue'] = $value;
         return $this;
@@ -89,8 +85,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetOfferCount()
     {
-                return !empty($this->_fields['OfferCount']['FieldValue']);
-            }
+        return !empty($this->_fields['OfferCount']['FieldValue']);
+    }
 
     /**
      * Add values for OfferCount, return this.
@@ -102,8 +98,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withOfferCount()
     {
-        foreach (func_get_args() as $OfferCount)
-        {
+        foreach (func_get_args() as $OfferCount) {
             $this->_fields['OfferCount']['FieldValue'][] = $OfferCount;
         }
         return $this;

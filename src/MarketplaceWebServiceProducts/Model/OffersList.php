@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,28 +22,24 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_OffersList
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Offer: array</li>
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_OffersList extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_OffersList extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Offer' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_OfferType')),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'Offer' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_OfferType')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -52,8 +49,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getOffer()
     {
-        if ($this->_fields['Offer']['FieldValue'] == null)
-        {
+        if ($this->_fields['Offer']['FieldValue'] == null) {
             $this->_fields['Offer']['FieldValue'] = array();
         }
         return $this->_fields['Offer']['FieldValue'];
@@ -68,7 +64,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function setOffer($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array ($value);
+            $value = array($value);
         }
         $this->_fields['Offer']['FieldValue'] = $value;
         return $this;
@@ -89,8 +85,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetOffer()
     {
-                return !empty($this->_fields['Offer']['FieldValue']);
-            }
+        return !empty($this->_fields['Offer']['FieldValue']);
+    }
 
     /**
      * Add values for Offer, return this.
@@ -102,8 +98,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withOffer()
     {
-        foreach (func_get_args() as $Offer)
-        {
+        foreach (func_get_args() as $Offer) {
             $this->_fields['Offer']['FieldValue'][] = $Offer;
         }
         return $this;

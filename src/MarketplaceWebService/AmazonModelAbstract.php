@@ -40,6 +40,7 @@ abstract class AmazonModelAbstract
             } elseif ($this->isDOMElement($data)) {
                 $this->fromDOMElement($data);
             } else {
+                dump($data);
                 throw new \Exception ("Unable to construct from provided data.
                                 Please be sure to pass associative array or DOMElement");
             }

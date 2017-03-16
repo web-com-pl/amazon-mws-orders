@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,15 +22,12 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResult
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>MarketplaceID: string</li>
  * <li>ASIN: string</li>
  * <li>ItemCondition: string</li>
@@ -40,21 +38,20 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResult extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResult extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceID' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'ASIN' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'ItemCondition' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'status' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'Identifier' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_GetLowestPricedOffersAsinIdentifier'),
-    'Summary' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Summary'),
-    'Offers' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ASINOfferDetailList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'MarketplaceID' => array('FieldValue' => null, 'FieldType' => '@string'),
+                'ASIN'          => array('FieldValue' => null, 'FieldType' => '@string'),
+                'ItemCondition' => array('FieldValue' => null, 'FieldType' => '@string'),
+                'status'        => array('FieldValue' => null, 'FieldType' => '@string'),
+                'Identifier'    => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_GetLowestPricedOffersAsinIdentifier'),
+                'Summary'       => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Summary'),
+                'Offers'        => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ASINOfferDetailList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -86,8 +83,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMarketplaceID()
     {
-                return !is_null($this->_fields['MarketplaceID']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceID']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceID, return this.
@@ -132,8 +129,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetASIN()
     {
-                return !is_null($this->_fields['ASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of ASIN, return this.
@@ -178,8 +175,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetItemCondition()
     {
-                return !is_null($this->_fields['ItemCondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemCondition']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemCondition, return this.
@@ -224,8 +221,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetstatus()
     {
-                return !is_null($this->_fields['status']['FieldValue']);
-            }
+        return !is_null($this->_fields['status']['FieldValue']);
+    }
 
     /**
      * Set the value of status, return this.
@@ -270,8 +267,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIdentifier()
     {
-                return !is_null($this->_fields['Identifier']['FieldValue']);
-            }
+        return !is_null($this->_fields['Identifier']['FieldValue']);
+    }
 
     /**
      * Set the value of Identifier, return this.
@@ -316,8 +313,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSummary()
     {
-                return !is_null($this->_fields['Summary']['FieldValue']);
-            }
+        return !is_null($this->_fields['Summary']['FieldValue']);
+    }
 
     /**
      * Set the value of Summary, return this.
@@ -362,8 +359,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetOffers()
     {
-                return !is_null($this->_fields['Offers']['FieldValue']);
-            }
+        return !is_null($this->_fields['Offers']['FieldValue']);
+    }
 
     /**
      * Set the value of Offers, return this.

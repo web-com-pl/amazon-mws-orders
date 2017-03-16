@@ -56,7 +56,7 @@ class CancelFeedSubmissionsResult extends AmazonModelAbstract
     {
         $this->fields = array (
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
+        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('Model\FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }

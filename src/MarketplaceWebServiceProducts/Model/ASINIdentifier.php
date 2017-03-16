@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,30 +22,26 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_ASINIdentifier
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>MarketplaceId: string</li>
  * <li>ASIN: string</li>
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_ASINIdentifier extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_ASINIdentifier extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ASIN' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+                'ASIN'          => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -76,8 +73,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -122,8 +119,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetASIN()
     {
-                return !is_null($this->_fields['ASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of ASIN, return this.

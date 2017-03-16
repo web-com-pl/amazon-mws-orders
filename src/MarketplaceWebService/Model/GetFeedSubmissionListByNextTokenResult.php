@@ -59,7 +59,7 @@ class GetFeedSubmissionListByNextTokenResult extends AmazonModelAbstract
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
+        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('Model\FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }

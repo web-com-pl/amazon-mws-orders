@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,15 +22,12 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Product: MarketplaceWebServiceProducts_Model_Product</li>
  * <li>Error: MarketplaceWebServiceProducts_Model_Error</li>
  * <li>SellerSKU: string</li>
@@ -37,18 +35,17 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Product' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Product'),
-    'Error' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'status' => array('FieldValue' => null, 'FieldType' => '@string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'Product'   => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Product'),
+                'Error'     => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
+                'SellerSKU' => array('FieldValue' => null, 'FieldType' => '@string'),
+                'status'    => array('FieldValue' => null, 'FieldType' => '@string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -80,8 +77,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetProduct()
     {
-                return !is_null($this->_fields['Product']['FieldValue']);
-            }
+        return !is_null($this->_fields['Product']['FieldValue']);
+    }
 
     /**
      * Set the value of Product, return this.
@@ -126,8 +123,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetError()
     {
-                return !is_null($this->_fields['Error']['FieldValue']);
-            }
+        return !is_null($this->_fields['Error']['FieldValue']);
+    }
 
     /**
      * Set the value of Error, return this.
@@ -172,8 +169,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -218,8 +215,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetstatus()
     {
-                return !is_null($this->_fields['status']['FieldValue']);
-            }
+        return !is_null($this->_fields['status']['FieldValue']);
+    }
 
     /**
      * Set the value of status, return this.

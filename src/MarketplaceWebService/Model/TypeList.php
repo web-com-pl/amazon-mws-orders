@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  *  PHP Version 5
  *
  *  @category    Amazon
@@ -9,43 +9,43 @@
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
  *  @version     2009-01-01
  */
-/******************************************************************************* 
+/*******************************************************************************
 
  *  Marketplace Web Service PHP5 Library
  *  Generated: Thu May 07 13:07:36 PDT 2009
- * 
+ *
  */
 
 /**
  *  @see AmazonModelAbstract
  */
 namespace Webcom\MarketPlaceWebService\Model;
-use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;
 
-    
+
 
 /**
  * TypeList
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Type: string</li>
  *
  * </ul>
- */ 
+ */
 class TypeList extends AmazonModelAbstract
 {
 
 
     /**
      * Construct new TypeList
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
+     *
+     * @param mixed $data DOMElement or Associative Array to construct from.
+     *
      * Valid properties:
      * <ul>
-     * 
+     *
      * <li>Type: string</li>
      *
      * </ul>
@@ -60,35 +60,35 @@ class TypeList extends AmazonModelAbstract
 
         /**
      * Gets the value of the Type .
-     * 
+     *
      * @return array of string Type
      */
-    public function getType() 
+    public function getType()
     {
         return $this->fields['Type']['FieldValue'];
     }
 
     /**
      * Sets the value of the Type.
-     * 
+     *
      * @param string or an array of string Type
      * @return this instance
      */
-    public function setType($type) 
+    public function setType($type)
     {
         if (!$this->isNumericArray($type)) {
-            $type =  array ($type);    
+            $type =  array ($type);
         }
         $this->fields['Type']['FieldValue'] = $type;
         return $this;
     }
-  
+
 
     /**
-     * Sets single or multiple values of Type list via variable number of arguments. 
+     * Sets single or multiple values of Type list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
      * <code>withType($type1, $type2)</code>
-     * 
+     *
      * @param string  $stringArgs one or more Type
      * @return TypeList  instance
      */
@@ -98,12 +98,12 @@ class TypeList extends AmazonModelAbstract
             $this->fields['Type']['FieldValue'][] = $type;
         }
         return $this;
-    }  
-      
+    }
+
 
     /**
      * Checks if Type list is non-empty
-     * 
+     *
      * @return bool true if Type list is non-empty
      */
     public function isSetType()

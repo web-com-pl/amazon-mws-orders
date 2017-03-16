@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,28 +22,24 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_LowestPrices
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>LowestPrice: array</li>
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_LowestPrices extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_LowestPrices extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'LowestPrice' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_LowestPriceType')),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'LowestPrice' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_LowestPriceType')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -52,8 +49,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getLowestPrice()
     {
-        if ($this->_fields['LowestPrice']['FieldValue'] == null)
-        {
+        if ($this->_fields['LowestPrice']['FieldValue'] == null) {
             $this->_fields['LowestPrice']['FieldValue'] = array();
         }
         return $this->_fields['LowestPrice']['FieldValue'];
@@ -68,7 +64,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     public function setLowestPrice($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array ($value);
+            $value = array($value);
         }
         $this->_fields['LowestPrice']['FieldValue'] = $value;
         return $this;
@@ -89,8 +85,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetLowestPrice()
     {
-                return !empty($this->_fields['LowestPrice']['FieldValue']);
-            }
+        return !empty($this->_fields['LowestPrice']['FieldValue']);
+    }
 
     /**
      * Add values for LowestPrice, return this.
@@ -102,8 +98,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withLowestPrice()
     {
-        foreach (func_get_args() as $LowestPrice)
-        {
+        foreach (func_get_args() as $LowestPrice) {
             $this->_fields['LowestPrice']['FieldValue'][] = $LowestPrice;
         }
         return $this;

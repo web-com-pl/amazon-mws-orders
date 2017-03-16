@@ -1,14 +1,15 @@
 <?php
-/*******************************************************************************
+
+/* * *****************************************************************************
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
- *******************************************************************************
+ * ******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Products
@@ -21,15 +22,12 @@
  *  @see MarketplaceWebServiceProducts_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
 /**
  * MarketplaceWebServiceProducts_Model_DetailedShippingTimeType
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>minimumHours: int</li>
  * <li>maximumHours: int</li>
  * <li>availableDate: string</li>
@@ -37,18 +35,17 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceProducts_Model_DetailedShippingTimeType extends MarketplaceWebServiceProducts_Model {
-
+class MarketplaceWebServiceProducts_Model_DetailedShippingTimeType extends AmazonModelAbstract
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'minimumHours' => array('FieldValue' => null, 'FieldType' => '@int'),
-    'maximumHours' => array('FieldValue' => null, 'FieldType' => '@int'),
-    'availableDate' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'availabilityType' => array('FieldValue' => null, 'FieldType' => '@string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array(
+                'minimumHours'     => array('FieldValue' => null, 'FieldType' => '@int'),
+                'maximumHours'     => array('FieldValue' => null, 'FieldType' => '@int'),
+                'availableDate'    => array('FieldValue' => null, 'FieldType' => '@string'),
+                'availabilityType' => array('FieldValue' => null, 'FieldType' => '@string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -80,8 +77,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetminimumHours()
     {
-                return !is_null($this->_fields['minimumHours']['FieldValue']);
-            }
+        return !is_null($this->_fields['minimumHours']['FieldValue']);
+    }
 
     /**
      * Set the value of minimumHours, return this.
@@ -126,8 +123,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetmaximumHours()
     {
-                return !is_null($this->_fields['maximumHours']['FieldValue']);
-            }
+        return !is_null($this->_fields['maximumHours']['FieldValue']);
+    }
 
     /**
      * Set the value of maximumHours, return this.
@@ -172,8 +169,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetavailableDate()
     {
-                return !is_null($this->_fields['availableDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['availableDate']['FieldValue']);
+    }
 
     /**
      * Set the value of availableDate, return this.
@@ -218,8 +215,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetavailabilityType()
     {
-                return !is_null($this->_fields['availabilityType']['FieldValue']);
-            }
+        return !is_null($this->_fields['availabilityType']['FieldValue']);
+    }
 
     /**
      * Set the value of availabilityType, return this.
