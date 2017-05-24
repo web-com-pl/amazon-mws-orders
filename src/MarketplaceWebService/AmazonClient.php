@@ -1317,8 +1317,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetReportId()) {
         $parameters['ReportId'] =  $request->getReportId();
@@ -1563,8 +1563,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetMarketplaceIdList()) {
 	$marketplaceIdList = $request->getMarketplaceIdList();
@@ -1686,14 +1686,13 @@ class AmazonClient implements AmazonInterface
      * Convert GetReportListRequest to name value pairs
      */
     private function convertGetReportList($request) {
-
       $parameters = array();
       $parameters['Action'] = 'GetReportList';
       if ($request->isSetMarketplace()) {
-        $parameters['Marketplace'] =  $request->getMarketplace();
+        $parameters['MarketplaceI'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetMaxCount()) {
         $parameters['MaxCount'] =  $request->getMaxCount();

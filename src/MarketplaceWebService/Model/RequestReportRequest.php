@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  *  PHP Version 5
  *
  *  @category    Amazon
@@ -9,27 +9,27 @@
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
  *  @version     2009-01-01
  */
-/******************************************************************************* 
+/*******************************************************************************
 
  *  Marketplace Web Service PHP5 Library
  *  Generated: Thu May 07 13:07:36 PDT 2009
- * 
+ *
  */
 
 /**
  *  @see AmazonModelAbstract
  */
 namespace Webcom\MarketPlaceWebService\Model;
-use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;
 
-    
+
 
 /**
  * RequestReportRequest
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>MarketplaceIdList: IdList</li>
@@ -39,19 +39,19 @@ use Webcom\MarketPlaceWebService\AmazonModelAbstract;
  * <li>ReportOptions: string</li>
  *
  * </ul>
- */ 
+ */
 class RequestReportRequest extends AmazonModelAbstract
 {
 
 
     /**
      * Construct new RequestReportRequest
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
+     *
+     * @param mixed $data DOMElement or Associative Array to construct from.
+     *
      * Valid properties:
      * <ul>
-     * 
+     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>MarketplaceIdList: IdList</li>
@@ -66,7 +66,7 @@ class RequestReportRequest extends AmazonModelAbstract
     {
         $this->fields = array (
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
+        'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'Model\IdList'),
         'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -79,21 +79,21 @@ class RequestReportRequest extends AmazonModelAbstract
 
         /**
      * Gets the value of the Marketplace property.
-     * 
+     *
      * @return string Marketplace
      */
-    public function getMarketplace() 
+    public function getMarketplace()
     {
         return $this->fields['Marketplace']['FieldValue'];
     }
 
     /**
      * Sets the value of the Marketplace property.
-     * 
+     *
      * @param string Marketplace
      * @return this instance
      */
-    public function setMarketplace($value) 
+    public function setMarketplace($value)
     {
         $this->fields['Marketplace']['FieldValue'] = $value;
         return $this;
@@ -101,7 +101,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the Marketplace and returns this instance
-     * 
+     *
      * @param string $value Marketplace
      * @return RequestReportRequest instance
      */
@@ -114,7 +114,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Checks if Marketplace is set
-     * 
+     *
      * @return bool true if Marketplace  is set
      */
     public function isSetMarketplace()
@@ -123,48 +123,35 @@ class RequestReportRequest extends AmazonModelAbstract
     }
 
     /**
-     * Gets the value of the Merchant property.
-     * 
-     * @return string Merchant
+     * Get the value of the SellerId property.
+     *
+     * @return String SellerId.
      */
-    public function getMerchant() 
+    public function getSellerId()
     {
-        return $this->fields['Merchant']['FieldValue'];
+        return $this->fields['SellerId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Merchant property.
-     * 
-     * @param string Merchant
+     * Set the value of the SellerId property.
+     *
+     * @param string sellerId
      * @return this instance
      */
-    public function setMerchant($value) 
+    public function setSellerId($value)
     {
-        $this->fields['Merchant']['FieldValue'] = $value;
+        $this->fields['SellerId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the Merchant and returns this instance
-     * 
-     * @param string $value Merchant
-     * @return RequestReportRequest instance
+     * Check to see if SellerId is set.
+     *
+     * @return boolean TRUE if SellerId is set.
      */
-    public function withMerchant($value)
+    public function isSetSellerId()
     {
-        $this->setMerchant($value);
-        return $this;
-    }
-
-
-    /**
-     * Checks if Merchant is set
-     * 
-     * @return bool true if Merchant  is set
-     */
-    public function isSetMerchant()
-    {
-        return !is_null($this->fields['Merchant']['FieldValue']);
+        return !is_null($this->fields['SellerId']['FieldValue']);
     }
 
     /**
@@ -214,21 +201,21 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Gets the value of the MarketplaceIdList.
-     * 
+     *
      * @return IdList MarketplaceIdList
      */
-    public function getMarketplaceIdList() 
+    public function getMarketplaceIdList()
     {
         return $this->fields['MarketplaceIdList']['FieldValue'];
     }
 
     /**
      * Sets the value of the MarketplaceIdList.
-     * 
+     *
      * @param IdList MarketplaceIdList
      * @return void
      */
-    public function setMarketplaceIdList($value) 
+    public function setMarketplaceIdList($value)
     {
 	$marketplaceIdList = new IdList();
 	$marketplaceIdList->setId($value['Id']);
@@ -238,7 +225,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the MarketplaceIdList  and returns this instance
-     * 
+     *
      * @param IdList $value MarketplaceIdList
      * @return RequestReportRequest instance
      */
@@ -251,7 +238,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Checks if MarketplaceIdList  is set
-     * 
+     *
      * @return bool true if MarketplaceIdList property is set
      */
     public function isSetMarketplaceIdList()
@@ -262,21 +249,21 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Gets the value of the ReportType property.
-     * 
+     *
      * @return string ReportType
      */
-    public function getReportType() 
+    public function getReportType()
     {
         return $this->fields['ReportType']['FieldValue'];
     }
 
     /**
      * Sets the value of the ReportType property.
-     * 
+     *
      * @param string ReportType
      * @return this instance
      */
-    public function setReportType($value) 
+    public function setReportType($value)
     {
         $this->fields['ReportType']['FieldValue'] = $value;
         return $this;
@@ -284,7 +271,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the ReportType and returns this instance
-     * 
+     *
      * @param string $value ReportType
      * @return RequestReportRequest instance
      */
@@ -297,7 +284,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Checks if ReportType is set
-     * 
+     *
      * @return bool true if ReportType  is set
      */
     public function isSetReportType()
@@ -307,21 +294,21 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Gets the value of the StartDate property.
-     * 
+     *
      * @return string StartDate
      */
-    public function getStartDate() 
+    public function getStartDate()
     {
         return $this->fields['StartDate']['FieldValue'];
     }
 
     /**
      * Sets the value of the StartDate property.
-     * 
+     *
      * @param string StartDate
      * @return this instance
      */
-    public function setStartDate($value) 
+    public function setStartDate($value)
     {
         $this->fields['StartDate']['FieldValue'] = $value;
         return $this;
@@ -329,7 +316,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the StartDate and returns this instance
-     * 
+     *
      * @param string $value StartDate
      * @return RequestReportRequest instance
      */
@@ -342,7 +329,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Checks if StartDate is set
-     * 
+     *
      * @return bool true if StartDate  is set
      */
     public function isSetStartDate()
@@ -352,21 +339,21 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Gets the value of the EndDate property.
-     * 
+     *
      * @return string EndDate
      */
-    public function getEndDate() 
+    public function getEndDate()
     {
         return $this->fields['EndDate']['FieldValue'];
     }
 
     /**
      * Sets the value of the EndDate property.
-     * 
+     *
      * @param string EndDate
      * @return this instance
      */
-    public function setEndDate($value) 
+    public function setEndDate($value)
     {
         $this->fields['EndDate']['FieldValue'] = $value;
         return $this;
@@ -374,7 +361,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the EndDate and returns this instance
-     * 
+     *
      * @param string $value EndDate
      * @return RequestReportRequest instance
      */
@@ -387,7 +374,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Checks if EndDate is set
-     * 
+     *
      * @return bool true if EndDate  is set
      */
     public function isSetEndDate()
@@ -397,21 +384,21 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Gets the value of the ReportOptions property.
-     * 
+     *
      * @return string ReportOptions
      */
-    public function getReportOptions() 
+    public function getReportOptions()
     {
         return $this->fields['ReportOptions']['FieldValue'];
     }
 
     /**
      * Sets the value of the ReportOptions property.
-     * 
+     *
      * @param string ReportOptions
      * @return this instance
      */
-    public function setReportOptions($value) 
+    public function setReportOptions($value)
     {
         $this->fields['ReportOptions']['FieldValue'] = $value;
         return $this;
@@ -419,7 +406,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the ReportOptions and returns this instance
-     * 
+     *
      * @param string $value ReportOptions
      * @return RequestReportRequest instance
      */
@@ -432,7 +419,7 @@ class RequestReportRequest extends AmazonModelAbstract
 
     /**
      * Checks if ReportOptions is set
-     * 
+     *
      * @return bool true if ReportOptions  is set
      */
     public function isSetReportOptions()
