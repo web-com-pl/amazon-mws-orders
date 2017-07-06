@@ -59,7 +59,7 @@ class GetReportRequestListByNextTokenResult extends AmazonModelAbstract
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
+        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('Model\ReportRequestInfo')),
         );
         parent::__construct($data);
     }

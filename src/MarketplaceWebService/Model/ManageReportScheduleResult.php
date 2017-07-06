@@ -56,7 +56,7 @@ class ManageReportScheduleResult extends AmazonModelAbstract
     {
         $this->fields = array (
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
+        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('Model\ReportSchedule')),
         );
         parent::__construct($data);
     }

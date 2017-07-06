@@ -59,7 +59,7 @@ class GetReportScheduleListByNextTokenResult extends AmazonModelAbstract
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
+        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('Model\ReportSchedule')),
         );
         parent::__construct($data);
     }

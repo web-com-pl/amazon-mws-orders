@@ -56,7 +56,7 @@ class CancelReportRequestsResult extends AmazonModelAbstract
     {
         $this->fields = array (
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
+        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('Model\ReportRequestInfo')),
         );
         parent::__construct($data);
     }
