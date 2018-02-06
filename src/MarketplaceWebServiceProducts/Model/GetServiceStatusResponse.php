@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -40,12 +42,13 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class GetServiceStatusResponse extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => 'GetServiceStatusResult'),
-                'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-                'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => 'GetServiceStatusResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }
@@ -198,9 +201,9 @@ class GetServiceStatusResponse extends AmazonModelAbstract
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetServiceStatusResponse']");
         if ($response->length == 1) {
             return new GetServiceStatusResponse(($response->item(0)));

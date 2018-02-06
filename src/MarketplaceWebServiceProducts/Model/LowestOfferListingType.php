@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -42,14 +44,15 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class LowestOfferListingType extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'Qualifiers'                      => array('FieldValue' => null, 'FieldType' => 'QualifiersType'),
-                'NumberOfOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'int'),
-                'SellerFeedbackCount'             => array('FieldValue' => null, 'FieldType' => 'int'),
-                'Price'                           => array('FieldValue' => null, 'FieldType' => 'PriceType'),
-                'MultipleOffersAtLowestPrice'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Qualifiers'                      => array('FieldValue' => null, 'FieldType' => 'QualifiersType'),
+            'NumberOfOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'int'),
+            'SellerFeedbackCount'             => array('FieldValue' => null, 'FieldType' => 'int'),
+            'Price'                           => array('FieldValue' => null, 'FieldType' => 'PriceType'),
+            'MultipleOffersAtLowestPrice'     => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }

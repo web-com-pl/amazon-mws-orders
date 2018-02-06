@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -44,16 +46,17 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class Product extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'Identifiers'         => array('FieldValue' => null, 'FieldType' => 'IdentifierType'),
-                'AttributeSets'       => array('FieldValue' => null, 'FieldType' => 'AttributeSetList'),
-                'Relationships'       => array('FieldValue' => null, 'FieldType' => 'RelationshipList'),
-                'CompetitivePricing'  => array('FieldValue' => null, 'FieldType' => 'CompetitivePricingType'),
-                'SalesRankings'       => array('FieldValue' => null, 'FieldType' => 'SalesRankList'),
-                'LowestOfferListings' => array('FieldValue' => null, 'FieldType' => 'LowestOfferListingList'),
-                'Offers'              => array('FieldValue' => null, 'FieldType' => 'OffersList'),
+            'Identifiers'         => array('FieldValue' => null, 'FieldType' => 'Model\IdentifierType'),
+            'AttributeSets'       => array('FieldValue' => null, 'FieldType' => 'Model\AttributeSetList'),
+            'Relationships'       => array('FieldValue' => null, 'FieldType' => 'Model\RelationshipList'),
+            'CompetitivePricing'  => array('FieldValue' => null, 'FieldType' => 'Model\CompetitivePricingType'),
+            'SalesRankings'       => array('FieldValue' => null, 'FieldType' => 'Model\SalesRankList'),
+            'LowestOfferListings' => array('FieldValue' => null, 'FieldType' => 'Model\LowestOfferListingList'),
+            'Offers'              => array('FieldValue' => null, 'FieldType' => 'Model\OffersList'),
         );
         parent::__construct($data);
     }

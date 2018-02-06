@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -40,12 +42,13 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class CompetitivePricingType extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'CompetitivePrices'     => array('FieldValue' => null, 'FieldType' => 'CompetitivePriceList'),
-                'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'NumberOfOfferListingsList'),
-                'TradeInValue'          => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'CompetitivePrices'     => array('FieldValue' => null, 'FieldType' => 'Model\CompetitivePriceList'),
+            'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'Model\NumberOfOfferListingsList'),
+            'TradeInValue'          => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
         );
         parent::__construct($data);
     }

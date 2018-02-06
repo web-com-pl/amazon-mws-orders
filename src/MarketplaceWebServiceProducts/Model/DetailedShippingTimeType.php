@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -41,13 +43,14 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class DetailedShippingTimeType extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'minimumHours'     => array('FieldValue' => null, 'FieldType' => '@int'),
-                'maximumHours'     => array('FieldValue' => null, 'FieldType' => '@int'),
-                'availableDate'    => array('FieldValue' => null, 'FieldType' => '@string'),
-                'availabilityType' => array('FieldValue' => null, 'FieldType' => '@string'),
+            'minimumHours'     => array('FieldValue' => null, 'FieldType' => '@int'),
+            'maximumHours'     => array('FieldValue' => null, 'FieldType' => '@int'),
+            'availableDate'    => array('FieldValue' => null, 'FieldType' => '@string'),
+            'availabilityType' => array('FieldValue' => null, 'FieldType' => '@string'),
         );
         parent::__construct($data);
     }

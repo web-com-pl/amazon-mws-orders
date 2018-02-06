@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -39,11 +41,12 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class Points extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'PointsNumber'        => array('FieldValue' => null, 'FieldType' => 'int'),
-                'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'PointsNumber'        => array('FieldValue' => null, 'FieldType' => 'int'),
+            'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
         );
         parent::__construct($data);
     }

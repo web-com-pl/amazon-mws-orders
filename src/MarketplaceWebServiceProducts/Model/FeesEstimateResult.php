@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -41,13 +43,14 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class FeesEstimateResult extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'Status'                 => array('FieldValue' => null, 'FieldType' => 'string'),
-                'FeesEstimateIdentifier' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateIdentifier'),
-                'FeesEstimate'           => array('FieldValue' => null, 'FieldType' => 'FeesEstimate'),
-                'Error'                  => array('FieldValue' => null, 'FieldType' => 'Error'),
+            'Status'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeesEstimateIdentifier' => array('FieldValue' => null, 'FieldType' => 'Model\FeesEstimateIdentifier'),
+            'FeesEstimate'           => array('FieldValue' => null, 'FieldType' => 'Model\FeesEstimate'),
+            'Error'                  => array('FieldValue' => null, 'FieldType' => 'Error'),
         );
         parent::__construct($data);
     }

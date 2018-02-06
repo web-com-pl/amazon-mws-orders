@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -43,15 +45,16 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class QualifiersType extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'ItemCondition'                => array('FieldValue' => null, 'FieldType' => 'string'),
-                'ItemSubcondition'             => array('FieldValue' => null, 'FieldType' => 'string'),
-                'FulfillmentChannel'           => array('FieldValue' => null, 'FieldType' => 'string'),
-                'ShipsDomestically'            => array('FieldValue' => null, 'FieldType' => 'string'),
-                'ShippingTime'                 => array('FieldValue' => null, 'FieldType' => 'ShippingTimeType'),
-                'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemCondition'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemSubcondition'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentChannel'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipsDomestically'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShippingTime'                 => array('FieldValue' => null, 'FieldType' => 'ShippingTimeType'),
+            'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }

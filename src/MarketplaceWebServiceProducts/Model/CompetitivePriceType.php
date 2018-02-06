@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -42,14 +44,15 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class CompetitivePriceType extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'CompetitivePriceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'Price'              => array('FieldValue' => null, 'FieldType' => 'PriceType'),
-                'condition'          => array('FieldValue' => null, 'FieldType' => '@string'),
-                'subcondition'       => array('FieldValue' => null, 'FieldType' => '@string'),
-                'belongsToRequester' => array('FieldValue' => null, 'FieldType' => '@bool'),
+            'CompetitivePriceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Price'              => array('FieldValue' => null, 'FieldType' => 'Model\PriceType'),
+            'condition'          => array('FieldValue' => null, 'FieldType' => '@string'),
+            'subcondition'       => array('FieldValue' => null, 'FieldType' => '@string'),
+            'belongsToRequester' => array('FieldValue' => null, 'FieldType' => '@bool'),
         );
         parent::__construct($data);
     }

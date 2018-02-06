@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -41,13 +43,14 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class Error extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'Type'    => array('FieldValue' => null, 'FieldType' => 'string'),
-                'Code'    => array('FieldValue' => null, 'FieldType' => 'string'),
-                'Message' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'Detail'  => array('FieldValue' => null, 'FieldType' => 'ErrorDetail'),
+            'Type'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Code'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Message' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Detail'  => array('FieldValue' => null, 'FieldType' => 'Model\ErrorDetail'),
         );
         parent::__construct($data);
     }

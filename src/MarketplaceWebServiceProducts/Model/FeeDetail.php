@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -43,15 +45,16 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class FeeDetail extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'FeeType'               => array('FieldValue' => null, 'FieldType' => 'string'),
-                'FeeAmount'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'FeePromotion'          => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'TaxAmount'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'FinalFee'              => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'IncludedFeeDetailList' => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
+            'FeeType'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeeAmount'             => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'FeePromotion'          => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'TaxAmount'             => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'FinalFee'              => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'IncludedFeeDetailList' => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
         );
         parent::__construct($data);
     }

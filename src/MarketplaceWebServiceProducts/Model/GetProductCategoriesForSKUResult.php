@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -38,10 +40,11 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class GetProductCategoriesForSKUResult extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'Self' => array('FieldValue' => array(), 'FieldType' => array('Model\Categories')),
+            'Self' => array('FieldValue' => array(), 'FieldType' => array('Model\Categories')),
         );
         parent::__construct($data);
     }

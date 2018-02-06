@@ -19,7 +19,6 @@
  */
 
 namespace Webcom\MarketPlaceWebServiceProducts;
-use Webcom\MarketPlaceWebServiceProduct\Model as AmazonModel;
 
 /**
  * MarketplaceWebServiceProducts_Model - base class for all model classes
@@ -43,7 +42,7 @@ abstract class AmazonModelAbstract
             } elseif ($this->_isDOMElement($data)) {
                 $this->_fromDOMElement($data);
             } else {
-                throw new Exception("Unable to construct from provided data. Please be sure to pass associative array or DOMElement");
+                throw new \Exception ("Unable to construct from provided data. Please be sure to pass associative array or DOMElement");
             }
         }
     }
@@ -101,9 +100,9 @@ abstract class AmazonModelAbstract
      *
      * @param DOMElement $dom XML element to construct from
      */
-    private function _fromDOMElement(DOMElement $dom)
+    private function _fromDOMElement(\DOMElement $dom)
     {
-        $xpath = new DOMXPath($dom->ownerDocument);
+        $xpath = new \DOMXPath($dom->ownerDocument);
 
         foreach ($this->_fields as $fieldName => $field) {
             $fieldType = $field['FieldType'];
@@ -123,7 +122,8 @@ abstract class AmazonModelAbstract
                     if ($elements->length >= 1) {
                         
                         foreach ($elements as $element) {
-                            $this->_fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
+                            $class = '\\' . __NAMESPACE__ . '\\' . $fieldType[0];
+                            $this->_fields[$fieldName]['FieldValue'][] = new $class($element);
                         }
                     }
                 } else {
@@ -145,7 +145,8 @@ abstract class AmazonModelAbstract
                     $elements = $xpath->query("./*[local-name()='$fieldName']", $dom);
                     if ($elements->length == 1) {
                         
-                        $this->_fields[$fieldName]['FieldValue'] = new $fieldType($elements->item(0));
+                        $class = '\\' . __NAMESPACE__ . '\\' . $fieldType;
+                        $this->_fields[$fieldName]['FieldValue'] = new $class($elements->item(0));
                     }
                 } else {
                     if ($fieldType[0] == "@") {
@@ -176,10 +177,12 @@ abstract class AmazonModelAbstract
                             $this->_fields['Value']['FieldValue'] = $parentNode->nodeValue;
                         }
                     }
+
                 }
             }
         }
     }
+
 
     /**
      * Construct from Associative Array
@@ -202,7 +205,8 @@ abstract class AmazonModelAbstract
                             
 
                             foreach ($elements as $element) {
-                                $this->_fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
+                                $class = '\\' . __NAMESPACE__ . '\\' . $fieldType[0];
+                                $this->_fields[$fieldName]['FieldValue'][] = new $class($element);
                             }
                         }
                     }
@@ -222,8 +226,8 @@ abstract class AmazonModelAbstract
             } else {
                 if ($this->_isComplexType($fieldType)) {
                     if (array_key_exists($fieldName, $array)) {
-                        
-                        $this->_fields[$fieldName]['FieldValue'] = new $fieldType($array[$fieldName]);
+                        $class = '\\' . __NAMESPACE__ . '\\' . $fieldType;
+                        $this->_fields[$fieldName]['FieldValue'] = new $class($array[$fieldName]);
                     }
                 } else {
                     if (array_key_exists($fieldName, $array)) {
@@ -270,8 +274,11 @@ abstract class AmazonModelAbstract
             for ($i = 1; $i <= count($fieldValue); $i++) {
                 $indexedPrefix = $itemPrefix . $i . '.';
                 $memberType = $fieldType[0];
-                $arr = array_merge($arr, $this->__toQueryParameterArray($indexedPrefix, $memberType, $fieldValue[$i - 1], null));
+                $arr = array_merge($arr,
+                    $this->__toQueryParameterArray($indexedPrefix,
+                    $memberType, $fieldValue[$i - 1], null));
             }
+
         } else if ($this->_isComplexType($fieldType)) {
             // Struct
             if (isset($fieldValue)) {
@@ -305,7 +312,7 @@ abstract class AmazonModelAbstract
                 if (is_array($fieldType)) {
                     if ($fieldType[0] == "object") {
                         foreach ($fieldValue as $item) {
-                            $newDoc = new DOMDocument();
+                            $newDoc = new \DOMDocument();
                             $importedNode = $newDoc->importNode($item, true);
                             $newDoc->appendChild($importedNode);
                             $xmlStr = $newDoc->saveXML();
@@ -402,14 +409,17 @@ abstract class AmazonModelAbstract
      */
     private function _isComplexType($fieldType)
     {
-        return preg_match("/^MarketplaceWebServiceProducts_/", $fieldType);
+        if (is_array($fieldType)) {
+            return true;
+        }
+        return strpos($fieldType, 'Model') !== false;
     }
 
     /**
      * Checks  whether passed variable is an associative array
      *
      * @param mixed $var
-     * @return TRUE if passed variable is an associative array
+    * @return boolean TRUE if passed variable is an associative array
      */
     private function _isAssociativeArray($var)
     {
@@ -424,7 +434,7 @@ abstract class AmazonModelAbstract
      */
     private function _isDOMElement($var)
     {
-        return $var instanceof DOMElement;
+        return $var instanceof \DOMElement;
     }
 
     /**

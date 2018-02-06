@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -44,16 +46,17 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class GetLowestPricedOffersForASINResult extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'MarketplaceID' => array('FieldValue' => null, 'FieldType' => '@string'),
-                'ASIN'          => array('FieldValue' => null, 'FieldType' => '@string'),
-                'ItemCondition' => array('FieldValue' => null, 'FieldType' => '@string'),
-                'status'        => array('FieldValue' => null, 'FieldType' => '@string'),
-                'Identifier'    => array('FieldValue' => null, 'FieldType' => 'GetLowestPricedOffersAsinIdentifier'),
-                'Summary'       => array('FieldValue' => null, 'FieldType' => 'Summary'),
-                'Offers'        => array('FieldValue' => null, 'FieldType' => 'ASINOfferDetailList'),
+            'MarketplaceID' => array('FieldValue' => null, 'FieldType' => '@string'),
+            'ASIN'          => array('FieldValue' => null, 'FieldType' => '@string'),
+            'ItemCondition' => array('FieldValue' => null, 'FieldType' => '@string'),
+            'status'        => array('FieldValue' => null, 'FieldType' => '@string'),
+            'Identifier'    => array('FieldValue' => null, 'FieldType' => 'GetLowestPricedOffersAsinIdentifier'),
+            'Summary'       => array('FieldValue' => null, 'FieldType' => 'Summary'),
+            'Offers'        => array('FieldValue' => null, 'FieldType' => 'ASINOfferDetailList'),
         );
         parent::__construct($data);
     }

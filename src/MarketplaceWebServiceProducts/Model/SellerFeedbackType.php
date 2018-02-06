@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -39,11 +41,12 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class SellerFeedbackType extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'float'),
-                'FeedbackCount'                => array('FieldValue' => null, 'FieldType' => 'int'),
+            'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'float'),
+            'FeedbackCount'                => array('FieldValue' => null, 'FieldType' => 'int'),
         );
         parent::__construct($data);
     }

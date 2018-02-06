@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -40,12 +42,13 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class Categories extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'ProductCategoryId'   => array('FieldValue' => null, 'FieldType' => 'string'),
-                'ProductCategoryName' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'Parent'              => array('FieldValue' => null, 'FieldType' => 'Categories'),
+            'ProductCategoryId'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ProductCategoryName' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Parent'              => array('FieldValue' => null, 'FieldType' => 'Model\Categories'),
         );
         parent::__construct($data);
     }

@@ -19,7 +19,7 @@
  */
 
 namespace Webcom\MarketPlaceWebServiceProducts;
-use Webcom\MarketPlaceWebServiceProduct\Model as AmazonModel;
+use Webcom\MarketPlaceWebServiceProducts\Model as AmazonModel;
 
 interface AmazonInterface
 {

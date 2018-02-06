@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -44,16 +46,17 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class OfferType extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'BuyingPrice'        => array('FieldValue' => null, 'FieldType' => 'PriceType'),
-                'RegularPrice'       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'ItemCondition'      => array('FieldValue' => null, 'FieldType' => 'string'),
-                'ItemSubCondition'   => array('FieldValue' => null, 'FieldType' => 'string'),
-                'SellerId'           => array('FieldValue' => null, 'FieldType' => 'string'),
-                'SellerSKU'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'BuyingPrice'        => array('FieldValue' => null, 'FieldType' => 'PriceType'),
+            'RegularPrice'       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemCondition'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemSubCondition'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerId'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerSKU'          => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }

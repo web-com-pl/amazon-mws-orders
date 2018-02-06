@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -42,14 +44,15 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class GetLowestOfferListingsForSKUResult extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'AllOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'bool'),
-                'Product'                    => array('FieldValue' => null, 'FieldType' => 'Product'),
-                'Error'                      => array('FieldValue' => null, 'FieldType' => 'Error'),
-                'SellerSKU'                  => array('FieldValue' => null, 'FieldType' => '@string'),
-                'status'                     => array('FieldValue' => null, 'FieldType' => '@string'),
+            'AllOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'Product'                    => array('FieldValue' => null, 'FieldType' => 'Product'),
+            'Error'                      => array('FieldValue' => null, 'FieldType' => 'Error'),
+            'SellerSKU'                  => array('FieldValue' => null, 'FieldType' => '@string'),
+            'status'                     => array('FieldValue' => null, 'FieldType' => '@string'),
         );
         parent::__construct($data);
     }

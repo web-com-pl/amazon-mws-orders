@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -42,14 +44,15 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class GetMatchingProductForIdRequest extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
-                'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
-                'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'IdType'        => array('FieldValue' => null, 'FieldType' => 'string'),
-                'IdList'        => array('FieldValue' => null, 'FieldType' => 'IdListType'),
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'IdType'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'IdList'        => array('FieldValue' => null, 'FieldType' => 'Model\IdListType'),
         );
         parent::__construct($data);
     }

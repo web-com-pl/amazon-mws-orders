@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -41,13 +43,14 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class GetCompetitivePricingForSKURequest extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
-                'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
-                'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'SellerSKUListType'),
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'Model\SellerSKUListType'),
         );
         parent::__construct($data);
     }

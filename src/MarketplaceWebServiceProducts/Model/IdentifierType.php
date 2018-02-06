@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -39,11 +41,12 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class IdentifierType extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'MarketplaceASIN' => array('FieldValue' => null, 'FieldType' => 'ASINIdentifier'),
-                'SKUIdentifier'   => array('FieldValue' => null, 'FieldType' => 'SellerSKUIdentifier'),
+            'MarketplaceASIN' => array('FieldValue' => null, 'FieldType' => 'Model\ASINIdentifier'),
+            'SKUIdentifier'   => array('FieldValue' => null, 'FieldType' => 'Model\SellerSKUIdentifier'),
         );
         parent::__construct($data);
     }

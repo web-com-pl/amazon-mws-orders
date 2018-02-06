@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -40,12 +42,13 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class GetMatchingProductResponse extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'GetMatchingProductResult' => array('FieldValue' => array(), 'FieldType' => array('Model\GetMatchingProductResult')),
-                'ResponseMetadata'         => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-                'ResponseHeaderMetadata'   => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetMatchingProductResult' => array('FieldValue' => array(), 'FieldType' => array('Model\GetMatchingProductResult')),
+            'ResponseMetadata'         => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'   => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }
@@ -214,9 +217,9 @@ class GetMatchingProductResponse extends AmazonModelAbstract
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetMatchingProductResponse']");
         if ($response->length == 1) {
             return new GetMatchingProductResponse(($response->item(0)));

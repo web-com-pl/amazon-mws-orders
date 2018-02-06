@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -48,20 +50,21 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class SKUOfferDetail extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'MyOffer'              => array('FieldValue' => null, 'FieldType' => 'bool'),
-                'SubCondition'         => array('FieldValue' => null, 'FieldType' => 'string'),
-                'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'SellerFeedbackType'),
-                'ShippingTime'         => array('FieldValue' => null, 'FieldType' => 'DetailedShippingTimeType'),
-                'ListingPrice'         => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'Points'               => array('FieldValue' => null, 'FieldType' => 'Points'),
-                'Shipping'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'ShipsFrom'            => array('FieldValue' => null, 'FieldType' => 'ShipsFromType'),
-                'IsFulfilledByAmazon'  => array('FieldValue' => null, 'FieldType' => 'bool'),
-                'IsBuyBoxWinner'       => array('FieldValue' => null, 'FieldType' => 'bool'),
-                'IsFeaturedMerchant'   => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'MyOffer'              => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'SubCondition'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'SellerFeedbackType'),
+            'ShippingTime'         => array('FieldValue' => null, 'FieldType' => 'DetailedShippingTimeType'),
+            'ListingPrice'         => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'Points'               => array('FieldValue' => null, 'FieldType' => 'Points'),
+            'Shipping'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'ShipsFrom'            => array('FieldValue' => null, 'FieldType' => 'ShipsFromType'),
+            'IsFulfilledByAmazon'  => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'IsBuyBoxWinner'       => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'IsFeaturedMerchant'   => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
         parent::__construct($data);
     }

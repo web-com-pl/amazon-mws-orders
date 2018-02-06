@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -39,11 +41,12 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class MoneyType extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'Amount'       => array('FieldValue' => null, 'FieldType' => 'float'),
+            'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Amount'       => array('FieldValue' => null, 'FieldType' => 'float'),
         );
         parent::__construct($data);
     }

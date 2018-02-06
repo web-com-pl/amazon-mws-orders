@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -42,14 +44,15 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class BuyBoxPriceType extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'condition'    => array('FieldValue' => null, 'FieldType' => '@string'),
-                'LandedPrice'  => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'Shipping'     => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'Points'       => array('FieldValue' => null, 'FieldType' => 'Points'),
+            'condition'    => array('FieldValue' => null, 'FieldType' => '@string'),
+            'LandedPrice'  => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'Shipping'     => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'Points'       => array('FieldValue' => null, 'FieldType' => 'Model\Points'),
         );
         parent::__construct($data);
     }

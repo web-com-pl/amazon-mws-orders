@@ -22,7 +22,7 @@
  *  @see MarketplaceWebServiceProducts_Interface
  */
 namespace Webcom\MarketPlaceWebServiceProducts;
-use Webcom\MarketPlaceWebServiceProduct\Model as AmazonModel;
+use Webcom\MarketPlaceWebServiceProducts\Model as AmazonModel;
 
 /**
  * MarketplaceWebServiceProducts_Client is an implementation of MarketplaceWebServiceProducts
@@ -457,14 +457,13 @@ class AmazonClient implements AmazonInterface
     public function getMatchingProductForId($request)
     {
         if (!($request instanceof AmazonModel\GetMatchingProductForIdRequest)) {
-            
             $request = new AmazonModel\GetMatchingProductForIdRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMatchingProductForId';
         $httpResponse = $this->_invoke($parameters);
 
-        
+        dump($httpResponse['ResponseBody']);
         $response = AmazonModel\GetMatchingProductForIdResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;

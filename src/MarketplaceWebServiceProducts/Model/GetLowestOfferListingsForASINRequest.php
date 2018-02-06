@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -43,15 +45,16 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class GetLowestOfferListingsForASINRequest extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
-                'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
-                'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'ASINList'      => array('FieldValue' => null, 'FieldType' => 'ASINListType'),
-                'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'ExcludeMe'     => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ASINList'      => array('FieldValue' => null, 'FieldType' => 'ASINListType'),
+            'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ExcludeMe'     => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
         parent::__construct($data);
     }

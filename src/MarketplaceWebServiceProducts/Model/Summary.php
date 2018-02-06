@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -44,16 +46,17 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class Summary extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'TotalOfferCount'                 => array('FieldValue' => null, 'FieldType' => 'int'),
-                'NumberOfOffers'                  => array('FieldValue' => null, 'FieldType' => 'NumberOfOffers'),
-                'LowestPrices'                    => array('FieldValue' => null, 'FieldType' => 'LowestPrices'),
-                'BuyBoxPrices'                    => array('FieldValue' => null, 'FieldType' => 'BuyBoxPrices'),
-                'ListPrice'                       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-                'BuyBoxEligibleOffers'            => array('FieldValue' => null, 'FieldType' => 'BuyBoxEligibleOffers'),
+            'TotalOfferCount'                 => array('FieldValue' => null, 'FieldType' => 'int'),
+            'NumberOfOffers'                  => array('FieldValue' => null, 'FieldType' => 'NumberOfOffers'),
+            'LowestPrices'                    => array('FieldValue' => null, 'FieldType' => 'LowestPrices'),
+            'BuyBoxPrices'                    => array('FieldValue' => null, 'FieldType' => 'BuyBoxPrices'),
+            'ListPrice'                       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'BuyBoxEligibleOffers'            => array('FieldValue' => null, 'FieldType' => 'BuyBoxEligibleOffers'),
         );
         parent::__construct($data);
     }

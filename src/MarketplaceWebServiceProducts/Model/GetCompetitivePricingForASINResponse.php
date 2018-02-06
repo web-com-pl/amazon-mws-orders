@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -40,12 +42,13 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
  */
 class GetCompetitivePricingForASINResponse extends AmazonModelAbstract
 {
+
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'GetCompetitivePricingForASINResult' => array('FieldValue' => array(), 'FieldType' => array('Model\GetCompetitivePricingForASINResult')),
-                'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-                'ResponseHeaderMetadata'             => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetCompetitivePricingForASINResult' => array('FieldValue' => array(), 'FieldType' => array('Model\GetCompetitivePricingForASINResult')),
+            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+            'ResponseHeaderMetadata'             => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }
@@ -214,9 +217,9 @@ class GetCompetitivePricingForASINResponse extends AmazonModelAbstract
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetCompetitivePricingForASINResponse']");
         if ($response->length == 1) {
             return new GetCompetitivePricingForASINResponse(($response->item(0)));

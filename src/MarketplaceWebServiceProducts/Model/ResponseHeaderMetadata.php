@@ -1,7 +1,9 @@
 <?php
 
-namespace Webcom\MarketPlaceWebServiceOrders\Model;
-use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
+namespace Webcom\MarketPlaceWebServiceProducts\Model;
+
+use Webcom\MarketPlaceWebServiceProducts\AmazonModelAbstract;
+
 /* * *****************************************************************************
 
 
@@ -24,7 +26,6 @@ use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 
 class ResponseHeaderMetadata
 {
-
     const REQUEST_ID = 'x-mws-request-id';
     const RESPONSE_CONTEXT = 'x-mws-response-context';
     const TIMESTAMP = 'x-mws-timestamp';
@@ -34,13 +35,13 @@ class ResponseHeaderMetadata
 
     private $metadata = array();
 
-    public function __construct($requestId = null, $responseContext = null, $timestamp = null, $quotaMax = null, $quotaMax = null, $quotaResetsAt = null)
+    public function __construct($requestId = null, $responseContext = null, $timestamp = null, $quotaMax = null, $quotaRemaning = null, $quotaResetsAt = null)
     {
         $this->metadata[self::REQUEST_ID] = $requestId;
         $this->metadata[self::RESPONSE_CONTEXT] = $responseContext;
         $this->metadata[self::TIMESTAMP] = $timestamp;
         $this->metadata[self::QUOTA_MAX] = $quotaMax;
-        $this->metadata[self::QUOTA_REMAINING] = $quotaMax;
+        $this->metadata[self::QUOTA_REMAINING] = $quotaRemaning;
         $this->metadata[self::QUOTA_RESETS_AT] = $quotaResetsAt;
     }
 

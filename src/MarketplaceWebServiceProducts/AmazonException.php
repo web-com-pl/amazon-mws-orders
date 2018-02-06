@@ -19,7 +19,7 @@
  */
 
 namespace Webcom\MarketPlaceWebService;
-use Webcom\MarketPlaceWebServiceProduct\Model as AmazonModel;
+use Webcom\MarketPlaceWebServiceProducts\Model as AmazonModel;
 
 /**
  * Marketplace Web Service Products Exception provides details of errors
