@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest
+ * GetMatchingProductForIdRequest
  *
  * Properties:
  * <ul>
@@ -32,11 +36,11 @@
  * <li>MWSAuthToken: string</li>
  * <li>MarketplaceId: string</li>
  * <li>IdType: string</li>
- * <li>IdList: MarketplaceWebServiceProducts_Model_IdListType</li>
+ * <li>IdList: IdListType</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest extends AmazonModelAbstract
+class GetMatchingProductForIdRequest extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
@@ -45,7 +49,7 @@ class MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest extends
                 'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
                 'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
                 'IdType'        => array('FieldValue' => null, 'FieldType' => 'string'),
-                'IdList'        => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_IdListType'),
+                'IdList'        => array('FieldValue' => null, 'FieldType' => 'IdListType'),
         );
         parent::__construct($data);
     }
@@ -247,7 +251,7 @@ class MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest extends
     /**
      * Set the value of the IdList property.
      *
-     * @param MarketplaceWebServiceProducts_Model_IdListType idList
+     * @param IdListType idList
      * @return this instance
      */
     public function setIdList($value)

@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResult
+ * GetLowestPricedOffersForSKUResult
  *
  * Properties:
  * <ul>
@@ -32,13 +36,13 @@
  * <li>SKU: string</li>
  * <li>ItemCondition: string</li>
  * <li>status: string</li>
- * <li>Identifier: MarketplaceWebServiceProducts_Model_GetLowestPricedOffersSkuIdentifier</li>
- * <li>Summary: MarketplaceWebServiceProducts_Model_Summary</li>
- * <li>Offers: MarketplaceWebServiceProducts_Model_SKUOfferDetailList</li>
+ * <li>Identifier: GetLowestPricedOffersSkuIdentifier</li>
+ * <li>Summary: Summary</li>
+ * <li>Offers: SKUOfferDetailList</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResult extends AmazonModelAbstract
+class GetLowestPricedOffersForSKUResult extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
@@ -47,9 +51,9 @@ class MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResult exte
                 'SKU'           => array('FieldValue' => null, 'FieldType' => '@string'),
                 'ItemCondition' => array('FieldValue' => null, 'FieldType' => '@string'),
                 'status'        => array('FieldValue' => null, 'FieldType' => '@string'),
-                'Identifier'    => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_GetLowestPricedOffersSkuIdentifier'),
-                'Summary'       => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Summary'),
-                'Offers'        => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SKUOfferDetailList'),
+                'Identifier'    => array('FieldValue' => null, 'FieldType' => 'GetLowestPricedOffersSkuIdentifier'),
+                'Summary'       => array('FieldValue' => null, 'FieldType' => 'Summary'),
+                'Offers'        => array('FieldValue' => null, 'FieldType' => 'SKUOfferDetailList'),
         );
         parent::__construct($data);
     }
@@ -251,7 +255,7 @@ class MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResult exte
     /**
      * Set the value of the Identifier property.
      *
-     * @param MarketplaceWebServiceProducts_Model_GetLowestPricedOffersSkuIdentifier identifier
+     * @param GetLowestPricedOffersSkuIdentifier identifier
      * @return this instance
      */
     public function setIdentifier($value)
@@ -297,7 +301,7 @@ class MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResult exte
     /**
      * Set the value of the Summary property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Summary summary
+     * @param Summary summary
      * @return this instance
      */
     public function setSummary($value)
@@ -343,7 +347,7 @@ class MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResult exte
     /**
      * Set the value of the Offers property.
      *
-     * @param MarketplaceWebServiceProducts_Model_SKUOfferDetailList offers
+     * @param SKUOfferDetailList offers
      * @return this instance
      */
     public function setOffers($value)

@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,13 +27,13 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_OfferType
+ * OfferType
  *
  * Properties:
  * <ul>
  *
- * <li>BuyingPrice: MarketplaceWebServiceProducts_Model_PriceType</li>
- * <li>RegularPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
+ * <li>BuyingPrice: PriceType</li>
+ * <li>RegularPrice: MoneyType</li>
  * <li>FulfillmentChannel: string</li>
  * <li>ItemCondition: string</li>
  * <li>ItemSubCondition: string</li>
@@ -38,13 +42,13 @@
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_OfferType extends AmazonModelAbstract
+class OfferType extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'BuyingPrice'        => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
-                'RegularPrice'       => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'BuyingPrice'        => array('FieldValue' => null, 'FieldType' => 'PriceType'),
+                'RegularPrice'       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
                 'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
                 'ItemCondition'      => array('FieldValue' => null, 'FieldType' => 'string'),
                 'ItemSubCondition'   => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -67,7 +71,7 @@ class MarketplaceWebServiceProducts_Model_OfferType extends AmazonModelAbstract
     /**
      * Set the value of the BuyingPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_PriceType buyingPrice
+     * @param PriceType buyingPrice
      * @return this instance
      */
     public function setBuyingPrice($value)
@@ -113,7 +117,7 @@ class MarketplaceWebServiceProducts_Model_OfferType extends AmazonModelAbstract
     /**
      * Set the value of the RegularPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType regularPrice
+     * @param MoneyType regularPrice
      * @return this instance
      */
     public function setRegularPrice($value)

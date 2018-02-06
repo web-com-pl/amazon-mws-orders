@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,21 +27,21 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResult
+ * GetMyFeesEstimateResult
  *
  * Properties:
  * <ul>
  *
- * <li>FeesEstimateResultList: MarketplaceWebServiceProducts_Model_FeesEstimateResultList</li>
+ * <li>FeesEstimateResultList: FeesEstimateResultList</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResult extends AmazonModelAbstract
+class GetMyFeesEstimateResult extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'FeesEstimateResultList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_FeesEstimateResultList'),
+                'FeesEstimateResultList' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateResultList'),
         );
         parent::__construct($data);
     }
@@ -55,7 +59,7 @@ class MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResult extends Amazon
     /**
      * Set the value of the FeesEstimateResultList property.
      *
-     * @param MarketplaceWebServiceProducts_Model_FeesEstimateResultList feesEstimateResultList
+     * @param FeesEstimateResultList feesEstimateResultList
      * @return this instance
      */
     public function setFeesEstimateResultList($value)

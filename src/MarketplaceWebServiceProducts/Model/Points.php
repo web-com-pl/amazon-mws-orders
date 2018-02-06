@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,23 +27,23 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_Points
+ * Points
  *
  * Properties:
  * <ul>
  *
  * <li>PointsNumber: int</li>
- * <li>PointsMonetaryValue: MarketplaceWebServiceProducts_Model_MoneyType</li>
+ * <li>PointsMonetaryValue: MoneyType</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_Points extends AmazonModelAbstract
+class Points extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
                 'PointsNumber'        => array('FieldValue' => null, 'FieldType' => 'int'),
-                'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
         );
         parent::__construct($data);
     }
@@ -103,7 +107,7 @@ class MarketplaceWebServiceProducts_Model_Points extends AmazonModelAbstract
     /**
      * Set the value of the PointsMonetaryValue property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType pointsMonetaryValue
+     * @param MoneyType pointsMonetaryValue
      * @return this instance
      */
     public function setPointsMonetaryValue($value)

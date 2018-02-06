@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,25 +27,25 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse
+ * ListMatchingProductsResponse
  *
  * Properties:
  * <ul>
  *
- * <li>ListMatchingProductsResult: MarketplaceWebServiceProducts_Model_ListMatchingProductsResult</li>
- * <li>ResponseMetadata: MarketplaceWebServiceProducts_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata</li>
+ * <li>ListMatchingProductsResult: ListMatchingProductsResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse extends AmazonModelAbstract
+class ListMatchingProductsResponse extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'ListMatchingProductsResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ListMatchingProductsResult'),
-                'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ResponseMetadata'),
-                'ResponseHeaderMetadata'     => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata'),
+                'ListMatchingProductsResult' => array('FieldValue' => null, 'FieldType' => 'ListMatchingProductsResult'),
+                'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+                'ResponseHeaderMetadata'     => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }
@@ -59,7 +63,7 @@ class MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse extends A
     /**
      * Set the value of the ListMatchingProductsResult property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ListMatchingProductsResult listMatchingProductsResult
+     * @param ListMatchingProductsResult listMatchingProductsResult
      * @return this instance
      */
     public function setListMatchingProductsResult($value)
@@ -105,7 +109,7 @@ class MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse extends A
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -151,7 +155,7 @@ class MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse extends A
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -185,12 +189,12 @@ class MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse extends A
     }
 
     /**
-     * Construct MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse from XML string
+     * Construct ListMatchingProductsResponse from XML string
      *
      * @param $xml
      *        XML string to construct from
      *
-     * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse
+     * @return ListMatchingProductsResponse
      */
     public static function fromXML($xml)
     {
@@ -199,9 +203,9 @@ class MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse extends A
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListMatchingProductsResponse']");
         if ($response->length == 1) {
-            return new MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse(($response->item(0)));
+            return new ListMatchingProductsResponse(($response->item(0)));
         } else {
-            throw new Exception("Unable to construct MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse from provided XML.
+            throw new Exception("Unable to construct ListMatchingProductsResponse from provided XML.
                                   Make sure that ListMatchingProductsResponse is a root element");
         }
     }

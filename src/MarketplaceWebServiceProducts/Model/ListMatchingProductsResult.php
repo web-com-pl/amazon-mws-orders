@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,21 +27,21 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_ListMatchingProductsResult
+ * ListMatchingProductsResult
  *
  * Properties:
  * <ul>
  *
- * <li>Products: MarketplaceWebServiceProducts_Model_ProductList</li>
+ * <li>Products: ProductList</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_ListMatchingProductsResult extends AmazonModelAbstract
+class ListMatchingProductsResult extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'Products' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ProductList'),
+                'Products' => array('FieldValue' => null, 'FieldType' => 'ProductList'),
         );
         parent::__construct($data);
     }
@@ -55,7 +59,7 @@ class MarketplaceWebServiceProducts_Model_ListMatchingProductsResult extends Ama
     /**
      * Set the value of the Products property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ProductList products
+     * @param ProductList products
      * @return this instance
      */
     public function setProducts($value)

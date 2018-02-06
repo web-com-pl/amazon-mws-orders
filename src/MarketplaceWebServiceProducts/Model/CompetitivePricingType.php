@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,25 +27,25 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_CompetitivePricingType
+ * CompetitivePricingType
  *
  * Properties:
  * <ul>
  *
- * <li>CompetitivePrices: MarketplaceWebServiceProducts_Model_CompetitivePriceList</li>
- * <li>NumberOfOfferListings: MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList</li>
- * <li>TradeInValue: MarketplaceWebServiceProducts_Model_MoneyType</li>
+ * <li>CompetitivePrices: CompetitivePriceList</li>
+ * <li>NumberOfOfferListings: NumberOfOfferListingsList</li>
+ * <li>TradeInValue: MoneyType</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_CompetitivePricingType extends AmazonModelAbstract
+class CompetitivePricingType extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'CompetitivePrices'     => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_CompetitivePriceList'),
-                'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList'),
-                'TradeInValue'          => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+                'CompetitivePrices'     => array('FieldValue' => null, 'FieldType' => 'CompetitivePriceList'),
+                'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'NumberOfOfferListingsList'),
+                'TradeInValue'          => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
         );
         parent::__construct($data);
     }
@@ -59,7 +63,7 @@ class MarketplaceWebServiceProducts_Model_CompetitivePricingType extends AmazonM
     /**
      * Set the value of the CompetitivePrices property.
      *
-     * @param MarketplaceWebServiceProducts_Model_CompetitivePriceList competitivePrices
+     * @param CompetitivePriceList competitivePrices
      * @return this instance
      */
     public function setCompetitivePrices($value)
@@ -105,7 +109,7 @@ class MarketplaceWebServiceProducts_Model_CompetitivePricingType extends AmazonM
     /**
      * Set the value of the NumberOfOfferListings property.
      *
-     * @param MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList numberOfOfferListings
+     * @param NumberOfOfferListingsList numberOfOfferListings
      * @return this instance
      */
     public function setNumberOfOfferListings($value)
@@ -151,7 +155,7 @@ class MarketplaceWebServiceProducts_Model_CompetitivePricingType extends AmazonM
     /**
      * Set the value of the TradeInValue property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType tradeInValue
+     * @param MoneyType tradeInValue
      * @return this instance
      */
     public function setTradeInValue($value)

@@ -18,6 +18,9 @@
  * Generated: Fri Sep 16 11:49:32 PDT 2016
  */
 
+namespace Webcom\MarketPlaceWebServiceProducts;
+use Webcom\MarketPlaceWebServiceProduct\Model as AmazonModel;
+
 interface AmazonInterface
 {
     /**
@@ -25,9 +28,9 @@ interface AmazonInterface
      * Gets competitive pricing and related information for a product identified by
      * the MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASIN request or MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetCompetitivePricingForASIN request or AmazonModel\GetCompetitivePricingForASIN object itself
+     * @see AmazonModel\GetCompetitivePricingForASINRequest
+     * @return AmazonModel\GetCompetitivePricingForASINResponse
      *
      * @throws AmazonException
      */
@@ -37,9 +40,9 @@ interface AmazonInterface
      * Gets competitive pricing and related information for a product identified by
      * the SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKU request or MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetCompetitivePricingForSKU request or AmazonModel\GetCompetitivePricingForSKU object itself
+     * @see AmazonModel\GetCompetitivePricingForSKURequest
+     * @return AmazonModel\GetCompetitivePricingForSKUResponse
      *
      * @throws AmazonException
      */
@@ -49,9 +52,9 @@ interface AmazonInterface
      * Gets some of the lowest prices based on the product identified by the given
      * MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASIN request or MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestOfferListingsForASIN request or AmazonModel\GetLowestOfferListingsForASIN object itself
+     * @see AmazonModel\GetLowestOfferListingsForASINRequest
+     * @return AmazonModel\GetLowestOfferListingsForASINResponse
      *
      * @throws AmazonException
      */
@@ -61,9 +64,9 @@ interface AmazonInterface
      * Gets some of the lowest prices based on the product identified by the given
      * SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKU request or MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestOfferListingsForSKU request or AmazonModel\GetLowestOfferListingsForSKU object itself
+     * @see AmazonModel\GetLowestOfferListingsForSKURequest
+     * @return AmazonModel\GetLowestOfferListingsForSKUResponse
      *
      * @throws AmazonException
      */
@@ -73,9 +76,9 @@ interface AmazonInterface
      * Retrieves the lowest priced offers based on the product identified by the given
      *     ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestPricedOffersForASIN request or AmazonModel\GetLowestPricedOffersForASIN object itself
+     * @see AmazonModel\GetLowestPricedOffersForASINRequest
+     * @return AmazonModel\GetLowestPricedOffersForASINResponse
      *
      * @throws AmazonException
      */
@@ -85,9 +88,9 @@ interface AmazonInterface
      * Retrieves the lowest priced offers based on the product identified by the given
      *     SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestPricedOffersForSKU request or AmazonModel\GetLowestPricedOffersForSKU object itself
+     * @see AmazonModel\GetLowestPricedOffersForSKURequest
+     * @return AmazonModel\GetLowestPricedOffersForSKUResponse
      *
      * @throws AmazonException
      */
@@ -97,9 +100,9 @@ interface AmazonInterface
      * GetMatchingProduct will return the details (attributes) for the
      * given ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMatchingProduct request or MarketplaceWebServiceProducts_Model_GetMatchingProduct object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMatchingProductRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMatchingProductResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMatchingProduct request or AmazonModel\GetMatchingProduct object itself
+     * @see AmazonModel\GetMatchingProductRequest
+     * @return AmazonModel\GetMatchingProductResponse
      *
      * @throws AmazonException
      */
@@ -109,9 +112,9 @@ interface AmazonInterface
      * GetMatchingProduct will return the details (attributes) for the
      * given Identifier list. Identifer type can be one of [SKU|ASIN|UPC|EAN|ISBN|GTIN|JAN]
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMatchingProductForId request or MarketplaceWebServiceProducts_Model_GetMatchingProductForId object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMatchingProductForId request or AmazonModel\GetMatchingProductForId object itself
+     * @see AmazonModel\GetMatchingProductForIdRequest
+     * @return AmazonModel\GetMatchingProductForIdResponse
      *
      * @throws AmazonException
      */
@@ -122,9 +125,9 @@ interface AmazonInterface
      *         products identified by the given
      *         ASIN/SKU list.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyFeesEstimate request or MarketplaceWebServiceProducts_Model_GetMyFeesEstimate object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyFeesEstimateRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMyFeesEstimate request or AmazonModel\GetMyFeesEstimate object itself
+     * @see AmazonModel\GetMyFeesEstimateRequest
+     * @return AmazonModel\GetMyFeesEstimateResponse
      *
      * @throws AmazonException
      */
@@ -133,9 +136,9 @@ interface AmazonInterface
      * Get My Price For ASIN
      * <!-- Wrong doc in current code -->
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyPriceForASIN request or MarketplaceWebServiceProducts_Model_GetMyPriceForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMyPriceForASIN request or AmazonModel\GetMyPriceForASIN object itself
+     * @see AmazonModel\GetMyPriceForASINRequest
+     * @return AmazonModel\GetMyPriceForASINResponse
      *
      * @throws AmazonException
      */
@@ -144,9 +147,9 @@ interface AmazonInterface
      * Get My Price For SKU
      * <!-- Wrong doc in current code -->
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyPriceForSKU request or MarketplaceWebServiceProducts_Model_GetMyPriceForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMyPriceForSKU request or AmazonModel\GetMyPriceForSKU object itself
+     * @see AmazonModel\GetMyPriceForSKURequest
+     * @return AmazonModel\GetMyPriceForSKUResponse
      *
      * @throws AmazonException
      */
@@ -156,9 +159,9 @@ interface AmazonInterface
      * Gets categories information for a product identified by
      * the MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetProductCategoriesForASIN request or MarketplaceWebServiceProducts_Model_GetProductCategoriesForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetProductCategoriesForASIN request or AmazonModel\GetProductCategoriesForASIN object itself
+     * @see AmazonModel\GetProductCategoriesForASINRequest
+     * @return AmazonModel\GetProductCategoriesForASINResponse
      *
      * @throws AmazonException
      */
@@ -168,9 +171,9 @@ interface AmazonInterface
      * Gets categories information for a product identified by
      * the SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKU request or MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetProductCategoriesForSKU request or AmazonModel\GetProductCategoriesForSKU object itself
+     * @see AmazonModel\GetProductCategoriesForSKURequest
+     * @return AmazonModel\GetProductCategoriesForSKUResponse
      *
      * @throws AmazonException
      */
@@ -181,9 +184,9 @@ interface AmazonInterface
      * takes no input.
      * All API sections within the API are required to implement this operation.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetServiceStatus request or MarketplaceWebServiceProducts_Model_GetServiceStatus object itself
-     * @see MarketplaceWebServiceProducts_Model_GetServiceStatusRequest
-     * @return MarketplaceWebServiceProducts_Model_GetServiceStatusResponse
+     * @param mixed $request array of parameters for AmazonModel\GetServiceStatus request or AmazonModel\GetServiceStatus object itself
+     * @see AmazonModel\GetServiceStatusRequest
+     * @return AmazonModel\GetServiceStatusResponse
      *
      * @throws AmazonException
      */
@@ -193,9 +196,9 @@ interface AmazonInterface
      * ListMatchingProducts can be used to
      * find products that match the given criteria.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_ListMatchingProducts request or MarketplaceWebServiceProducts_Model_ListMatchingProducts object itself
-     * @see MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest
-     * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse
+     * @param mixed $request array of parameters for AmazonModel\ListMatchingProducts request or AmazonModel\ListMatchingProducts object itself
+     * @see AmazonModel\ListMatchingProductsRequest
+     * @return AmazonModel\ListMatchingProductsResponse
      *
      * @throws AmazonException
      */

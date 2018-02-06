@@ -18,6 +18,9 @@
  * Generated: Fri Sep 16 11:49:32 PDT 2016
  */
 
+namespace Webcom\MarketPlaceWebService;
+use Webcom\MarketPlaceWebServiceProduct\Model as AmazonModel;
+
 /**
  * Marketplace Web Service Products Exception provides details of errors
  * returned by Marketplace Web Service Products service

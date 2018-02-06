@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_Error
+ * Error
  *
  * Properties:
  * <ul>
@@ -31,11 +35,11 @@
  * <li>Type: string</li>
  * <li>Code: string</li>
  * <li>Message: string</li>
- * <li>Detail: MarketplaceWebServiceProducts_Model_ErrorDetail</li>
+ * <li>Detail: ErrorDetail</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_Error extends AmazonModelAbstract
+class Error extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
@@ -43,7 +47,7 @@ class MarketplaceWebServiceProducts_Model_Error extends AmazonModelAbstract
                 'Type'    => array('FieldValue' => null, 'FieldType' => 'string'),
                 'Code'    => array('FieldValue' => null, 'FieldType' => 'string'),
                 'Message' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'Detail'  => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ErrorDetail'),
+                'Detail'  => array('FieldValue' => null, 'FieldType' => 'ErrorDetail'),
         );
         parent::__construct($data);
     }
@@ -199,7 +203,7 @@ class MarketplaceWebServiceProducts_Model_Error extends AmazonModelAbstract
     /**
      * Set the value of the Detail property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ErrorDetail detail
+     * @param ErrorDetail detail
      * @return this instance
      */
     public function setDetail($value)

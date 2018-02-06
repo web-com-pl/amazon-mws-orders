@@ -10,7 +10,7 @@
     "autoload": {
         "psr-4": {
             "Webcom\\MarketPlaceWebServiceOrders\\": "src/MarketplaceWebServiceOrders/",
-            "Webcom\\MarketPlaceWebService\\Products\\": "src/MarketplaceWebServiceProducts/",
+            "Webcom\\MarketPlaceWebServiceProducts\\": "src/MarketplaceWebServiceProducts/",
             "Webcom\\MarketPlaceWebService\\": "src/MarketplaceWebService/"
         }
     }

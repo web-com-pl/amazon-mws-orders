@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_QualifiersType
+ * QualifiersType
  *
  * Properties:
  * <ul>
@@ -32,12 +36,12 @@
  * <li>ItemSubcondition: string</li>
  * <li>FulfillmentChannel: string</li>
  * <li>ShipsDomestically: string</li>
- * <li>ShippingTime: MarketplaceWebServiceProducts_Model_ShippingTimeType</li>
+ * <li>ShippingTime: ShippingTimeType</li>
  * <li>SellerPositiveFeedbackRating: string</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_QualifiersType extends AmazonModelAbstract
+class QualifiersType extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
@@ -46,7 +50,7 @@ class MarketplaceWebServiceProducts_Model_QualifiersType extends AmazonModelAbst
                 'ItemSubcondition'             => array('FieldValue' => null, 'FieldType' => 'string'),
                 'FulfillmentChannel'           => array('FieldValue' => null, 'FieldType' => 'string'),
                 'ShipsDomestically'            => array('FieldValue' => null, 'FieldType' => 'string'),
-                'ShippingTime'                 => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ShippingTimeType'),
+                'ShippingTime'                 => array('FieldValue' => null, 'FieldType' => 'ShippingTimeType'),
                 'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
@@ -249,7 +253,7 @@ class MarketplaceWebServiceProducts_Model_QualifiersType extends AmazonModelAbst
     /**
      * Set the value of the ShippingTime property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ShippingTimeType shippingTime
+     * @param ShippingTimeType shippingTime
      * @return this instance
      */
     public function setShippingTime($value)

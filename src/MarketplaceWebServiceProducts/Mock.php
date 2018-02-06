@@ -21,7 +21,8 @@
 /**
  *  @see MarketplaceWebServiceProducts_Interface
  */
-require_once (dirname(__FILE__) . '/Interface.php');
+namespace Webcom\MarketPlaceWebServiceProducts;
+use Webcom\MarketPlaceWebServiceProduct\Model as AmazonModel;
 
 class Mock implements AmazonInterface
 {
@@ -31,16 +32,16 @@ class Mock implements AmazonInterface
      * Gets competitive pricing and related information for a product identified by
      * the MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASIN request or MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASIN
-     * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetCompetitivePricingForASIN request or AmazonModel\GetCompetitivePricingForASIN object itself
+     * @see AmazonModel\GetCompetitivePricingForASIN
+     * @return AmazonModel\GetCompetitivePricingForASINResponse
      *
      * @throws AmazonException
      */
     public function getCompetitivePricingForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse::fromXML($this->_invoke('GetCompetitivePricingForASIN'));
+        
+        return AmazonModel\GetCompetitivePricingForASINResponse::fromXML($this->_invoke('GetCompetitivePricingForASIN'));
     }
 
     /**
@@ -48,16 +49,16 @@ class Mock implements AmazonInterface
      * Gets competitive pricing and related information for a product identified by
      * the SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKU request or MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKU
-     * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetCompetitivePricingForSKU request or AmazonModel\GetCompetitivePricingForSKU object itself
+     * @see AmazonModel\GetCompetitivePricingForSKU
+     * @return AmazonModel\GetCompetitivePricingForSKUResponse
      *
      * @throws AmazonException
      */
     public function getCompetitivePricingForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKUResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse::fromXML($this->_invoke('GetCompetitivePricingForSKU'));
+        
+        return AmazonModel\GetCompetitivePricingForSKUResponse::fromXML($this->_invoke('GetCompetitivePricingForSKU'));
     }
 
     /**
@@ -65,16 +66,16 @@ class Mock implements AmazonInterface
      * Gets some of the lowest prices based on the product identified by the given
      * MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASIN request or MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASIN
-     * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestOfferListingsForASIN request or AmazonModel\GetLowestOfferListingsForASIN object itself
+     * @see AmazonModel\GetLowestOfferListingsForASIN
+     * @return AmazonModel\GetLowestOfferListingsForASINResponse
      *
      * @throws AmazonException
      */
     public function getLowestOfferListingsForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse::fromXML($this->_invoke('GetLowestOfferListingsForASIN'));
+        
+        return AmazonModel\GetLowestOfferListingsForASINResponse::fromXML($this->_invoke('GetLowestOfferListingsForASIN'));
     }
 
     /**
@@ -82,16 +83,16 @@ class Mock implements AmazonInterface
      * Gets some of the lowest prices based on the product identified by the given
      * SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKU request or MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKU
-     * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestOfferListingsForSKU request or AmazonModel\GetLowestOfferListingsForSKU object itself
+     * @see AmazonModel\GetLowestOfferListingsForSKU
+     * @return AmazonModel\GetLowestOfferListingsForSKUResponse
      *
      * @throws AmazonException
      */
     public function getLowestOfferListingsForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKUResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse::fromXML($this->_invoke('GetLowestOfferListingsForSKU'));
+        
+        return AmazonModel\GetLowestOfferListingsForSKUResponse::fromXML($this->_invoke('GetLowestOfferListingsForSKU'));
     }
 
     /**
@@ -99,16 +100,16 @@ class Mock implements AmazonInterface
      * Retrieves the lowest priced offers based on the product identified by the given
      *     ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN
-     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestPricedOffersForASIN request or AmazonModel\GetLowestPricedOffersForASIN object itself
+     * @see AmazonModel\GetLowestPricedOffersForASIN
+     * @return AmazonModel\GetLowestPricedOffersForASINResponse
      *
      * @throws AmazonException
      */
     public function getLowestPricedOffersForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForASINResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse::fromXML($this->_invoke('GetLowestPricedOffersForASIN'));
+        
+        return AmazonModel\GetLowestPricedOffersForASINResponse::fromXML($this->_invoke('GetLowestPricedOffersForASIN'));
     }
 
     /**
@@ -116,16 +117,16 @@ class Mock implements AmazonInterface
      * Retrieves the lowest priced offers based on the product identified by the given
      *     SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU
-     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestPricedOffersForSKU request or AmazonModel\GetLowestPricedOffersForSKU object itself
+     * @see AmazonModel\GetLowestPricedOffersForSKU
+     * @return AmazonModel\GetLowestPricedOffersForSKUResponse
      *
      * @throws AmazonException
      */
     public function getLowestPricedOffersForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForSKUResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse::fromXML($this->_invoke('GetLowestPricedOffersForSKU'));
+        
+        return AmazonModel\GetLowestPricedOffersForSKUResponse::fromXML($this->_invoke('GetLowestPricedOffersForSKU'));
     }
 
     /**
@@ -133,16 +134,16 @@ class Mock implements AmazonInterface
      * GetMatchingProduct will return the details (attributes) for the
      * given ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMatchingProduct request or MarketplaceWebServiceProducts_Model_GetMatchingProduct object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMatchingProduct
-     * @return MarketplaceWebServiceProducts_Model_GetMatchingProductResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMatchingProduct request or AmazonModel\GetMatchingProduct object itself
+     * @see AmazonModel\GetMatchingProduct
+     * @return AmazonModel\GetMatchingProductResponse
      *
      * @throws AmazonException
      */
     public function getMatchingProduct($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetMatchingProductResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetMatchingProductResponse::fromXML($this->_invoke('GetMatchingProduct'));
+        
+        return AmazonModel\GetMatchingProductResponse::fromXML($this->_invoke('GetMatchingProduct'));
     }
 
     /**
@@ -150,16 +151,16 @@ class Mock implements AmazonInterface
      * GetMatchingProduct will return the details (attributes) for the
      * given Identifier list. Identifer type can be one of [SKU|ASIN|UPC|EAN|ISBN|GTIN|JAN]
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMatchingProductForId request or MarketplaceWebServiceProducts_Model_GetMatchingProductForId object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMatchingProductForId
-     * @return MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMatchingProductForId request or AmazonModel\GetMatchingProductForId object itself
+     * @see AmazonModel\GetMatchingProductForId
+     * @return AmazonModel\GetMatchingProductForIdResponse
      *
      * @throws AmazonException
      */
     public function getMatchingProductForId($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse::fromXML($this->_invoke('GetMatchingProductForId'));
+        
+        return AmazonModel\GetMatchingProductForIdResponse::fromXML($this->_invoke('GetMatchingProductForId'));
     }
 
     /**
@@ -168,48 +169,48 @@ class Mock implements AmazonInterface
      *         products identified by the given
      *         ASIN/SKU list.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyFeesEstimate request or MarketplaceWebServiceProducts_Model_GetMyFeesEstimate object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyFeesEstimate
-     * @return MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMyFeesEstimate request or AmazonModel\GetMyFeesEstimate object itself
+     * @see AmazonModel\GetMyFeesEstimate
+     * @return AmazonModel\GetMyFeesEstimateResponse
      *
      * @throws AmazonException
      */
     public function getMyFeesEstimate($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetMyFeesEstimateResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResponse::fromXML($this->_invoke('GetMyFeesEstimate'));
+        
+        return AmazonModel\GetMyFeesEstimateResponse::fromXML($this->_invoke('GetMyFeesEstimate'));
     }
 
     /**
      * Get My Price For ASIN
      * <!-- Wrong doc in current code -->
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyPriceForASIN request or MarketplaceWebServiceProducts_Model_GetMyPriceForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyPriceForASIN
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMyPriceForASIN request or AmazonModel\GetMyPriceForASIN object itself
+     * @see AmazonModel\GetMyPriceForASIN
+     * @return AmazonModel\GetMyPriceForASINResponse
      *
      * @throws AmazonException
      */
     public function getMyPriceForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse::fromXML($this->_invoke('GetMyPriceForASIN'));
+        
+        return AmazonModel\GetMyPriceForASINResponse::fromXML($this->_invoke('GetMyPriceForASIN'));
     }
 
     /**
      * Get My Price For SKU
      * <!-- Wrong doc in current code -->
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyPriceForSKU request or MarketplaceWebServiceProducts_Model_GetMyPriceForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyPriceForSKU
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMyPriceForSKU request or AmazonModel\GetMyPriceForSKU object itself
+     * @see AmazonModel\GetMyPriceForSKU
+     * @return AmazonModel\GetMyPriceForSKUResponse
      *
      * @throws AmazonException
      */
     public function getMyPriceForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKUResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse::fromXML($this->_invoke('GetMyPriceForSKU'));
+        
+        return AmazonModel\GetMyPriceForSKUResponse::fromXML($this->_invoke('GetMyPriceForSKU'));
     }
 
     /**
@@ -217,16 +218,16 @@ class Mock implements AmazonInterface
      * Gets categories information for a product identified by
      * the MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetProductCategoriesForASIN request or MarketplaceWebServiceProducts_Model_GetProductCategoriesForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForASIN
-     * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetProductCategoriesForASIN request or AmazonModel\GetProductCategoriesForASIN object itself
+     * @see AmazonModel\GetProductCategoriesForASIN
+     * @return AmazonModel\GetProductCategoriesForASINResponse
      *
      * @throws AmazonException
      */
     public function getProductCategoriesForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse::fromXML($this->_invoke('GetProductCategoriesForASIN'));
+        
+        return AmazonModel\GetProductCategoriesForASINResponse::fromXML($this->_invoke('GetProductCategoriesForASIN'));
     }
 
     /**
@@ -234,16 +235,16 @@ class Mock implements AmazonInterface
      * Gets categories information for a product identified by
      * the SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKU request or MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKU
-     * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetProductCategoriesForSKU request or AmazonModel\GetProductCategoriesForSKU object itself
+     * @see AmazonModel\GetProductCategoriesForSKU
+     * @return AmazonModel\GetProductCategoriesForSKUResponse
      *
      * @throws AmazonException
      */
     public function getProductCategoriesForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKUResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse::fromXML($this->_invoke('GetProductCategoriesForSKU'));
+        
+        return AmazonModel\GetProductCategoriesForSKUResponse::fromXML($this->_invoke('GetProductCategoriesForSKU'));
     }
 
     /**
@@ -252,16 +253,16 @@ class Mock implements AmazonInterface
      * takes no input.
      * All API sections within the API are required to implement this operation.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetServiceStatus request or MarketplaceWebServiceProducts_Model_GetServiceStatus object itself
-     * @see MarketplaceWebServiceProducts_Model_GetServiceStatus
-     * @return MarketplaceWebServiceProducts_Model_GetServiceStatusResponse
+     * @param mixed $request array of parameters for AmazonModel\GetServiceStatus request or AmazonModel\GetServiceStatus object itself
+     * @see AmazonModel\GetServiceStatus
+     * @return AmazonModel\GetServiceStatusResponse
      *
      * @throws AmazonException
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        return MarketplaceWebServiceProducts_Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
+        
+        return AmazonModel\GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
     /**
@@ -269,16 +270,16 @@ class Mock implements AmazonInterface
      * ListMatchingProducts can be used to
      * find products that match the given criteria.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_ListMatchingProducts request or MarketplaceWebServiceProducts_Model_ListMatchingProducts object itself
-     * @see MarketplaceWebServiceProducts_Model_ListMatchingProducts
-     * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse
+     * @param mixed $request array of parameters for AmazonModel\ListMatchingProducts request or AmazonModel\ListMatchingProducts object itself
+     * @see AmazonModel\ListMatchingProducts
+     * @return AmazonModel\ListMatchingProductsResponse
      *
      * @throws AmazonException
      */
     public function listMatchingProducts($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListMatchingProductsResponse.php');
-        return MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse::fromXML($this->_invoke('ListMatchingProducts'));
+        
+        return AmazonModel\ListMatchingProductsResponse::fromXML($this->_invoke('ListMatchingProducts'));
     }
 
     // Private API ------------------------------------------------------------//

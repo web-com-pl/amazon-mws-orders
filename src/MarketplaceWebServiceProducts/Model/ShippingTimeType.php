@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_ShippingTimeType
+ * ShippingTimeType
  *
  * Properties:
  * <ul>
@@ -32,7 +36,7 @@
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_ShippingTimeType extends AmazonModelAbstract
+class ShippingTimeType extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {

@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier
+ * FeesEstimateIdentifier
  *
  * Properties:
  * <ul>
@@ -33,12 +37,12 @@
  * <li>IdType: string</li>
  * <li>IdValue: string</li>
  * <li>IsAmazonFulfilled: bool</li>
- * <li>PriceToEstimateFees: MarketplaceWebServiceProducts_Model_PriceToEstimateFees</li>
+ * <li>PriceToEstimateFees: PriceToEstimateFees</li>
  * <li>SellerInputIdentifier: string</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier extends AmazonModelAbstract
+class FeesEstimateIdentifier extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
@@ -48,7 +52,7 @@ class MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier extends AmazonM
                 'IdType'                => array('FieldValue' => null, 'FieldType' => 'string'),
                 'IdValue'               => array('FieldValue' => null, 'FieldType' => 'string'),
                 'IsAmazonFulfilled'     => array('FieldValue' => null, 'FieldType' => 'bool'),
-                'PriceToEstimateFees'   => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceToEstimateFees'),
+                'PriceToEstimateFees'   => array('FieldValue' => null, 'FieldType' => 'PriceToEstimateFees'),
                 'SellerInputIdentifier' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
@@ -307,7 +311,7 @@ class MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier extends AmazonM
     /**
      * Set the value of the PriceToEstimateFees property.
      *
-     * @param MarketplaceWebServiceProducts_Model_PriceToEstimateFees priceToEstimateFees
+     * @param PriceToEstimateFees priceToEstimateFees
      * @return this instance
      */
     public function setPriceToEstimateFees($value)

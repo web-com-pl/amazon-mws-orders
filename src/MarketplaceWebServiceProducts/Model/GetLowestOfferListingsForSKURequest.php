@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest
+ * GetLowestOfferListingsForSKURequest
  *
  * Properties:
  * <ul>
@@ -31,13 +35,13 @@
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>MarketplaceId: string</li>
- * <li>SellerSKUList: MarketplaceWebServiceProducts_Model_SellerSKUListType</li>
+ * <li>SellerSKUList: SellerSKUListType</li>
  * <li>ItemCondition: string</li>
  * <li>ExcludeMe: bool</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest extends AmazonModelAbstract
+class GetLowestOfferListingsForSKURequest extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
@@ -45,7 +49,7 @@ class MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest ex
                 'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
                 'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
                 'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SellerSKUListType'),
+                'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'SellerSKUListType'),
                 'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
                 'ExcludeMe'     => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
@@ -203,7 +207,7 @@ class MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest ex
     /**
      * Set the value of the SellerSKUList property.
      *
-     * @param MarketplaceWebServiceProducts_Model_SellerSKUListType sellerSKUList
+     * @param SellerSKUListType sellerSKUList
      * @return this instance
      */
     public function setSellerSKUList($value)

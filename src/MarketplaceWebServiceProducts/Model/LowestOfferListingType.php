@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,28 +27,28 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_LowestOfferListingType
+ * LowestOfferListingType
  *
  * Properties:
  * <ul>
  *
- * <li>Qualifiers: MarketplaceWebServiceProducts_Model_QualifiersType</li>
+ * <li>Qualifiers: QualifiersType</li>
  * <li>NumberOfOfferListingsConsidered: int</li>
  * <li>SellerFeedbackCount: int</li>
- * <li>Price: MarketplaceWebServiceProducts_Model_PriceType</li>
+ * <li>Price: PriceType</li>
  * <li>MultipleOffersAtLowestPrice: string</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_LowestOfferListingType extends AmazonModelAbstract
+class LowestOfferListingType extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'Qualifiers'                      => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_QualifiersType'),
+                'Qualifiers'                      => array('FieldValue' => null, 'FieldType' => 'QualifiersType'),
                 'NumberOfOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'int'),
                 'SellerFeedbackCount'             => array('FieldValue' => null, 'FieldType' => 'int'),
-                'Price'                           => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
+                'Price'                           => array('FieldValue' => null, 'FieldType' => 'PriceType'),
                 'MultipleOffersAtLowestPrice'     => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
@@ -63,7 +67,7 @@ class MarketplaceWebServiceProducts_Model_LowestOfferListingType extends AmazonM
     /**
      * Set the value of the Qualifiers property.
      *
-     * @param MarketplaceWebServiceProducts_Model_QualifiersType qualifiers
+     * @param QualifiersType qualifiers
      * @return this instance
      */
     public function setQualifiers($value)
@@ -201,7 +205,7 @@ class MarketplaceWebServiceProducts_Model_LowestOfferListingType extends AmazonM
     /**
      * Set the value of the Price property.
      *
-     * @param MarketplaceWebServiceProducts_Model_PriceType price
+     * @param PriceType price
      * @return this instance
      */
     public function setPrice($value)

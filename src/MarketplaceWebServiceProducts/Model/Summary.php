@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,33 +27,33 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_Summary
+ * Summary
  *
  * Properties:
  * <ul>
  *
  * <li>TotalOfferCount: int</li>
- * <li>NumberOfOffers: MarketplaceWebServiceProducts_Model_NumberOfOffers</li>
- * <li>LowestPrices: MarketplaceWebServiceProducts_Model_LowestPrices</li>
- * <li>BuyBoxPrices: MarketplaceWebServiceProducts_Model_BuyBoxPrices</li>
- * <li>ListPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>SuggestedLowerPricePlusShipping: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>BuyBoxEligibleOffers: MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers</li>
+ * <li>NumberOfOffers: NumberOfOffers</li>
+ * <li>LowestPrices: LowestPrices</li>
+ * <li>BuyBoxPrices: BuyBoxPrices</li>
+ * <li>ListPrice: MoneyType</li>
+ * <li>SuggestedLowerPricePlusShipping: MoneyType</li>
+ * <li>BuyBoxEligibleOffers: BuyBoxEligibleOffers</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_Summary extends AmazonModelAbstract
+class Summary extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
                 'TotalOfferCount'                 => array('FieldValue' => null, 'FieldType' => 'int'),
-                'NumberOfOffers'                  => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_NumberOfOffers'),
-                'LowestPrices'                    => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_LowestPrices'),
-                'BuyBoxPrices'                    => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_BuyBoxPrices'),
-                'ListPrice'                       => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'BuyBoxEligibleOffers'            => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers'),
+                'NumberOfOffers'                  => array('FieldValue' => null, 'FieldType' => 'NumberOfOffers'),
+                'LowestPrices'                    => array('FieldValue' => null, 'FieldType' => 'LowestPrices'),
+                'BuyBoxPrices'                    => array('FieldValue' => null, 'FieldType' => 'BuyBoxPrices'),
+                'ListPrice'                       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'BuyBoxEligibleOffers'            => array('FieldValue' => null, 'FieldType' => 'BuyBoxEligibleOffers'),
         );
         parent::__construct($data);
     }
@@ -113,7 +117,7 @@ class MarketplaceWebServiceProducts_Model_Summary extends AmazonModelAbstract
     /**
      * Set the value of the NumberOfOffers property.
      *
-     * @param MarketplaceWebServiceProducts_Model_NumberOfOffers numberOfOffers
+     * @param NumberOfOffers numberOfOffers
      * @return this instance
      */
     public function setNumberOfOffers($value)
@@ -159,7 +163,7 @@ class MarketplaceWebServiceProducts_Model_Summary extends AmazonModelAbstract
     /**
      * Set the value of the LowestPrices property.
      *
-     * @param MarketplaceWebServiceProducts_Model_LowestPrices lowestPrices
+     * @param LowestPrices lowestPrices
      * @return this instance
      */
     public function setLowestPrices($value)
@@ -205,7 +209,7 @@ class MarketplaceWebServiceProducts_Model_Summary extends AmazonModelAbstract
     /**
      * Set the value of the BuyBoxPrices property.
      *
-     * @param MarketplaceWebServiceProducts_Model_BuyBoxPrices buyBoxPrices
+     * @param BuyBoxPrices buyBoxPrices
      * @return this instance
      */
     public function setBuyBoxPrices($value)
@@ -251,7 +255,7 @@ class MarketplaceWebServiceProducts_Model_Summary extends AmazonModelAbstract
     /**
      * Set the value of the ListPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType listPrice
+     * @param MoneyType listPrice
      * @return this instance
      */
     public function setListPrice($value)
@@ -297,7 +301,7 @@ class MarketplaceWebServiceProducts_Model_Summary extends AmazonModelAbstract
     /**
      * Set the value of the SuggestedLowerPricePlusShipping property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType suggestedLowerPricePlusShipping
+     * @param MoneyType suggestedLowerPricePlusShipping
      * @return this instance
      */
     public function setSuggestedLowerPricePlusShipping($value)
@@ -343,7 +347,7 @@ class MarketplaceWebServiceProducts_Model_Summary extends AmazonModelAbstract
     /**
      * Set the value of the BuyBoxEligibleOffers property.
      *
-     * @param MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers buyBoxEligibleOffers
+     * @param BuyBoxEligibleOffers buyBoxEligibleOffers
      * @return this instance
      */
     public function setBuyBoxEligibleOffers($value)

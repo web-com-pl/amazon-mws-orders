@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,27 +27,27 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_FeesEstimateResult
+ * FeesEstimateResult
  *
  * Properties:
  * <ul>
  *
  * <li>Status: string</li>
- * <li>FeesEstimateIdentifier: MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier</li>
- * <li>FeesEstimate: MarketplaceWebServiceProducts_Model_FeesEstimate</li>
- * <li>Error: MarketplaceWebServiceProducts_Model_Error</li>
+ * <li>FeesEstimateIdentifier: FeesEstimateIdentifier</li>
+ * <li>FeesEstimate: FeesEstimate</li>
+ * <li>Error: Error</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_FeesEstimateResult extends AmazonModelAbstract
+class FeesEstimateResult extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
                 'Status'                 => array('FieldValue' => null, 'FieldType' => 'string'),
-                'FeesEstimateIdentifier' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier'),
-                'FeesEstimate'           => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_FeesEstimate'),
-                'Error'                  => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
+                'FeesEstimateIdentifier' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateIdentifier'),
+                'FeesEstimate'           => array('FieldValue' => null, 'FieldType' => 'FeesEstimate'),
+                'Error'                  => array('FieldValue' => null, 'FieldType' => 'Error'),
         );
         parent::__construct($data);
     }
@@ -107,7 +111,7 @@ class MarketplaceWebServiceProducts_Model_FeesEstimateResult extends AmazonModel
     /**
      * Set the value of the FeesEstimateIdentifier property.
      *
-     * @param MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier feesEstimateIdentifier
+     * @param FeesEstimateIdentifier feesEstimateIdentifier
      * @return this instance
      */
     public function setFeesEstimateIdentifier($value)
@@ -153,7 +157,7 @@ class MarketplaceWebServiceProducts_Model_FeesEstimateResult extends AmazonModel
     /**
      * Set the value of the FeesEstimate property.
      *
-     * @param MarketplaceWebServiceProducts_Model_FeesEstimate feesEstimate
+     * @param FeesEstimate feesEstimate
      * @return this instance
      */
     public function setFeesEstimate($value)
@@ -199,7 +203,7 @@ class MarketplaceWebServiceProducts_Model_FeesEstimateResult extends AmazonModel
     /**
      * Set the value of the Error property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Error error
+     * @param Error error
      * @return this instance
      */
     public function setError($value)

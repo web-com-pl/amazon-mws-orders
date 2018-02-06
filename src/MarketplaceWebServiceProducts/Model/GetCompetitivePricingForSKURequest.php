@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest
+ * GetCompetitivePricingForSKURequest
  *
  * Properties:
  * <ul>
@@ -31,11 +35,11 @@
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>MarketplaceId: string</li>
- * <li>SellerSKUList: MarketplaceWebServiceProducts_Model_SellerSKUListType</li>
+ * <li>SellerSKUList: SellerSKUListType</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest extends AmazonModelAbstract
+class GetCompetitivePricingForSKURequest extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
@@ -43,7 +47,7 @@ class MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest ext
                 'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
                 'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
                 'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SellerSKUListType'),
+                'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'SellerSKUListType'),
         );
         parent::__construct($data);
     }
@@ -199,7 +203,7 @@ class MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest ext
     /**
      * Set the value of the SellerSKUList property.
      *
-     * @param MarketplaceWebServiceProducts_Model_SellerSKUListType sellerSKUList
+     * @param SellerSKUListType sellerSKUList
      * @return this instance
      */
     public function setSellerSKUList($value)

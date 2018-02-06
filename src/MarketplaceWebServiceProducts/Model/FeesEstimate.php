@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,25 +27,25 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_FeesEstimate
+ * FeesEstimate
  *
  * Properties:
  * <ul>
  *
  * <li>TimeOfFeesEstimation: string</li>
- * <li>TotalFeesEstimate: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>FeeDetailList: MarketplaceWebServiceProducts_Model_FeeDetailList</li>
+ * <li>TotalFeesEstimate: MoneyType</li>
+ * <li>FeeDetailList: FeeDetailList</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_FeesEstimate extends AmazonModelAbstract
+class FeesEstimate extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
                 'TimeOfFeesEstimation' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'TotalFeesEstimate'    => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'FeeDetailList'        => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_FeeDetailList'),
+                'TotalFeesEstimate'    => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'FeeDetailList'        => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
         );
         parent::__construct($data);
     }
@@ -105,7 +109,7 @@ class MarketplaceWebServiceProducts_Model_FeesEstimate extends AmazonModelAbstra
     /**
      * Set the value of the TotalFeesEstimate property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType totalFeesEstimate
+     * @param MoneyType totalFeesEstimate
      * @return this instance
      */
     public function setTotalFeesEstimate($value)
@@ -151,7 +155,7 @@ class MarketplaceWebServiceProducts_Model_FeesEstimate extends AmazonModelAbstra
     /**
      * Set the value of the FeeDetailList property.
      *
-     * @param MarketplaceWebServiceProducts_Model_FeeDetailList feeDetailList
+     * @param FeeDetailList feeDetailList
      * @return this instance
      */
     public function setFeeDetailList($value)

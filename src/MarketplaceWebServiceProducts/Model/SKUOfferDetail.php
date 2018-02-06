@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,38 +27,38 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_SKUOfferDetail
+ * SKUOfferDetail
  *
  * Properties:
  * <ul>
  *
  * <li>MyOffer: bool</li>
  * <li>SubCondition: string</li>
- * <li>SellerFeedbackRating: MarketplaceWebServiceProducts_Model_SellerFeedbackType</li>
- * <li>ShippingTime: MarketplaceWebServiceProducts_Model_DetailedShippingTimeType</li>
- * <li>ListingPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>Points: MarketplaceWebServiceProducts_Model_Points</li>
- * <li>Shipping: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>ShipsFrom: MarketplaceWebServiceProducts_Model_ShipsFromType</li>
+ * <li>SellerFeedbackRating: SellerFeedbackType</li>
+ * <li>ShippingTime: DetailedShippingTimeType</li>
+ * <li>ListingPrice: MoneyType</li>
+ * <li>Points: Points</li>
+ * <li>Shipping: MoneyType</li>
+ * <li>ShipsFrom: ShipsFromType</li>
  * <li>IsFulfilledByAmazon: bool</li>
  * <li>IsBuyBoxWinner: bool</li>
  * <li>IsFeaturedMerchant: bool</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_SKUOfferDetail extends AmazonModelAbstract
+class SKUOfferDetail extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
                 'MyOffer'              => array('FieldValue' => null, 'FieldType' => 'bool'),
                 'SubCondition'         => array('FieldValue' => null, 'FieldType' => 'string'),
-                'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SellerFeedbackType'),
-                'ShippingTime'         => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_DetailedShippingTimeType'),
-                'ListingPrice'         => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'Points'               => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Points'),
-                'Shipping'             => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'ShipsFrom'            => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ShipsFromType'),
+                'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'SellerFeedbackType'),
+                'ShippingTime'         => array('FieldValue' => null, 'FieldType' => 'DetailedShippingTimeType'),
+                'ListingPrice'         => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'Points'               => array('FieldValue' => null, 'FieldType' => 'Points'),
+                'Shipping'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'ShipsFrom'            => array('FieldValue' => null, 'FieldType' => 'ShipsFromType'),
                 'IsFulfilledByAmazon'  => array('FieldValue' => null, 'FieldType' => 'bool'),
                 'IsBuyBoxWinner'       => array('FieldValue' => null, 'FieldType' => 'bool'),
                 'IsFeaturedMerchant'   => array('FieldValue' => null, 'FieldType' => 'bool'),
@@ -177,7 +181,7 @@ class MarketplaceWebServiceProducts_Model_SKUOfferDetail extends AmazonModelAbst
     /**
      * Set the value of the SellerFeedbackRating property.
      *
-     * @param MarketplaceWebServiceProducts_Model_SellerFeedbackType sellerFeedbackRating
+     * @param SellerFeedbackType sellerFeedbackRating
      * @return this instance
      */
     public function setSellerFeedbackRating($value)
@@ -223,7 +227,7 @@ class MarketplaceWebServiceProducts_Model_SKUOfferDetail extends AmazonModelAbst
     /**
      * Set the value of the ShippingTime property.
      *
-     * @param MarketplaceWebServiceProducts_Model_DetailedShippingTimeType shippingTime
+     * @param DetailedShippingTimeType shippingTime
      * @return this instance
      */
     public function setShippingTime($value)
@@ -269,7 +273,7 @@ class MarketplaceWebServiceProducts_Model_SKUOfferDetail extends AmazonModelAbst
     /**
      * Set the value of the ListingPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType listingPrice
+     * @param MoneyType listingPrice
      * @return this instance
      */
     public function setListingPrice($value)
@@ -315,7 +319,7 @@ class MarketplaceWebServiceProducts_Model_SKUOfferDetail extends AmazonModelAbst
     /**
      * Set the value of the Points property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Points points
+     * @param Points points
      * @return this instance
      */
     public function setPoints($value)
@@ -361,7 +365,7 @@ class MarketplaceWebServiceProducts_Model_SKUOfferDetail extends AmazonModelAbst
     /**
      * Set the value of the Shipping property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType shipping
+     * @param MoneyType shipping
      * @return this instance
      */
     public function setShipping($value)
@@ -407,7 +411,7 @@ class MarketplaceWebServiceProducts_Model_SKUOfferDetail extends AmazonModelAbst
     /**
      * Set the value of the ShipsFrom property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ShipsFromType shipsFrom
+     * @param ShipsFromType shipsFrom
      * @return this instance
      */
     public function setShipsFrom($value)

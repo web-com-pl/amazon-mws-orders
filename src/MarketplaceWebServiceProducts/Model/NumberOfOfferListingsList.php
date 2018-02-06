@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList
+ * NumberOfOfferListingsList
  *
  * Properties:
  * <ul>
@@ -32,12 +36,12 @@
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList extends AmazonModelAbstract
+class NumberOfOfferListingsList extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'OfferListingCount' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_OfferListingCountType')),
+                'OfferListingCount' => array('FieldValue' => array(), 'FieldType' => array('Model\OfferListingCountType')),
         );
         parent::__construct($data);
     }

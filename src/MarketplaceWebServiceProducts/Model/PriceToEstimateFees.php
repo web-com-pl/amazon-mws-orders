@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,25 +27,25 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_PriceToEstimateFees
+ * PriceToEstimateFees
  *
  * Properties:
  * <ul>
  *
- * <li>ListingPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>Shipping: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>Points: MarketplaceWebServiceProducts_Model_Points</li>
+ * <li>ListingPrice: MoneyType</li>
+ * <li>Shipping: MoneyType</li>
+ * <li>Points: Points</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_PriceToEstimateFees extends AmazonModelAbstract
+class PriceToEstimateFees extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'Shipping'     => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'Points'       => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Points'),
+                'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'Shipping'     => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'Points'       => array('FieldValue' => null, 'FieldType' => 'Points'),
         );
         parent::__construct($data);
     }
@@ -59,7 +63,7 @@ class MarketplaceWebServiceProducts_Model_PriceToEstimateFees extends AmazonMode
     /**
      * Set the value of the ListingPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType listingPrice
+     * @param MoneyType listingPrice
      * @return this instance
      */
     public function setListingPrice($value)
@@ -105,7 +109,7 @@ class MarketplaceWebServiceProducts_Model_PriceToEstimateFees extends AmazonMode
     /**
      * Set the value of the Shipping property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType shipping
+     * @param MoneyType shipping
      * @return this instance
      */
     public function setShipping($value)
@@ -151,7 +155,7 @@ class MarketplaceWebServiceProducts_Model_PriceToEstimateFees extends AmazonMode
     /**
      * Set the value of the Points property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Points points
+     * @param Points points
      * @return this instance
      */
     public function setPoints($value)

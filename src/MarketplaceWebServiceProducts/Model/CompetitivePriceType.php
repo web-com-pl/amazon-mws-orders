@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,26 +27,26 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_CompetitivePriceType
+ * CompetitivePriceType
  *
  * Properties:
  * <ul>
  *
  * <li>CompetitivePriceId: string</li>
- * <li>Price: MarketplaceWebServiceProducts_Model_PriceType</li>
+ * <li>Price: PriceType</li>
  * <li>condition: string</li>
  * <li>subcondition: string</li>
  * <li>belongsToRequester: bool</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_CompetitivePriceType extends AmazonModelAbstract
+class CompetitivePriceType extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
                 'CompetitivePriceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'Price'              => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
+                'Price'              => array('FieldValue' => null, 'FieldType' => 'PriceType'),
                 'condition'          => array('FieldValue' => null, 'FieldType' => '@string'),
                 'subcondition'       => array('FieldValue' => null, 'FieldType' => '@string'),
                 'belongsToRequester' => array('FieldValue' => null, 'FieldType' => '@bool'),
@@ -109,7 +113,7 @@ class MarketplaceWebServiceProducts_Model_CompetitivePriceType extends AmazonMod
     /**
      * Set the value of the Price property.
      *
-     * @param MarketplaceWebServiceProducts_Model_PriceType price
+     * @param PriceType price
      * @return this instance
      */
     public function setPrice($value)

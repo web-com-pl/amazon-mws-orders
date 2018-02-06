@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,23 +27,23 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_IdentifierType
+ * IdentifierType
  *
  * Properties:
  * <ul>
  *
- * <li>MarketplaceASIN: MarketplaceWebServiceProducts_Model_ASINIdentifier</li>
- * <li>SKUIdentifier: MarketplaceWebServiceProducts_Model_SellerSKUIdentifier</li>
+ * <li>MarketplaceASIN: ASINIdentifier</li>
+ * <li>SKUIdentifier: SellerSKUIdentifier</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_IdentifierType extends AmazonModelAbstract
+class IdentifierType extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'MarketplaceASIN' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ASINIdentifier'),
-                'SKUIdentifier'   => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SellerSKUIdentifier'),
+                'MarketplaceASIN' => array('FieldValue' => null, 'FieldType' => 'ASINIdentifier'),
+                'SKUIdentifier'   => array('FieldValue' => null, 'FieldType' => 'SellerSKUIdentifier'),
         );
         parent::__construct($data);
     }
@@ -57,7 +61,7 @@ class MarketplaceWebServiceProducts_Model_IdentifierType extends AmazonModelAbst
     /**
      * Set the value of the MarketplaceASIN property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ASINIdentifier marketplaceASIN
+     * @param ASINIdentifier marketplaceASIN
      * @return this instance
      */
     public function setMarketplaceASIN($value)
@@ -103,7 +107,7 @@ class MarketplaceWebServiceProducts_Model_IdentifierType extends AmazonModelAbst
     /**
      * Set the value of the SKUIdentifier property.
      *
-     * @param MarketplaceWebServiceProducts_Model_SellerSKUIdentifier skuIdentifier
+     * @param SellerSKUIdentifier skuIdentifier
      * @return this instance
      */
     public function setSKUIdentifier($value)

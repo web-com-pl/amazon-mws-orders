@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,25 +27,25 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetMatchingProductResult
+ * GetMatchingProductResult
  *
  * Properties:
  * <ul>
  *
- * <li>Product: MarketplaceWebServiceProducts_Model_Product</li>
- * <li>Error: MarketplaceWebServiceProducts_Model_Error</li>
+ * <li>Product: Product</li>
+ * <li>Error: Error</li>
  * <li>ASIN: string</li>
  * <li>status: string</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetMatchingProductResult extends AmazonModelAbstract
+class GetMatchingProductResult extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'Product' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Product'),
-                'Error'   => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
+                'Product' => array('FieldValue' => null, 'FieldType' => 'Product'),
+                'Error'   => array('FieldValue' => null, 'FieldType' => 'Error'),
                 'ASIN'    => array('FieldValue' => null, 'FieldType' => '@string'),
                 'status'  => array('FieldValue' => null, 'FieldType' => '@string'),
         );
@@ -61,7 +65,7 @@ class MarketplaceWebServiceProducts_Model_GetMatchingProductResult extends Amazo
     /**
      * Set the value of the Product property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Product product
+     * @param Product product
      * @return this instance
      */
     public function setProduct($value)
@@ -107,7 +111,7 @@ class MarketplaceWebServiceProducts_Model_GetMatchingProductResult extends Amazo
     /**
      * Set the value of the Error property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Error error
+     * @param Error error
      * @return this instance
      */
     public function setError($value)

@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,31 +27,31 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_FeeDetail
+ * FeeDetail
  *
  * Properties:
  * <ul>
  *
  * <li>FeeType: string</li>
- * <li>FeeAmount: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>FeePromotion: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>TaxAmount: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>FinalFee: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>IncludedFeeDetailList: MarketplaceWebServiceProducts_Model_FeeDetailList</li>
+ * <li>FeeAmount: MoneyType</li>
+ * <li>FeePromotion: MoneyType</li>
+ * <li>TaxAmount: MoneyType</li>
+ * <li>FinalFee: MoneyType</li>
+ * <li>IncludedFeeDetailList: FeeDetailList</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_FeeDetail extends AmazonModelAbstract
+class FeeDetail extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
                 'FeeType'               => array('FieldValue' => null, 'FieldType' => 'string'),
-                'FeeAmount'             => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'FeePromotion'          => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'TaxAmount'             => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'FinalFee'              => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-                'IncludedFeeDetailList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_FeeDetailList'),
+                'FeeAmount'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'FeePromotion'          => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'TaxAmount'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'FinalFee'              => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+                'IncludedFeeDetailList' => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
         );
         parent::__construct($data);
     }
@@ -111,7 +115,7 @@ class MarketplaceWebServiceProducts_Model_FeeDetail extends AmazonModelAbstract
     /**
      * Set the value of the FeeAmount property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType feeAmount
+     * @param MoneyType feeAmount
      * @return this instance
      */
     public function setFeeAmount($value)
@@ -157,7 +161,7 @@ class MarketplaceWebServiceProducts_Model_FeeDetail extends AmazonModelAbstract
     /**
      * Set the value of the FeePromotion property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType feePromotion
+     * @param MoneyType feePromotion
      * @return this instance
      */
     public function setFeePromotion($value)
@@ -203,7 +207,7 @@ class MarketplaceWebServiceProducts_Model_FeeDetail extends AmazonModelAbstract
     /**
      * Set the value of the TaxAmount property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType taxAmount
+     * @param MoneyType taxAmount
      * @return this instance
      */
     public function setTaxAmount($value)
@@ -249,7 +253,7 @@ class MarketplaceWebServiceProducts_Model_FeeDetail extends AmazonModelAbstract
     /**
      * Set the value of the FinalFee property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType finalFee
+     * @param MoneyType finalFee
      * @return this instance
      */
     public function setFinalFee($value)
@@ -295,7 +299,7 @@ class MarketplaceWebServiceProducts_Model_FeeDetail extends AmazonModelAbstract
     /**
      * Set the value of the IncludedFeeDetailList property.
      *
-     * @param MarketplaceWebServiceProducts_Model_FeeDetailList includedFeeDetailList
+     * @param FeeDetailList includedFeeDetailList
      * @return this instance
      */
     public function setIncludedFeeDetailList($value)

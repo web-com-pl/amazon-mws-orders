@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest
+ * GetLowestOfferListingsForASINRequest
  *
  * Properties:
  * <ul>
@@ -31,13 +35,13 @@
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>MarketplaceId: string</li>
- * <li>ASINList: MarketplaceWebServiceProducts_Model_ASINListType</li>
+ * <li>ASINList: ASINListType</li>
  * <li>ItemCondition: string</li>
  * <li>ExcludeMe: bool</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest extends AmazonModelAbstract
+class GetLowestOfferListingsForASINRequest extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
@@ -45,7 +49,7 @@ class MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest e
                 'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
                 'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
                 'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'ASINList'      => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ASINListType'),
+                'ASINList'      => array('FieldValue' => null, 'FieldType' => 'ASINListType'),
                 'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
                 'ExcludeMe'     => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
@@ -203,7 +207,7 @@ class MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest e
     /**
      * Set the value of the ASINList property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ASINListType asinList
+     * @param ASINListType asinList
      * @return this instance
      */
     public function setASINList($value)

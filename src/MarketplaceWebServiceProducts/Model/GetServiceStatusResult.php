@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,7 +27,7 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetServiceStatusResult
+ * GetServiceStatusResult
  *
  * Properties:
  * <ul>
@@ -31,11 +35,11 @@
  * <li>Status: string</li>
  * <li>Timestamp: string</li>
  * <li>MessageId: string</li>
- * <li>Messages: MarketplaceWebServiceProducts_Model_MessageList</li>
+ * <li>Messages: MessageList</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetServiceStatusResult extends AmazonModelAbstract
+class GetServiceStatusResult extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
@@ -43,7 +47,7 @@ class MarketplaceWebServiceProducts_Model_GetServiceStatusResult extends AmazonM
                 'Status'    => array('FieldValue' => null, 'FieldType' => 'string'),
                 'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
                 'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'Messages'  => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MessageList'),
+                'Messages'  => array('FieldValue' => null, 'FieldType' => 'MessageList'),
         );
         parent::__construct($data);
     }
@@ -199,7 +203,7 @@ class MarketplaceWebServiceProducts_Model_GetServiceStatusResult extends AmazonM
     /**
      * Set the value of the Messages property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MessageList messages
+     * @param MessageList messages
      * @return this instance
      */
     public function setMessages($value)

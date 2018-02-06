@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,25 +27,25 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetMyFeesEstimateRequest
+ * GetMyFeesEstimateRequest
  *
  * Properties:
  * <ul>
  *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
- * <li>FeesEstimateRequestList: MarketplaceWebServiceProducts_Model_FeesEstimateRequestList</li>
+ * <li>FeesEstimateRequestList: FeesEstimateRequestList</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetMyFeesEstimateRequest extends AmazonModelAbstract
+class GetMyFeesEstimateRequest extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
                 'SellerId'                => array('FieldValue' => null, 'FieldType' => 'string'),
                 'MWSAuthToken'            => array('FieldValue' => null, 'FieldType' => 'string'),
-                'FeesEstimateRequestList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_FeesEstimateRequestList'),
+                'FeesEstimateRequestList' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateRequestList'),
         );
         parent::__construct($data);
     }
@@ -151,7 +155,7 @@ class MarketplaceWebServiceProducts_Model_GetMyFeesEstimateRequest extends Amazo
     /**
      * Set the value of the FeesEstimateRequestList property.
      *
-     * @param MarketplaceWebServiceProducts_Model_FeesEstimateRequestList feesEstimateRequestList
+     * @param FeesEstimateRequestList feesEstimateRequestList
      * @return this instance
      */
     public function setFeesEstimateRequestList($value)

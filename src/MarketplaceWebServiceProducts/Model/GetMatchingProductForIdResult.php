@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,26 +27,26 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResult
+ * GetMatchingProductForIdResult
  *
  * Properties:
  * <ul>
  *
- * <li>Products: MarketplaceWebServiceProducts_Model_ProductList</li>
- * <li>Error: MarketplaceWebServiceProducts_Model_Error</li>
+ * <li>Products: ProductList</li>
+ * <li>Error: Error</li>
  * <li>Id: string</li>
  * <li>IdType: string</li>
  * <li>status: string</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResult extends AmazonModelAbstract
+class GetMatchingProductForIdResult extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'Products' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ProductList'),
-                'Error'    => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
+                'Products' => array('FieldValue' => null, 'FieldType' => 'ProductList'),
+                'Error'    => array('FieldValue' => null, 'FieldType' => 'Error'),
                 'Id'       => array('FieldValue' => null, 'FieldType' => '@string'),
                 'IdType'   => array('FieldValue' => null, 'FieldType' => '@string'),
                 'status'   => array('FieldValue' => null, 'FieldType' => '@string'),
@@ -63,7 +67,7 @@ class MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResult extends 
     /**
      * Set the value of the Products property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ProductList products
+     * @param ProductList products
      * @return this instance
      */
     public function setProducts($value)
@@ -109,7 +113,7 @@ class MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResult extends 
     /**
      * Set the value of the Error property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Error error
+     * @param Error error
      * @return this instance
      */
     public function setError($value)

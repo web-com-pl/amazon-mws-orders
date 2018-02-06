@@ -21,7 +21,8 @@
 /**
  *  @see MarketplaceWebServiceProducts_Interface
  */
-require_once (dirname(__FILE__) . '/Interface.php');
+namespace Webcom\MarketPlaceWebServiceProducts;
+use Webcom\MarketPlaceWebServiceProduct\Model as AmazonModel;
 
 /**
  * MarketplaceWebServiceProducts_Client is an implementation of MarketplaceWebServiceProducts
@@ -57,24 +58,24 @@ class AmazonClient implements AmazonInterface
      * Gets competitive pricing and related information for a product identified by
      * the MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASIN request or MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetCompetitivePricingForASIN request or AmazonModel\GetCompetitivePricingForASIN object itself
+     * @see AmazonModel\GetCompetitivePricingForASINRequest
+     * @return AmazonModel\GetCompetitivePricingForASINResponse
      *
      * @throws AmazonException
      */
     public function getCompetitivePricingForASIN($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINRequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest($request);
+        if (!($request instanceof AmazonModel\GetCompetitivePricingForASINRequest)) {
+            
+            $request = new AmazonModel\GetCompetitivePricingForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetCompetitivePricingForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetCompetitivePricingForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -111,24 +112,24 @@ class AmazonClient implements AmazonInterface
      * Gets competitive pricing and related information for a product identified by
      * the SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKU request or MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetCompetitivePricingForSKU request or AmazonModel\GetCompetitivePricingForSKU object itself
+     * @see AmazonModel\GetCompetitivePricingForSKURequest
+     * @return AmazonModel\GetCompetitivePricingForSKUResponse
      *
      * @throws AmazonException
      */
     public function getCompetitivePricingForSKU($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKURequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest($request);
+        if (!($request instanceof AmazonModel\GetCompetitivePricingForSKURequest)) {
+            
+            $request = new AmazonModel\GetCompetitivePricingForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetCompetitivePricingForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKUResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetCompetitivePricingForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -165,24 +166,24 @@ class AmazonClient implements AmazonInterface
      * Gets some of the lowest prices based on the product identified by the given
      * MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASIN request or MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestOfferListingsForASIN request or AmazonModel\GetLowestOfferListingsForASIN object itself
+     * @see AmazonModel\GetLowestOfferListingsForASINRequest
+     * @return AmazonModel\GetLowestOfferListingsForASINResponse
      *
      * @throws AmazonException
      */
     public function getLowestOfferListingsForASIN($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINRequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest($request);
+        if (!($request instanceof AmazonModel\GetLowestOfferListingsForASINRequest)) {
+            
+            $request = new AmazonModel\GetLowestOfferListingsForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLowestOfferListingsForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetLowestOfferListingsForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -225,24 +226,24 @@ class AmazonClient implements AmazonInterface
      * Gets some of the lowest prices based on the product identified by the given
      * SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKU request or MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestOfferListingsForSKU request or AmazonModel\GetLowestOfferListingsForSKU object itself
+     * @see AmazonModel\GetLowestOfferListingsForSKURequest
+     * @return AmazonModel\GetLowestOfferListingsForSKUResponse
      *
      * @throws AmazonException
      */
     public function getLowestOfferListingsForSKU($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKURequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest($request);
+        if (!($request instanceof AmazonModel\GetLowestOfferListingsForSKURequest)) {
+            
+            $request = new AmazonModel\GetLowestOfferListingsForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLowestOfferListingsForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKUResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetLowestOfferListingsForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -285,24 +286,24 @@ class AmazonClient implements AmazonInterface
      * Retrieves the lowest priced offers based on the product identified by the given
      *     ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestPricedOffersForASIN request or AmazonModel\GetLowestPricedOffersForASIN object itself
+     * @see AmazonModel\GetLowestPricedOffersForASINRequest
+     * @return AmazonModel\GetLowestPricedOffersForASINResponse
      *
      * @throws AmazonException
      */
     public function getLowestPricedOffersForASIN($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForASINRequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINRequest($request);
+        if (!($request instanceof AmazonModel\GetLowestPricedOffersForASINRequest)) {
+            
+            $request = new AmazonModel\GetLowestPricedOffersForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLowestPricedOffersForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForASINResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetLowestPricedOffersForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -339,24 +340,24 @@ class AmazonClient implements AmazonInterface
      * Retrieves the lowest priced offers based on the product identified by the given
      *     SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetLowestPricedOffersForSKU request or AmazonModel\GetLowestPricedOffersForSKU object itself
+     * @see AmazonModel\GetLowestPricedOffersForSKURequest
+     * @return AmazonModel\GetLowestPricedOffersForSKUResponse
      *
      * @throws AmazonException
      */
     public function getLowestPricedOffersForSKU($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForSKURequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKURequest($request);
+        if (!($request instanceof AmazonModel\GetLowestPricedOffersForSKURequest)) {
+            
+            $request = new AmazonModel\GetLowestPricedOffersForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLowestPricedOffersForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForSKUResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetLowestPricedOffersForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -393,24 +394,24 @@ class AmazonClient implements AmazonInterface
      * GetMatchingProduct will return the details (attributes) for the
      * given ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMatchingProduct request or MarketplaceWebServiceProducts_Model_GetMatchingProduct object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMatchingProductRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMatchingProductResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMatchingProduct request or AmazonModel\GetMatchingProduct object itself
+     * @see AmazonModel\GetMatchingProductRequest
+     * @return AmazonModel\GetMatchingProductResponse
      *
      * @throws AmazonException
      */
     public function getMatchingProduct($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMatchingProductRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetMatchingProductRequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetMatchingProductRequest($request);
+        if (!($request instanceof AmazonModel\GetMatchingProductRequest)) {
+            
+            $request = new AmazonModel\GetMatchingProductRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMatchingProduct';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetMatchingProductResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetMatchingProductResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetMatchingProductResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -447,24 +448,24 @@ class AmazonClient implements AmazonInterface
      * GetMatchingProduct will return the details (attributes) for the
      * given Identifier list. Identifer type can be one of [SKU|ASIN|UPC|EAN|ISBN|GTIN|JAN]
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMatchingProductForId request or MarketplaceWebServiceProducts_Model_GetMatchingProductForId object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMatchingProductForId request or AmazonModel\GetMatchingProductForId object itself
+     * @see AmazonModel\GetMatchingProductForIdRequest
+     * @return AmazonModel\GetMatchingProductForIdResponse
      *
      * @throws AmazonException
      */
     public function getMatchingProductForId($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdRequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest($request);
+        if (!($request instanceof AmazonModel\GetMatchingProductForIdRequest)) {
+            
+            $request = new AmazonModel\GetMatchingProductForIdRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMatchingProductForId';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetMatchingProductForIdResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -505,24 +506,24 @@ class AmazonClient implements AmazonInterface
      *         products identified by the given
      *         ASIN/SKU list.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyFeesEstimate request or MarketplaceWebServiceProducts_Model_GetMyFeesEstimate object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyFeesEstimateRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMyFeesEstimate request or AmazonModel\GetMyFeesEstimate object itself
+     * @see AmazonModel\GetMyFeesEstimateRequest
+     * @return AmazonModel\GetMyFeesEstimateResponse
      *
      * @throws AmazonException
      */
     public function getMyFeesEstimate($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMyFeesEstimateRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetMyFeesEstimateRequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetMyFeesEstimateRequest($request);
+        if (!($request instanceof AmazonModel\GetMyFeesEstimateRequest)) {
+            
+            $request = new AmazonModel\GetMyFeesEstimateRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMyFeesEstimate';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetMyFeesEstimateResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetMyFeesEstimateResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -555,24 +556,24 @@ class AmazonClient implements AmazonInterface
      * Get My Price For ASIN
      * <!-- Wrong doc in current code -->
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyPriceForASIN request or MarketplaceWebServiceProducts_Model_GetMyPriceForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMyPriceForASIN request or AmazonModel\GetMyPriceForASIN object itself
+     * @see AmazonModel\GetMyPriceForASINRequest
+     * @return AmazonModel\GetMyPriceForASINResponse
      *
      * @throws AmazonException
      */
     public function getMyPriceForASIN($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINRequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest($request);
+        if (!($request instanceof AmazonModel\GetMyPriceForASINRequest)) {
+            
+            $request = new AmazonModel\GetMyPriceForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMyPriceForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetMyPriceForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -608,24 +609,24 @@ class AmazonClient implements AmazonInterface
      * Get My Price For SKU
      * <!-- Wrong doc in current code -->
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyPriceForSKU request or MarketplaceWebServiceProducts_Model_GetMyPriceForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetMyPriceForSKU request or AmazonModel\GetMyPriceForSKU object itself
+     * @see AmazonModel\GetMyPriceForSKURequest
+     * @return AmazonModel\GetMyPriceForSKUResponse
      *
      * @throws AmazonException
      */
     public function getMyPriceForSKU($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKURequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest($request);
+        if (!($request instanceof AmazonModel\GetMyPriceForSKURequest)) {
+            
+            $request = new AmazonModel\GetMyPriceForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMyPriceForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKUResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetMyPriceForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -662,24 +663,24 @@ class AmazonClient implements AmazonInterface
      * Gets categories information for a product identified by
      * the MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetProductCategoriesForASIN request or MarketplaceWebServiceProducts_Model_GetProductCategoriesForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse
+     * @param mixed $request array of parameters for AmazonModel\GetProductCategoriesForASIN request or AmazonModel\GetProductCategoriesForASIN object itself
+     * @see AmazonModel\GetProductCategoriesForASINRequest
+     * @return AmazonModel\GetProductCategoriesForASINResponse
      *
      * @throws AmazonException
      */
     public function getProductCategoriesForASIN($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINRequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest($request);
+        if (!($request instanceof AmazonModel\GetProductCategoriesForASINRequest)) {
+            
+            $request = new AmazonModel\GetProductCategoriesForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetProductCategoriesForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetProductCategoriesForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -713,24 +714,24 @@ class AmazonClient implements AmazonInterface
      * Gets categories information for a product identified by
      * the SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKU request or MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse
+     * @param mixed $request array of parameters for AmazonModel\GetProductCategoriesForSKU request or AmazonModel\GetProductCategoriesForSKU object itself
+     * @see AmazonModel\GetProductCategoriesForSKURequest
+     * @return AmazonModel\GetProductCategoriesForSKUResponse
      *
      * @throws AmazonException
      */
     public function getProductCategoriesForSKU($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKURequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest($request);
+        if (!($request instanceof AmazonModel\GetProductCategoriesForSKURequest)) {
+            
+            $request = new AmazonModel\GetProductCategoriesForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetProductCategoriesForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKUResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetProductCategoriesForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -765,24 +766,24 @@ class AmazonClient implements AmazonInterface
      * takes no input.
      * All API sections within the API are required to implement this operation.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetServiceStatus request or MarketplaceWebServiceProducts_Model_GetServiceStatus object itself
-     * @see MarketplaceWebServiceProducts_Model_GetServiceStatusRequest
-     * @return MarketplaceWebServiceProducts_Model_GetServiceStatusResponse
+     * @param mixed $request array of parameters for AmazonModel\GetServiceStatus request or AmazonModel\GetServiceStatus object itself
+     * @see AmazonModel\GetServiceStatusRequest
+     * @return AmazonModel\GetServiceStatusResponse
      *
      * @throws AmazonException
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_GetServiceStatusRequest($request);
+        if (!($request instanceof AmazonModel\GetServiceStatusRequest)) {
+            
+            $request = new AmazonModel\GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -810,24 +811,24 @@ class AmazonClient implements AmazonInterface
      * ListMatchingProducts can be used to
      * find products that match the given criteria.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_ListMatchingProducts request or MarketplaceWebServiceProducts_Model_ListMatchingProducts object itself
-     * @see MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest
-     * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse
+     * @param mixed $request array of parameters for AmazonModel\ListMatchingProducts request or AmazonModel\ListMatchingProducts object itself
+     * @see AmazonModel\ListMatchingProductsRequest
+     * @return AmazonModel\ListMatchingProductsResponse
      *
      * @throws AmazonException
      */
     public function listMatchingProducts($request)
     {
-        if (!($request instanceof MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListMatchingProductsRequest.php');
-            $request = new MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest($request);
+        if (!($request instanceof AmazonModel\ListMatchingProductsRequest)) {
+            
+            $request = new AmazonModel\ListMatchingProductsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListMatchingProducts';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListMatchingProductsResponse.php');
-        $response = MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse::fromXML($httpResponse['ResponseBody']);
+        
+        $response = AmazonModel\ListMatchingProductsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -1021,7 +1022,7 @@ class AmazonClient implements AmazonInterface
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
+                
                 throw new AmazonException(
                 array('ErrorCode' => 'InvalidServiceURL',
                     'Message'   => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
@@ -1043,7 +1044,7 @@ class AmazonClient implements AmazonInterface
         } catch (AmazonException $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
+            
             throw new AmazonException(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
@@ -1070,7 +1071,7 @@ class AmazonClient implements AmazonInterface
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
+        
         return new AmazonException($exProps);
     }
 
@@ -1131,7 +1132,7 @@ class AmazonClient implements AmazonInterface
         $response = curl_exec($ch);
 
         if ($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
+            
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
@@ -1182,7 +1183,7 @@ class AmazonClient implements AmazonInterface
 
         //If the body is null here then we were unable to parse the response and will throw an exception
         if ($body == null) {
-            require_once (dirname(__FILE__) . '/Exception.php');
+            
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
             throw new AmazonException($exProps);
@@ -1250,7 +1251,7 @@ class AmazonClient implements AmazonInterface
         }
 
         require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
-        return new MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata(
+        return new AmazonModel\ResponseHeaderMetadata(
             $headers['x-mws-request-id'], $headers['x-mws-response-context'], $headers['x-mws-timestamp'], $headers['x-mws-quota-max'], $headers['x-mws-quota-remaining'], $headers['x-mws-quota-resetsOn']);
     }
 

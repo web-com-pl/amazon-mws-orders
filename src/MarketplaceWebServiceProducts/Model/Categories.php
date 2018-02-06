@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,25 +27,25 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_Categories
+ * Categories
  *
  * Properties:
  * <ul>
  *
  * <li>ProductCategoryId: string</li>
  * <li>ProductCategoryName: string</li>
- * <li>Parent: MarketplaceWebServiceProducts_Model_Categories</li>
+ * <li>Parent: Categories</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_Categories extends AmazonModelAbstract
+class Categories extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
                 'ProductCategoryId'   => array('FieldValue' => null, 'FieldType' => 'string'),
                 'ProductCategoryName' => array('FieldValue' => null, 'FieldType' => 'string'),
-                'Parent'              => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Categories'),
+                'Parent'              => array('FieldValue' => null, 'FieldType' => 'Categories'),
         );
         parent::__construct($data);
     }
@@ -151,7 +155,7 @@ class MarketplaceWebServiceProducts_Model_Categories extends AmazonModelAbstract
     /**
      * Set the value of the Parent property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Categories parent
+     * @param Categories parent
      * @return this instance
      */
     public function setParent($value)

@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,25 +27,25 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse
+ * GetMyPriceForSKUResponse
  *
  * Properties:
  * <ul>
  *
  * <li>GetMyPriceForSKUResult: array</li>
- * <li>ResponseMetadata: MarketplaceWebServiceProducts_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse extends AmazonModelAbstract
+class GetMyPriceForSKUResponse extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'GetMyPriceForSKUResult' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult')),
-                'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ResponseMetadata'),
-                'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata'),
+                'GetMyPriceForSKUResult' => array('FieldValue' => array(), 'FieldType' => array('Model\GetMyPriceForSKUResult')),
+                'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+                'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }
@@ -121,7 +125,7 @@ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse extends Amazo
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -167,7 +171,7 @@ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse extends Amazo
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -201,12 +205,12 @@ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse extends Amazo
     }
 
     /**
-     * Construct MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse from XML string
+     * Construct GetMyPriceForSKUResponse from XML string
      *
      * @param $xml
      *        XML string to construct from
      *
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse
+     * @return GetMyPriceForSKUResponse
      */
     public static function fromXML($xml)
     {
@@ -215,9 +219,9 @@ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse extends Amazo
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetMyPriceForSKUResponse']");
         if ($response->length == 1) {
-            return new MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse(($response->item(0)));
+            return new GetMyPriceForSKUResponse(($response->item(0)));
         } else {
-            throw new Exception("Unable to construct MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse from provided XML.
+            throw new Exception("Unable to construct GetMyPriceForSKUResponse from provided XML.
                                   Make sure that GetMyPriceForSKUResponse is a root element");
         }
     }

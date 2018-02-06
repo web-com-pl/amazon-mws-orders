@@ -1,6 +1,10 @@
 <?php
 
+namespace Webcom\MarketPlaceWebServiceOrders\Model;
+use Webcom\MarketPlaceWebServiceOrders\AmazonModelAbstract;
 /* * *****************************************************************************
+
+
  * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
@@ -23,25 +27,25 @@
  */
 
 /**
- * MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse
+ * GetProductCategoriesForASINResponse
  *
  * Properties:
  * <ul>
  *
- * <li>GetProductCategoriesForASINResult: MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResult</li>
- * <li>ResponseMetadata: MarketplaceWebServiceProducts_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata</li>
+ * <li>GetProductCategoriesForASINResult: GetProductCategoriesForASINResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse extends AmazonModelAbstract
+class GetProductCategoriesForASINResponse extends AmazonModelAbstract
 {
     public function __construct($data = null)
     {
         $this->_fields = array(
-                'GetProductCategoriesForASINResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResult'),
-                'ResponseMetadata'                  => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ResponseMetadata'),
-                'ResponseHeaderMetadata'            => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata'),
+                'GetProductCategoriesForASINResult' => array('FieldValue' => null, 'FieldType' => 'GetProductCategoriesForASINResult'),
+                'ResponseMetadata'                  => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+                'ResponseHeaderMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }
@@ -59,7 +63,7 @@ class MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse ex
     /**
      * Set the value of the GetProductCategoriesForASINResult property.
      *
-     * @param MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResult getProductCategoriesForASINResult
+     * @param GetProductCategoriesForASINResult getProductCategoriesForASINResult
      * @return this instance
      */
     public function setGetProductCategoriesForASINResult($value)
@@ -105,7 +109,7 @@ class MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse ex
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -151,7 +155,7 @@ class MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse ex
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -185,12 +189,12 @@ class MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse ex
     }
 
     /**
-     * Construct MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse from XML string
+     * Construct GetProductCategoriesForASINResponse from XML string
      *
      * @param $xml
      *        XML string to construct from
      *
-     * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse
+     * @return GetProductCategoriesForASINResponse
      */
     public static function fromXML($xml)
     {
@@ -199,9 +203,9 @@ class MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse ex
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetProductCategoriesForASINResponse']");
         if ($response->length == 1) {
-            return new MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse(($response->item(0)));
+            return new GetProductCategoriesForASINResponse(($response->item(0)));
         } else {
-            throw new Exception("Unable to construct MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse from provided XML.
+            throw new Exception("Unable to construct GetProductCategoriesForASINResponse from provided XML.
                                   Make sure that GetProductCategoriesForASINResponse is a root element");
         }
     }
