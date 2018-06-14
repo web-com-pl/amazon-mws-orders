@@ -900,7 +900,6 @@ class AmazonClient implements AmazonInterface
    * @return array
    */
   private function performRequest($action, array $converted, $dataHandle = null) {
-
     $curlOptions = $this->configureCurlOptions($action, $converted, $dataHandle);
 
     if (is_null($curlOptions[CURLOPT_RETURNTRANSFER]) || !$curlOptions[CURLOPT_RETURNTRANSFER]) {
@@ -1738,8 +1737,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetFeedSubmissionId()) {
         $parameters['FeedSubmissionId'] =  $request->getFeedSubmissionId();
@@ -1762,8 +1761,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetFeedSubmissionIdList()) {
         $feedSubmissionIdList = $request->getFeedSubmissionIdList();

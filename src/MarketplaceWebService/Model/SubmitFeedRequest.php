@@ -52,7 +52,7 @@ class SubmitFeedRequest extends AmazonModelAbstract
      * <ul>
      *
      * <li>Marketplace: string</li>
-     * <li>Merchant: string</li>
+     * <li>SellerId: string</li>
      * <li>MarketplaceIdList: IdList</li>
      * <li>FeedContent: string</li>
      * <li>FeedType: string</li>

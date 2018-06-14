@@ -54,7 +54,7 @@ class GetFeedSubmissionListRequest extends AmazonModelAbstract
      * <ul>
      * 
      * <li>Marketplace: string</li>
-     * <li>Merchant: string</li>
+     * <li>SellerId: string</li>
      * <li>FeedSubmissionIdList: IdList</li>
      * <li>MaxCount: Count</li>
      * <li>FeedTypeList: TypeList</li>
@@ -68,7 +68,7 @@ class GetFeedSubmissionListRequest extends AmazonModelAbstract
     {
         $this->fields = array (
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
+        'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'FeedSubmissionIdList' => array('FieldValue' => null, 'FieldType' => 'Model\IdList'),
         'MaxCount' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -126,48 +126,35 @@ class GetFeedSubmissionListRequest extends AmazonModelAbstract
     }
 
     /**
-     * Gets the value of the Merchant property.
-     * 
-     * @return string Merchant
+     * Get the value of the SellerId property.
+     *
+     * @return String SellerId.
      */
-    public function getMerchant() 
+    public function getSellerId()
     {
-        return $this->fields['Merchant']['FieldValue'];
+        return $this->fields['SellerId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Merchant property.
-     * 
-     * @param string Merchant
+     * Set the value of the SellerId property.
+     *
+     * @param string sellerId
      * @return this instance
      */
-    public function setMerchant($value) 
+    public function setSellerId($value)
     {
-        $this->fields['Merchant']['FieldValue'] = $value;
+        $this->fields['SellerId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the Merchant and returns this instance
-     * 
-     * @param string $value Merchant
-     * @return GetFeedSubmissionListRequest instance
+     * Check to see if SellerId is set.
+     *
+     * @return boolean TRUE if SellerId is set.
      */
-    public function withMerchant($value)
+    public function isSetSellerId()
     {
-        $this->setMerchant($value);
-        return $this;
-    }
-
-
-    /**
-     * Checks if Merchant is set
-     * 
-     * @return bool true if Merchant  is set
-     */
-    public function isSetMerchant()
-    {
-        return !is_null($this->fields['Merchant']['FieldValue']);
+        return !is_null($this->fields['SellerId']['FieldValue']);
     }
 
     /**
