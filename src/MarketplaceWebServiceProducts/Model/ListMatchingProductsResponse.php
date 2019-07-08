@@ -46,9 +46,9 @@ class ListMatchingProductsResponse extends AmazonModelAbstract
     public function __construct($data = null)
     {
         $this->_fields = array(
-            'ListMatchingProductsResult' => array('FieldValue' => null, 'FieldType' => 'ListMatchingProductsResult'),
-            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'     => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ListMatchingProductsResult' => array('FieldValue' => null, 'FieldType' => 'Model\ListMatchingProductsResult'),
+            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+            'ResponseHeaderMetadata'     => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

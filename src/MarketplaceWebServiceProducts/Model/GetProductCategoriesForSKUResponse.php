@@ -46,9 +46,9 @@ class GetProductCategoriesForSKUResponse extends AmazonModelAbstract
     public function __construct($data = null)
     {
         $this->_fields = array(
-            'GetProductCategoriesForSKUResult' => array('FieldValue' => null, 'FieldType' => 'GetProductCategoriesForSKUResult'),
-            'ResponseMetadata'                 => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetProductCategoriesForSKUResult' => array('FieldValue' => null, 'FieldType' => 'Model\GetProductCategoriesForSKUResult'),
+            'ResponseMetadata'                 => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+            'ResponseHeaderMetadata'           => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

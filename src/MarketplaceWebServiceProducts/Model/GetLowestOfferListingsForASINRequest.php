@@ -52,7 +52,7 @@ class GetLowestOfferListingsForASINRequest extends AmazonModelAbstract
             'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ASINList'      => array('FieldValue' => null, 'FieldType' => 'ASINListType'),
+            'ASINList'      => array('FieldValue' => null, 'FieldType' => 'Model\ASINListType'),
             'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ExcludeMe'     => array('FieldValue' => null, 'FieldType' => 'bool'),
         );

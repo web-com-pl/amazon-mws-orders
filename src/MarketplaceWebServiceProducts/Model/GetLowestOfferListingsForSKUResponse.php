@@ -47,8 +47,8 @@ class GetLowestOfferListingsForSKUResponse extends AmazonModelAbstract
     {
         $this->_fields = array(
             'GetLowestOfferListingsForSKUResult' => array('FieldValue' => array(), 'FieldType' => array('Model\GetLowestOfferListingsForSKUResult')),
-            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'             => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+            'ResponseHeaderMetadata'             => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

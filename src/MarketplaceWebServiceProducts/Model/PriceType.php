@@ -47,10 +47,10 @@ class PriceType extends AmazonModelAbstract
     public function __construct($data = null)
     {
         $this->_fields = array(
-            'LandedPrice'  => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'Shipping'     => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'Points'       => array('FieldValue' => null, 'FieldType' => 'Points'),
+            'LandedPrice'  => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'Shipping'     => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'Points'       => array('FieldValue' => null, 'FieldType' => 'Model\Points'),
         );
         parent::__construct($data);
     }

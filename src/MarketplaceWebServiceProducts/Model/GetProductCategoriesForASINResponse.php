@@ -46,9 +46,9 @@ class GetProductCategoriesForASINResponse extends AmazonModelAbstract
     public function __construct($data = null)
     {
         $this->_fields = array(
-            'GetProductCategoriesForASINResult' => array('FieldValue' => null, 'FieldType' => 'GetProductCategoriesForASINResult'),
-            'ResponseMetadata'                  => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetProductCategoriesForASINResult' => array('FieldValue' => null, 'FieldType' => 'Model\GetProductCategoriesForASINResult'),
+            'ResponseMetadata'                  => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+            'ResponseHeaderMetadata'            => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

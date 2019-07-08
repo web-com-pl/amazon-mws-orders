@@ -53,7 +53,7 @@ class QualifiersType extends AmazonModelAbstract
             'ItemSubcondition'             => array('FieldValue' => null, 'FieldType' => 'string'),
             'FulfillmentChannel'           => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipsDomestically'            => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ShippingTime'                 => array('FieldValue' => null, 'FieldType' => 'ShippingTimeType'),
+            'ShippingTime'                 => array('FieldValue' => null, 'FieldType' => 'Model\ShippingTimeType'),
             'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

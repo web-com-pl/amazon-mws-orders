@@ -50,7 +50,7 @@ class GetServiceStatusResult extends AmazonModelAbstract
             'Status'    => array('FieldValue' => null, 'FieldType' => 'string'),
             'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
             'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Messages'  => array('FieldValue' => null, 'FieldType' => 'MessageList'),
+            'Messages'  => array('FieldValue' => null, 'FieldType' => 'Model\MessageList'),
         );
         parent::__construct($data);
     }

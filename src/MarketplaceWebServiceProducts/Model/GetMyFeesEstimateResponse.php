@@ -46,9 +46,9 @@ class GetMyFeesEstimateResponse extends AmazonModelAbstract
     public function __construct($data = null)
     {
         $this->_fields = array(
-            'GetMyFeesEstimateResult' => array('FieldValue' => null, 'FieldType' => 'GetMyFeesEstimateResult'),
-            'ResponseMetadata'        => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'  => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetMyFeesEstimateResult' => array('FieldValue' => null, 'FieldType' => 'Model\GetMyFeesEstimateResult'),
+            'ResponseMetadata'        => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+            'ResponseHeaderMetadata'  => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

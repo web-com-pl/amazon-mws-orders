@@ -50,7 +50,7 @@ class GetMyPriceForSKURequest extends AmazonModelAbstract
             'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'SellerSKUListType'),
+            'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'Model\SellerSKUListType'),
         );
         parent::__construct($data);
     }

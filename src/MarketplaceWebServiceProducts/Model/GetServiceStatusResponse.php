@@ -46,9 +46,9 @@ class GetServiceStatusResponse extends AmazonModelAbstract
     public function __construct($data = null)
     {
         $this->_fields = array(
-            'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => 'GetServiceStatusResult'),
-            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => 'Model\GetServiceStatusResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

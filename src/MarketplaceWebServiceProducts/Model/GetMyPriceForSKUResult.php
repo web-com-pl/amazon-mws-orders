@@ -47,8 +47,8 @@ class GetMyPriceForSKUResult extends AmazonModelAbstract
     public function __construct($data = null)
     {
         $this->_fields = array(
-            'Product'   => array('FieldValue' => null, 'FieldType' => 'Product'),
-            'Error'     => array('FieldValue' => null, 'FieldType' => 'Error'),
+            'Product'   => array('FieldValue' => null, 'FieldType' => 'Model\Product'),
+            'Error'     => array('FieldValue' => null, 'FieldType' => 'Model\Error'),
             'SellerSKU' => array('FieldValue' => null, 'FieldType' => '@string'),
             'status'    => array('FieldValue' => null, 'FieldType' => '@string'),
         );

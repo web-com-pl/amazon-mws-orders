@@ -50,7 +50,7 @@ class GetMyPriceForASINRequest extends AmazonModelAbstract
             'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ASINList'      => array('FieldValue' => null, 'FieldType' => 'ASINListType'),
+            'ASINList'      => array('FieldValue' => null, 'FieldType' => 'Model\ASINListType'),
         );
         parent::__construct($data);
     }

@@ -44,7 +44,7 @@ class GetMyFeesEstimateResult extends AmazonModelAbstract
     public function __construct($data = null)
     {
         $this->_fields = array(
-            'FeesEstimateResultList' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateResultList'),
+            'FeesEstimateResultList' => array('FieldValue' => null, 'FieldType' => 'Model\FeesEstimateResultList'),
         );
         parent::__construct($data);
     }

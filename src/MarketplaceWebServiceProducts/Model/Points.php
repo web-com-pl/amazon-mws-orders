@@ -46,7 +46,7 @@ class Points extends AmazonModelAbstract
     {
         $this->_fields = array(
             'PointsNumber'        => array('FieldValue' => null, 'FieldType' => 'int'),
-            'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
         );
         parent::__construct($data);
     }

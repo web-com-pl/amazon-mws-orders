@@ -47,8 +47,8 @@ class GetMatchingProductResponse extends AmazonModelAbstract
     {
         $this->_fields = array(
             'GetMatchingProductResult' => array('FieldValue' => array(), 'FieldType' => array('Model\GetMatchingProductResult')),
-            'ResponseMetadata'         => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'   => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ResponseMetadata'         => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+            'ResponseHeaderMetadata'   => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }
@@ -56,7 +56,7 @@ class GetMatchingProductResponse extends AmazonModelAbstract
     /**
      * Get the value of the GetMatchingProductResult property.
      *
-     * @return List<GetMatchingProductResult> GetMatchingProductResult.
+     * @return GetMatchingProductResult[]
      */
     public function getGetMatchingProductResult()
     {

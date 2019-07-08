@@ -46,9 +46,9 @@ class GetLowestPricedOffersForASINResponse extends AmazonModelAbstract
     public function __construct($data = null)
     {
         $this->_fields = array(
-            'GetLowestPricedOffersForASINResult' => array('FieldValue' => null, 'FieldType' => 'GetLowestPricedOffersForASINResult'),
-            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'             => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetLowestPricedOffersForASINResult' => array('FieldValue' => null, 'FieldType' => 'Model\GetLowestPricedOffersForASINResult'),
+            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+            'ResponseHeaderMetadata'             => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

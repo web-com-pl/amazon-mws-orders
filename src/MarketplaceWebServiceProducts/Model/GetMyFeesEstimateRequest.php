@@ -48,7 +48,7 @@ class GetMyFeesEstimateRequest extends AmazonModelAbstract
         $this->_fields = array(
             'SellerId'                => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'            => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeesEstimateRequestList' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateRequestList'),
+            'FeesEstimateRequestList' => array('FieldValue' => null, 'FieldType' => 'Model\FeesEstimateRequestList'),
         );
         parent::__construct($data);
     }

@@ -51,10 +51,10 @@ class LowestPriceType extends AmazonModelAbstract
         $this->_fields = array(
             'condition'          => array('FieldValue' => null, 'FieldType' => '@string'),
             'fulfillmentChannel' => array('FieldValue' => null, 'FieldType' => '@string'),
-            'LandedPrice'        => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'ListingPrice'       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'Shipping'           => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'Points'             => array('FieldValue' => null, 'FieldType' => 'Points'),
+            'LandedPrice'        => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'ListingPrice'       => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'Shipping'           => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'Points'             => array('FieldValue' => null, 'FieldType' => 'Model\Points'),
         );
         parent::__construct($data);
     }

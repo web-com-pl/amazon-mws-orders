@@ -54,7 +54,7 @@ class FeeDetail extends AmazonModelAbstract
             'FeePromotion'          => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
             'TaxAmount'             => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
             'FinalFee'              => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
-            'IncludedFeeDetailList' => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
+            'IncludedFeeDetailList' => array('FieldValue' => null, 'FieldType' => 'Model\FeeDetailList'),
         );
         parent::__construct($data);
     }

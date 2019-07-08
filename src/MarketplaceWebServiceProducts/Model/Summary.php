@@ -51,12 +51,12 @@ class Summary extends AmazonModelAbstract
     {
         $this->_fields = array(
             'TotalOfferCount'                 => array('FieldValue' => null, 'FieldType' => 'int'),
-            'NumberOfOffers'                  => array('FieldValue' => null, 'FieldType' => 'NumberOfOffers'),
-            'LowestPrices'                    => array('FieldValue' => null, 'FieldType' => 'LowestPrices'),
-            'BuyBoxPrices'                    => array('FieldValue' => null, 'FieldType' => 'BuyBoxPrices'),
-            'ListPrice'                       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'BuyBoxEligibleOffers'            => array('FieldValue' => null, 'FieldType' => 'BuyBoxEligibleOffers'),
+            'NumberOfOffers'                  => array('FieldValue' => null, 'FieldType' => 'Model\NumberOfOffers'),
+            'LowestPrices'                    => array('FieldValue' => null, 'FieldType' => 'Model\LowestPrices'),
+            'BuyBoxPrices'                    => array('FieldValue' => null, 'FieldType' => 'Model\BuyBoxPrices'),
+            'ListPrice'                       => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'Model\MoneyType'),
+            'BuyBoxEligibleOffers'            => array('FieldValue' => null, 'FieldType' => 'Model\BuyBoxEligibleOffers'),
         );
         parent::__construct($data);
     }

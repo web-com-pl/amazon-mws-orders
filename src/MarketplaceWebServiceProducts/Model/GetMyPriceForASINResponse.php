@@ -47,8 +47,8 @@ class GetMyPriceForASINResponse extends AmazonModelAbstract
     {
         $this->_fields = array(
             'GetMyPriceForASINResult' => array('FieldValue' => array(), 'FieldType' => array('Model\GetMyPriceForASINResult')),
-            'ResponseMetadata'        => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'  => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ResponseMetadata'        => array('FieldValue' => null, 'FieldType' => 'Model\ResponseMetadata'),
+            'ResponseHeaderMetadata'  => array('FieldValue' => null, 'FieldType' => 'Model\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }
