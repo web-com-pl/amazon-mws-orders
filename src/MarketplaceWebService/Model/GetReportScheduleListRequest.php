@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  *  PHP Version 5
  *
  *  @category    Amazon
@@ -9,47 +9,47 @@
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
  *  @version     2009-01-01
  */
-/******************************************************************************* 
+/*******************************************************************************
 
  *  Marketplace Web Service PHP5 Library
  *  Generated: Thu May 07 13:07:36 PDT 2009
- * 
+ *
  */
 
 /**
  *  @see AmazonModelAbstract
  */
 namespace Webcom\MarketPlaceWebService\Model;
-use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;
 
-    
+
 
 /**
  * GetReportScheduleListRequest
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Marketplace: string</li>
- * <li>Merchant: string</li>
+ * <li>SellerId: string</li>
  * <li>ReportTypeList: TypeList</li>
  *
  * </ul>
- */ 
+ */
 class GetReportScheduleListRequest extends AmazonModelAbstract
 {
 
 
     /**
      * Construct new GetReportScheduleListRequest
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
+     *
+     * @param mixed $data DOMElement or Associative Array to construct from.
+     *
      * Valid properties:
      * <ul>
-     * 
+     *
      * <li>Marketplace: string</li>
-     * <li>Merchant: string</li>
+     * <li>SellerId: string</li>
      * <li>ReportTypeList: TypeList</li>
      *
      * </ul>
@@ -58,7 +58,7 @@ class GetReportScheduleListRequest extends AmazonModelAbstract
     {
         $this->fields = array (
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
+        'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'Model\TypeList'),
         );
@@ -67,21 +67,21 @@ class GetReportScheduleListRequest extends AmazonModelAbstract
 
         /**
      * Gets the value of the Marketplace property.
-     * 
+     *
      * @return string Marketplace
      */
-    public function getMarketplace() 
+    public function getMarketplace()
     {
         return $this->fields['Marketplace']['FieldValue'];
     }
 
     /**
      * Sets the value of the Marketplace property.
-     * 
+     *
      * @param string Marketplace
      * @return this instance
      */
-    public function setMarketplace($value) 
+    public function setMarketplace($value)
     {
         $this->fields['Marketplace']['FieldValue'] = $value;
         return $this;
@@ -89,7 +89,7 @@ class GetReportScheduleListRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the Marketplace and returns this instance
-     * 
+     *
      * @param string $value Marketplace
      * @return GetReportScheduleListRequest instance
      */
@@ -102,7 +102,7 @@ class GetReportScheduleListRequest extends AmazonModelAbstract
 
     /**
      * Checks if Marketplace is set
-     * 
+     *
      * @return bool true if Marketplace  is set
      */
     public function isSetMarketplace()
@@ -111,48 +111,48 @@ class GetReportScheduleListRequest extends AmazonModelAbstract
     }
 
     /**
-     * Gets the value of the Merchant property.
-     * 
-     * @return string Merchant
+     * Gets the value of the SellerId property.
+     *
+     * @return string SellerId
      */
-    public function getMerchant() 
+    public function getSellerId()
     {
-        return $this->fields['Merchant']['FieldValue'];
+        return $this->fields['SellerId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Merchant property.
-     * 
-     * @param string Merchant
+     * Sets the value of the SellerId property.
+     *
+     * @param string SellerId
      * @return this instance
      */
-    public function setMerchant($value) 
+    public function setSellerId($value)
     {
-        $this->fields['Merchant']['FieldValue'] = $value;
+        $this->fields['SellerId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the Merchant and returns this instance
-     * 
-     * @param string $value Merchant
+     * Sets the value of the SellerId and returns this instance
+     *
+     * @param string $value SellerId
      * @return GetReportScheduleListRequest instance
      */
-    public function withMerchant($value)
+    public function withSellerId($value)
     {
-        $this->setMerchant($value);
+        $this->setSellerId($value);
         return $this;
     }
 
 
     /**
-     * Checks if Merchant is set
-     * 
-     * @return bool true if Merchant  is set
+     * Checks if SellerId is set
+     *
+     * @return bool true if SellerId  is set
      */
-    public function isSetMerchant()
+    public function isSetSellerId()
     {
-        return !is_null($this->fields['Merchant']['FieldValue']);
+        return !is_null($this->fields['SellerId']['FieldValue']);
     }
 
     /**
@@ -202,21 +202,21 @@ class GetReportScheduleListRequest extends AmazonModelAbstract
 
     /**
      * Gets the value of the ReportTypeList.
-     * 
+     *
      * @return TypeList ReportTypeList
      */
-    public function getReportTypeList() 
+    public function getReportTypeList()
     {
         return $this->fields['ReportTypeList']['FieldValue'];
     }
 
     /**
      * Sets the value of the ReportTypeList.
-     * 
+     *
      * @param TypeList ReportTypeList
      * @return void
      */
-    public function setReportTypeList($value) 
+    public function setReportTypeList($value)
     {
         $this->fields['ReportTypeList']['FieldValue'] = $value;
         return;
@@ -224,7 +224,7 @@ class GetReportScheduleListRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the ReportTypeList  and returns this instance
-     * 
+     *
      * @param TypeList $value ReportTypeList
      * @return GetReportScheduleListRequest instance
      */
@@ -237,7 +237,7 @@ class GetReportScheduleListRequest extends AmazonModelAbstract
 
     /**
      * Checks if ReportTypeList  is set
-     * 
+     *
      * @return bool true if ReportTypeList property is set
      */
     public function isSetReportTypeList()

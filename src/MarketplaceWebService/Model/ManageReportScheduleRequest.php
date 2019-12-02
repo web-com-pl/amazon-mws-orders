@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  *  PHP Version 5
  *
  *  @category    Amazon
@@ -9,49 +9,49 @@
  *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
  *  @version     2009-01-01
  */
-/******************************************************************************* 
+/*******************************************************************************
 
  *  Marketplace Web Service PHP5 Library
  *  Generated: Thu May 07 13:07:36 PDT 2009
- * 
+ *
  */
 
 /**
  *  @see AmazonModelAbstract
  */
 namespace Webcom\MarketPlaceWebService\Model;
-use Webcom\MarketPlaceWebService\AmazonModelAbstract;  
+use Webcom\MarketPlaceWebService\AmazonModelAbstract;
 
-    
+
 
 /**
  * ManageReportScheduleRequest
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Marketplace: string</li>
- * <li>Merchant: string</li>
+ * <li>SellerId: string</li>
  * <li>ReportType: string</li>
  * <li>Schedule: string</li>
  * <li>ScheduleDate: string</li>
  *
  * </ul>
- */ 
+ */
 class ManageReportScheduleRequest extends AmazonModelAbstract
 {
 
 
     /**
      * Construct new ManageReportScheduleRequest
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
+     *
+     * @param mixed $data DOMElement or Associative Array to construct from.
+     *
      * Valid properties:
      * <ul>
-     * 
+     *
      * <li>Marketplace: string</li>
-     * <li>Merchant: string</li>
+     * <li>SellerId: string</li>
      * <li>ReportType: string</li>
      * <li>Schedule: string</li>
      * <li>ScheduleDate: string</li>
@@ -62,7 +62,7 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
     {
         $this->fields = array (
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
+        'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Schedule' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -73,21 +73,21 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
         /**
      * Gets the value of the Marketplace property.
-     * 
+     *
      * @return string Marketplace
      */
-    public function getMarketplace() 
+    public function getMarketplace()
     {
         return $this->fields['Marketplace']['FieldValue'];
     }
 
     /**
      * Sets the value of the Marketplace property.
-     * 
+     *
      * @param string Marketplace
      * @return this instance
      */
-    public function setMarketplace($value) 
+    public function setMarketplace($value)
     {
         $this->fields['Marketplace']['FieldValue'] = $value;
         return $this;
@@ -95,7 +95,7 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the Marketplace and returns this instance
-     * 
+     *
      * @param string $value Marketplace
      * @return ManageReportScheduleRequest instance
      */
@@ -108,7 +108,7 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Checks if Marketplace is set
-     * 
+     *
      * @return bool true if Marketplace  is set
      */
     public function isSetMarketplace()
@@ -117,48 +117,48 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
     }
 
     /**
-     * Gets the value of the Merchant property.
-     * 
-     * @return string Merchant
+     * Gets the value of the SellerId property.
+     *
+     * @return string SellerId
      */
-    public function getMerchant() 
+    public function getSellerId()
     {
-        return $this->fields['Merchant']['FieldValue'];
+        return $this->fields['SellerId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Merchant property.
-     * 
-     * @param string Merchant
+     * Sets the value of the SellerId property.
+     *
+     * @param string SellerId
      * @return this instance
      */
-    public function setMerchant($value) 
+    public function setSellerId($value)
     {
-        $this->fields['Merchant']['FieldValue'] = $value;
+        $this->fields['SellerId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the Merchant and returns this instance
-     * 
-     * @param string $value Merchant
+     * Sets the value of the SellerId and returns this instance
+     *
+     * @param string $value SellerId
      * @return ManageReportScheduleRequest instance
      */
-    public function withMerchant($value)
+    public function withSellerId($value)
     {
-        $this->setMerchant($value);
+        $this->setSellerId($value);
         return $this;
     }
 
 
     /**
-     * Checks if Merchant is set
-     * 
-     * @return bool true if Merchant  is set
+     * Checks if SellerId is set
+     *
+     * @return bool true if SellerId  is set
      */
-    public function isSetMerchant()
+    public function isSetSellerId()
     {
-        return !is_null($this->fields['Merchant']['FieldValue']);
+        return !is_null($this->fields['SellerId']['FieldValue']);
     }
 
     /**
@@ -208,21 +208,21 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Gets the value of the ReportType property.
-     * 
+     *
      * @return string ReportType
      */
-    public function getReportType() 
+    public function getReportType()
     {
         return $this->fields['ReportType']['FieldValue'];
     }
 
     /**
      * Sets the value of the ReportType property.
-     * 
+     *
      * @param string ReportType
      * @return this instance
      */
-    public function setReportType($value) 
+    public function setReportType($value)
     {
         $this->fields['ReportType']['FieldValue'] = $value;
         return $this;
@@ -230,7 +230,7 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the ReportType and returns this instance
-     * 
+     *
      * @param string $value ReportType
      * @return ManageReportScheduleRequest instance
      */
@@ -243,7 +243,7 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Checks if ReportType is set
-     * 
+     *
      * @return bool true if ReportType  is set
      */
     public function isSetReportType()
@@ -253,21 +253,21 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Gets the value of the Schedule property.
-     * 
+     *
      * @return string Schedule
      */
-    public function getSchedule() 
+    public function getSchedule()
     {
         return $this->fields['Schedule']['FieldValue'];
     }
 
     /**
      * Sets the value of the Schedule property.
-     * 
+     *
      * @param string Schedule
      * @return this instance
      */
-    public function setSchedule($value) 
+    public function setSchedule($value)
     {
         $this->fields['Schedule']['FieldValue'] = $value;
         return $this;
@@ -275,7 +275,7 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the Schedule and returns this instance
-     * 
+     *
      * @param string $value Schedule
      * @return ManageReportScheduleRequest instance
      */
@@ -288,7 +288,7 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Checks if Schedule is set
-     * 
+     *
      * @return bool true if Schedule  is set
      */
     public function isSetSchedule()
@@ -298,21 +298,21 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Gets the value of the ScheduleDate property.
-     * 
+     *
      * @return string ScheduleDate
      */
-    public function getScheduleDate() 
+    public function getScheduleDate()
     {
         return $this->fields['ScheduleDate']['FieldValue'];
     }
 
     /**
      * Sets the value of the ScheduleDate property.
-     * 
+     *
      * @param string ScheduleDate
      * @return this instance
      */
-    public function setScheduleDate($value) 
+    public function setScheduleDate($value)
     {
         $this->fields['ScheduleDate']['FieldValue'] = $value;
         return $this;
@@ -320,7 +320,7 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Sets the value of the ScheduleDate and returns this instance
-     * 
+     *
      * @param string $value ScheduleDate
      * @return ManageReportScheduleRequest instance
      */
@@ -333,7 +333,7 @@ class ManageReportScheduleRequest extends AmazonModelAbstract
 
     /**
      * Checks if ScheduleDate is set
-     * 
+     *
      * @return bool true if ScheduleDate  is set
      */
     public function isSetScheduleDate()

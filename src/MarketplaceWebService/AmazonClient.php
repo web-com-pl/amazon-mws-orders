@@ -1909,8 +1909,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetReportType()) {
         $parameters['ReportType'] =  $request->getReportType();
@@ -1981,8 +1981,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetReportTypeList()) {
         $reportTypeList = $request->getReportTypeList();

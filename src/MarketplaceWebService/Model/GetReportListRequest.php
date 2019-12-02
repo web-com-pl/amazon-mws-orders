@@ -31,7 +31,7 @@ use Webcom\MarketPlaceWebService\AmazonModelAbstract;
  * <ul>
  *
  * <li>Marketplace: string</li>
- * <li>Merchant: string</li>
+ * <li>SellerId: string</li>
  * <li>MaxCount: int</li>
  * <li>ReportTypeList: TypeList</li>
  * <li>Acknowledged: bool</li>
@@ -54,7 +54,7 @@ class GetReportListRequest extends AmazonModelAbstract
      * <ul>
      *
      * <li>Marketplace: string</li>
-     * <li>Merchant: string</li>
+     * <li>SellerId: string</li>
      * <li>MaxCount: int</li>
      * <li>ReportTypeList: TypeList</li>
      * <li>Acknowledged: bool</li>
