@@ -1047,7 +1047,7 @@ class AmazonClient implements AmazonInterface
     return array (
       CURLOPT_POST => true,
       CURLOPT_USERAGENT => $this->config['UserAgent'],
-      CURLOPT_VERBOSE => true,
+      CURLOPT_VERBOSE => false,
       CURLOPT_HEADERFUNCTION => array ($this, 'headerCallback'),
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_SSL_VERIFYPEER => true,
@@ -1340,8 +1340,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetReportTypeList()) {
         $reportTypeList = $request->getReportTypeList();
@@ -1367,8 +1367,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetNextToken()) {
         $parameters['NextToken'] =  $request->getNextToken();
@@ -1390,8 +1390,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetReportIdList()) {
         $reportIdList = $request->getReportIdList();
@@ -1459,8 +1459,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetReportTypeList()) {
         $reportTypeList = $request->getReportTypeList();
@@ -1497,8 +1497,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetNextToken()) {
         $parameters['NextToken'] =  $request->getNextToken();
@@ -1521,8 +1521,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetFeedSubmissionIdList()) {
         $feedSubmissionIdList = $request->getFeedSubmissionIdList();
@@ -1603,8 +1603,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetFeedTypeList()) {
         $feedTypeList = $request->getFeedTypeList();
@@ -1644,8 +1644,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetReportRequestIdList()) {
         $reportRequestIdList = $request->getReportRequestIdList();
@@ -1861,8 +1861,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetNextToken()) {
         $parameters['NextToken'] =  $request->getNextToken();
@@ -1885,8 +1885,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetNextToken()) {
         $parameters['NextToken'] =  $request->getNextToken();
@@ -1940,8 +1940,8 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetMarketplace()) {
         $parameters['Marketplace'] =  $request->getMarketplace();
       }
-      if ($request->isSetMerchant()) {
-        $parameters['Merchant'] =  $request->getMerchant();
+      if ($request->isSetSellerId()) {
+        $parameters['SellerId'] =  $request->getSellerId();
       }
       if ($request->isSetReportTypeList()) {
         $reportTypeList = $request->getReportTypeList();

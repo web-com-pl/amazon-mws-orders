@@ -31,7 +31,7 @@ use Webcom\MarketPlaceWebService\AmazonModelAbstract;
  * <ul>
  *
  * <li>Marketplace: string</li>
- * <li>Merchant: string</li>
+ * <li>SellerId: string</li>
  * <li>ReportRequestIdList: IdList</li>
  * <li>ReportTypeList: TypeList</li>
  * <li>ReportProcessingStatusList: StatusList</li>
@@ -53,7 +53,7 @@ class CancelReportRequestsRequest extends AmazonModelAbstract
      * <ul>
      *
      * <li>Marketplace: string</li>
-     * <li>Merchant: string</li>
+     * <li>SellerId: string</li>
      * <li>ReportRequestIdList: IdList</li>
      * <li>ReportTypeList: TypeList</li>
      * <li>ReportProcessingStatusList: StatusList</li>
@@ -66,7 +66,7 @@ class CancelReportRequestsRequest extends AmazonModelAbstract
     {
         $this->fields = array (
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
+        'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'Model\IdList'),
         'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'Model\TypeList'),
@@ -123,48 +123,48 @@ class CancelReportRequestsRequest extends AmazonModelAbstract
     }
 
     /**
-     * Gets the value of the Merchant property.
+     * Gets the value of the SellerId property.
      *
-     * @return string Merchant
+     * @return string SellerId
      */
-    public function getMerchant()
+    public function getSellerId()
     {
-        return $this->fields['Merchant']['FieldValue'];
+        return $this->fields['SellerId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Merchant property.
+     * Sets the value of the SellerId property.
      *
-     * @param string Merchant
+     * @param string SellerId
      * @return this instance
      */
-    public function setMerchant($value)
+    public function setSellerId($value)
     {
-        $this->fields['Merchant']['FieldValue'] = $value;
+        $this->fields['SellerId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the Merchant and returns this instance
+     * Sets the value of the SellerId and returns this instance
      *
-     * @param string $value Merchant
+     * @param string $value SellerId
      * @return CancelReportRequestsRequest instance
      */
-    public function withMerchant($value)
+    public function withSellerId($value)
     {
-        $this->setMerchant($value);
+        $this->setSellerId($value);
         return $this;
     }
 
 
     /**
-     * Checks if Merchant is set
+     * Checks if SellerId is set
      *
-     * @return bool true if Merchant  is set
+     * @return bool true if SellerId  is set
      */
-    public function isSetMerchant()
+    public function isSetSellerId()
     {
-        return !is_null($this->fields['Merchant']['FieldValue']);
+        return !is_null($this->fields['SellerId']['FieldValue']);
     }
 
     /**

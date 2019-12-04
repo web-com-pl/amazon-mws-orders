@@ -31,7 +31,7 @@ use Webcom\MarketPlaceWebService\AmazonModelAbstract;
  * <ul>
  *
  * <li>Marketplace: string</li>
- * <li>Merchant: string</li>
+ * <li>SellerId: string</li>
  * <li>MarketplaceIdList: IdList</li>
  * <li>ReportType: string</li>
  * <li>StartDate: string</li>
@@ -53,7 +53,7 @@ class RequestReportRequest extends AmazonModelAbstract
      * <ul>
      *
      * <li>Marketplace: string</li>
-     * <li>Merchant: string</li>
+     * <li>SellerId: string</li>
      * <li>MarketplaceIdList: IdList</li>
      * <li>ReportType: string</li>
      * <li>StartDate: string</li>

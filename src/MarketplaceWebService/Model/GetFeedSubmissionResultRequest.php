@@ -31,7 +31,7 @@ use Webcom\MarketPlaceWebService\AmazonModelAbstract;
  * <ul>
  * 
  * <li>Marketplace: string</li>
- * <li>Merchant: string</li>
+ * <li>SellerId: string</li>
  * <li>FeedSubmissionId: string</li>
  *
  * </ul>
