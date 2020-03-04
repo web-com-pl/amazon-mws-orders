@@ -463,7 +463,6 @@ class AmazonClient implements AmazonInterface
         $parameters['Action'] = 'GetMatchingProductForId';
         $httpResponse = $this->_invoke($parameters);
 
-        dump($httpResponse['ResponseBody']);
         $response = AmazonModel\GetMatchingProductForIdResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;

@@ -1432,6 +1432,9 @@ class AmazonClient implements AmazonInterface
       if ($request->isSetFeedType()) {
         $parameters['FeedType'] =  $request->getFeedType();
       }
+        if ($request->isSetFeedOptions()) {
+            $parameters['FeedOptions'] =  $request->getFeedOptions();
+        }
       if ($request->isSetPurgeAndReplace()) {
         $parameters['PurgeAndReplace'] =  $request->getPurgeAndReplace() ? "true" : "false";
       }

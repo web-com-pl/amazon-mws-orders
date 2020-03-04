@@ -67,7 +67,7 @@ class ContentType  extends AmazonModelAbstract {
     }
 
     public function isSetParameters() {
-    	return count ($this->fields['Parameters']['FieldValue']) > 0;
+    	return isset($this->fields['Parameters']['FieldValue']) && count ($this->fields['Parameters']['FieldValue']) > 0;
     }
 
 	public function toString() {
