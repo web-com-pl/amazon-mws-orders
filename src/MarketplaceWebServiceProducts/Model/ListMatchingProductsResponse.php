@@ -208,7 +208,7 @@ class ListMatchingProductsResponse extends AmazonModelAbstract
         if ($response->length == 1) {
             return new ListMatchingProductsResponse(($response->item(0)));
         } else {
-            throw new Exception("Unable to construct ListMatchingProductsResponse from provided XML.
+            throw new \Exception("Unable to construct ListMatchingProductsResponse from provided XML.
                                   Make sure that ListMatchingProductsResponse is a root element");
         }
     }

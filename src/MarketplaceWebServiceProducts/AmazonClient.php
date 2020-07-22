@@ -1255,7 +1255,7 @@ class AmazonClient implements AmazonInterface
 
     /**
      * Set curl options relating to SSL. Protected to allow overriding.
-     * @param $ch curl handle
+     * @param resource $ch curl handle
      */
     protected function setSSLCurlOptions($ch)
     {
@@ -1266,7 +1266,7 @@ class AmazonClient implements AmazonInterface
     /**
      * Exponential sleep on failed request
      *
-     * @param retries current retry
+     * @param int $retries current retry
      */
     private function _pauseOnRetry($retries)
     {
@@ -1347,7 +1347,7 @@ class AmazonClient implements AmazonInterface
             $parameters['SignatureMethod'] = $algorithm;
             $stringToSign = $this->_calculateStringToSignV2($parameters);
         } else {
-            throw new Exception("Invalid Signature Version specified");
+            throw new \Exception("Invalid Signature Version specified");
         }
         return $this->_sign($stringToSign, $key, $algorithm);
     }
@@ -1391,7 +1391,7 @@ class AmazonClient implements AmazonInterface
         } else if ($algorithm === 'HmacSHA256') {
             $hash = 'sha256';
         } else {
-            throw new Exception("Non-supported signing method specified");
+            throw new \Exception("Non-supported signing method specified");
         }
         return base64_encode(
             hash_hmac($hash, $data, $key, true)

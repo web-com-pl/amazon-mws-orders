@@ -208,7 +208,7 @@ class GetLowestPricedOffersForSKUResponse extends AmazonModelAbstract
         if ($response->length == 1) {
             return new GetLowestPricedOffersForSKUResponse(($response->item(0)));
         } else {
-            throw new Exception("Unable to construct GetLowestPricedOffersForSKUResponse from provided XML.
+            throw new \Exception("Unable to construct GetLowestPricedOffersForSKUResponse from provided XML.
                                   Make sure that GetLowestPricedOffersForSKUResponse is a root element");
         }
     }

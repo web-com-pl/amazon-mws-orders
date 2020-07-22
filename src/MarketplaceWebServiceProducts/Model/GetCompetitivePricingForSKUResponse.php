@@ -224,7 +224,7 @@ class GetCompetitivePricingForSKUResponse extends AmazonModelAbstract
         if ($response->length == 1) {
             return new GetCompetitivePricingForSKUResponse(($response->item(0)));
         } else {
-            throw new Exception("Unable to construct GetCompetitivePricingForSKUResponse from provided XML.
+            throw new \Exception("Unable to construct GetCompetitivePricingForSKUResponse from provided XML.
                                   Make sure that GetCompetitivePricingForSKUResponse is a root element");
         }
     }

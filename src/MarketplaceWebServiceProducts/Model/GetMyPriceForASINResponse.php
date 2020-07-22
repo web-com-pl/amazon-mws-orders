@@ -224,7 +224,7 @@ class GetMyPriceForASINResponse extends AmazonModelAbstract
         if ($response->length == 1) {
             return new GetMyPriceForASINResponse(($response->item(0)));
         } else {
-            throw new Exception("Unable to construct GetMyPriceForASINResponse from provided XML.
+            throw new \Exception("Unable to construct GetMyPriceForASINResponse from provided XML.
                                   Make sure that GetMyPriceForASINResponse is a root element");
         }
     }

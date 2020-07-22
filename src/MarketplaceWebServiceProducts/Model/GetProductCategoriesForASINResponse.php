@@ -208,7 +208,7 @@ class GetProductCategoriesForASINResponse extends AmazonModelAbstract
         if ($response->length == 1) {
             return new GetProductCategoriesForASINResponse(($response->item(0)));
         } else {
-            throw new Exception("Unable to construct GetProductCategoriesForASINResponse from provided XML.
+            throw new \Exception("Unable to construct GetProductCategoriesForASINResponse from provided XML.
                                   Make sure that GetProductCategoriesForASINResponse is a root element");
         }
     }

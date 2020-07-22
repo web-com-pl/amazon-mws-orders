@@ -208,7 +208,7 @@ class GetMyFeesEstimateResponse extends AmazonModelAbstract
         if ($response->length == 1) {
             return new GetMyFeesEstimateResponse(($response->item(0)));
         } else {
-            throw new Exception("Unable to construct GetMyFeesEstimateResponse from provided XML.
+            throw new \Exception("Unable to construct GetMyFeesEstimateResponse from provided XML.
                                   Make sure that GetMyFeesEstimateResponse is a root element");
         }
     }

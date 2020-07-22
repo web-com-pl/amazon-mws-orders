@@ -208,7 +208,7 @@ class GetServiceStatusResponse extends AmazonModelAbstract
         if ($response->length == 1) {
             return new GetServiceStatusResponse(($response->item(0)));
         } else {
-            throw new Exception("Unable to construct GetServiceStatusResponse from provided XML.
+            throw new \Exception("Unable to construct GetServiceStatusResponse from provided XML.
                                   Make sure that GetServiceStatusResponse is a root element");
         }
     }
