@@ -18,15 +18,14 @@
  * Generated: Fri Sep 16 11:49:32 PDT 2016
  */
 
-namespace Webcom\MarketPlaceWebService;
-use Webcom\MarketPlaceWebServiceProducts\Model as AmazonModel;
+namespace Webcom\MarketPlaceWebServiceProducts;
 
 /**
  * Marketplace Web Service Products Exception provides details of errors
  * returned by Marketplace Web Service Products service
  *
  */
-class AmazonException extends Exception
+class AmazonException extends \Exception
 {
 
     /** @var string */
