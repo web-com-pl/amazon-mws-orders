@@ -682,6 +682,10 @@ class AmazonClient implements AmazonInterface
      * return [status, body, ResponseHeaderMetadata]
      */
     private function _extractHeadersAndBody($response){
+        // cURL automatically handles Proxy rewrites, remove the "HTTP/1.0 200 Connection established" string
+        if ($this->_config['ProxyHost'] !== null && false !== stripos($response, "HTTP/1.1 200 Connection established\r\n\r\n")) {
+            $response = str_ireplace("HTTP/1.1 200 Connection established\r\n\r\n", '', $response);
+        }
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
